@@ -1,0 +1,400 @@
+# Noctalia configuration — all settings at their defaults.
+# Copy to ~/.config/noctalia/config.toml and edit what you need.
+# Most changes are hot-reloaded via inotify; startup-only settings are noted inline.
+
+# ── Accessibility ─────────────────────────────────────────────────────────────
+
+[accessibility]
+ui_scale              = 1.0           # global UI scale
+
+# ── Shell ─────────────────────────────────────────────────────────────────────
+
+[shell]
+corner_radius_scale   = 1.0          # 0 = square, 1 = default, 2 = extra rounded
+font_family           = "sans-serif"
+time_format           = "{:%H:%M}"  # default shell UI time format
+date_format           = "%A, %x"    # default shell UI date format
+offline_mode          = false        # block all outgoing HTTP when true
+telemetry_enabled     = false        # send an anonymous startup ping
+niri_overview_type_to_launch_enabled = false # opt in to type-to-launch from niri overview
+polkit_agent          = false
+password_style        = "default"    # default | random
+settings_show_advanced = false       # show advanced settings by default in Settings
+# middle-click on bar widgets opens their Settings entry by default;
+# rebind via [bar.main.actions] middle = "none" or per-widget [widget.<name>.actions]
+show_location         = true         # hide weather location text in shell UI when false
+clipboard_enabled     = true         # false disables clipboard panel, history, and compositor clipboard hooks
+clipboard_history_max_entries = 50 # unpinned history cap (10–200); pinned entries are extra
+clipboard_auto_paste  = "auto"       # off | auto | ctrl_v | ctrl_shift_v | shift_insert
+clipboard_image_action_command = ""  # image preview action: gimp {path}, or satty -f - via stdin
+shared_gl_context     = true         # startup-only; false isolates GPU contexts for broken drivers
+# avatar_path         = "~/Pictures/avatar.png"
+# lang                = "en"
+
+[shell.animation]
+enabled = true
+speed   = 1.0                       # 0.5 = 2× slower, 2.0 = 2× faster
+
+[shell.shadow]
+direction = "down"                  # center, up, down, left, right, up_left, up_right, down_left, down_right
+alpha     = 0.55                    # multiplied by each component's background opacity
+
+[shell.panel]
+transparency_mode     = "solid"     # solid | soft | glass; controls floating/centered opacity and card translucency
+borders               = true        # panel shell outline and in-panel section cards
+shadow                = true        # cast the global [shell.shadow] from panel surfaces
+launcher_placement       = "floating" # attached | floating (+ launcher_position = "center" for old "centered")
+clipboard_placement      = "floating" # attached | floating (+ clipboard_position = "center" for old "centered")
+control_center_placement = "attached" # attached | floating
+wallpaper_placement      = "attached" # attached | floating
+session_placement        = "attached" # attached | floating
+open_near_click_control_center = false # for attached/floating placement, follow the bar click instead of bar-center
+open_near_click_launcher       = false # for attached/floating placement, follow the bar click instead of bar-center
+open_near_click_clipboard      = false # for attached/floating placement, follow the bar click instead of bar-center
+open_near_click_wallpaper      = false # for attached/floating placement, follow the bar click instead of bar-center
+open_near_click_session        = false # for attached/floating placement, follow the bar click instead of bar-center
+
+[shell.mpris]
+blacklist = []                      # ignore MPRIS players by bus/identity/desktop entry token
+
+# ── Wallpaper ─────────────────────────────────────────────────────────────────
+
+[wallpaper]
+enabled             = true
+fill_mode           = "crop"        # center | crop | fit | stretch | repeat
+fill_color          = ""            # optional fallback/fill color: prefer a color role token; fixed hex also works
+transition          = ["fade", "wipe", "disc", "stripes", "zoom", "honeycomb"]
+transition_duration = 1500          # milliseconds
+edge_smoothness     = 0.3
+transition_on_startup = false       # animate the first wallpaper at shell startup (v4-style)
+directory           = "~/Pictures/Wallpapers"
+directory_light     = ""            # optional day-mode directory
+directory_dark      = ""            # optional night-mode directory
+
+[wallpaper.default]
+path = ""                            # optional initial/default wallpaper path
+
+[wallpaper.automation]
+enabled                    = false
+interval_seconds           = 0       # 0 = disabled
+order                      = "random" # random | alphabetical
+recursive                  = true    # include subdirectories when picking random wallpapers
+
+# ── Theme ─────────────────────────────────────────────────────────────────────
+
+[theme]
+mode   = "dark"                     # dark | light | auto
+source = "builtin"                  # builtin | wallpaper | community
+builtin = "Noctalia"                # Ayu | Catppuccin | Dracula | Eldritch | Gruvbox |
+                                    # Kanagawa | Noctalia | Nord | Rosé Pine | Tokyo-Night
+# community_palette = "Noctalia"    # fetched from api.noctalia.dev, cached locally
+# wallpaper_scheme  = "m3-content"  # m3-tonal-spot | m3-content | m3-fruit-salad |
+                                    # m3-rainbow | m3-monochrome | vibrant | faithful |
+                                    # dysfunctional | muted
+
+[theme.templates]
+enable_builtin_templates            = true
+builtin_ids                = []     # opt-in; list ids with: noctalia theme --list-templates
+enable_community_templates = true
+community_ids              = []     # fetched from api.noctalia.dev/templates, cached locally
+
+[theme.templates.user.konsole]
+input_path  = "~/.config/noctalia/templates/konsole.colorscheme"
+output_path = "~/.local/share/konsole/Noctalia.colorscheme"
+post_hook   = "/home/don/bin/noctalia-konsole-reload.sh"
+
+[theme.templates.user.qutebrowser]
+input_path  = "~/.config/noctalia/templates/qutebrowser.json"
+output_path = "~/.config/qutebrowser/noctalia-colors.json"
+
+[theme.templates.user.browser_startpage]
+input_path  = "~/.config/noctalia/templates/browser-startpage.css"
+output_path = "~/.local/share/noctalia-startpage/theme.css"
+
+[theme.templates.user.obs_background]
+input_path  = "~/.config/noctalia/templates/obs-background.hex"
+output_path = "~/.local/state/noctalia-obs/surface-variant.hex"
+post_hook   = "/home/don/bin/noctalia-colors-to-obs.sh"
+
+[theme.templates.user.felix]
+input_path  = "~/.config/noctalia/templates/felix.yaml"
+output_path = "~/.config/felix/config.yaml"
+
+
+# ── Backdrop ──────────────────────────────────────────────────────────────────
+
+[backdrop]
+enabled                = false
+blur_intensity         = 0.5        # 0.0 = no blur, 1.0 = maximum
+tint_intensity         = 0.3        # 0.0 = no tint, 1.0 = opaque
+
+# ── Notifications ─────────────────────────────────────────────────────────────
+
+[notification]
+enable_daemon      = true
+layer              = "top"          # top | overlay
+scale              = 1.0            # notification size multiplier applied on top of accessibility.ui_scale
+background_opacity = 0.97
+offset_x           = 20             # absolute horizontal margin from the screen edge
+offset_y           = 8              # absolute vertical margin from the screen edge
+# IPC examples:
+# noctalia msg notification-clear-active
+# noctalia msg notification-clear-history
+
+# ── OSD ───────────────────────────────────────────────────────────────────────
+
+[osd]
+position = "top_right"              # top_right | top_left | top_center | bottom_right | bottom_left | bottom_center | center_right | center_left
+orientation = "horizontal"          # horizontal | vertical
+scale = 1.0                         # OSD size multiplier applied on top of accessibility.ui_scale
+background_opacity = 0.97           # background opacity of OSD popups
+offset_x = 20                       # absolute horizontal margin from the screen edge
+offset_y = 8                        # absolute vertical margin from the screen edge
+# monitors = ["DP-1"]               # connector names; omit or leave empty for all monitors
+
+[osd.kinds]
+lock_keys = true                    # show Caps/Num/Scroll Lock OSD popups; disable to stop polling when no widget uses them
+keyboard_layout = true              # show an OSD popup when the input keyboard layout changes
+
+# ── Lock Screen ───────────────────────────────────────────────────────────────
+
+[lockscreen]
+blurred_desktop         = false       # capture desktop via screencopy before locking (requires wlr-screencopy)
+blur_intensity          = 0.5         # 0.0 = no blur, 1.0 = maximum
+tint_intensity          = 0.3         # 0.0 = no tint, 1.0 = opaque
+
+# ── System Monitor ────────────────────────────────────────────────────────────
+
+[system.monitor]
+enabled = true                      # sample CPU, memory, network, load, temperature, GPU VRAM, and disk statistics
+cpu_poll_seconds = 2.0              # CPU usage, CPU temperature, and load average
+gpu_poll_seconds = 5.0              # GPU temperature and VRAM usage
+memory_poll_seconds = 2.0           # RAM usage
+network_poll_seconds = 3.0          # network throughput
+disk_poll_seconds = 10.0            # disk usage and swap usage; graph widgets use the fastest poll above
+
+# ── Weather ───────────────────────────────────────────────────────────────────
+
+[weather]
+enabled         = false
+refresh_minutes = 30
+unit            = "celsius"         # celsius | fahrenheit
+
+# Location moved to its own section (shared by weather and nightlight):
+# [location]
+# auto_locate = true                # resolve location from IP when true
+# address     = "Toronto, ON"       # geocoded when auto_locate = false
+
+# ── Audio ─────────────────────────────────────────────────────────────────────
+
+[audio]
+enable_overdrive = false            # allow volume above 100% (up to 150%)
+enable_sounds = false               # master toggle for UI feedback sounds
+sound_volume = 0.5                  # 0.0 - 1.0
+volume_change_sound = ""            # empty = bundled sounds/volume-change.wav
+notification_sound = ""             # empty = bundled sounds/notification.wav
+
+# ── Brightness ────────────────────────────────────────────────────────────────
+
+[brightness]
+enable_ddcutil = false
+# ignore_mmids = []                 # skip these monitors from ddcutil; run: ddcutil --verbose detect
+
+# Per-monitor backend override:
+# [brightness.monitor.eDP-1]
+# backend = "backlight"             # auto | none | backlight | ddcutil
+# [brightness.monitor.DP-1]
+# backend = "ddcutil"
+
+# ── Night Light ───────────────────────────────────────────────────────────────
+
+[nightlight]
+enabled              = false
+force                = false
+# location now comes from the shared [location] section automatically
+temperature_day      = 6500         # Kelvin
+temperature_night    = 4000         # Kelvin
+# start_time = "20:30"              # HH:MM — manual/fallback schedule
+# stop_time  = "07:30"
+# latitude   = 52.5200              # manual/fallback location when start/stop are unset
+# longitude  = 13.4050
+
+# ── Idle ──────────────────────────────────────────────────────────────────────
+
+# Optional `[idle]` keys:
+#   pre_action_fade_seconds — fade a fullscreen surface-color overlay in over this many seconds, then run `command`.
+#                             Use 0 for immediate commands with no overlay. Input during the fade cancels.
+# [idle]
+# pre_action_fade_seconds = 2.0
+
+[idle.behavior.lock]
+timeout = 600
+command = "noctalia:session lock"
+enabled = false
+
+[idle.behavior.screen-off]
+timeout = 660
+command = "noctalia:dpms-off"
+resume_command = "noctalia:dpms-on"
+enabled = false
+
+# ── Keybinds ──────────────────────────────────────────────────────────────────
+
+[keybinds]
+validate = ["return", "kp_enter"]
+cancel   = ["escape"]
+left     = ["left"]
+right    = ["right"]
+up       = ["up"]
+down     = ["down"]
+
+# ── Bar ───────────────────────────────────────────────────────────────────────
+
+[bar.main]
+position           = "top"          # top | bottom | left | right
+thickness          = 34
+background_opacity = 1.0
+radius             = 12
+margin_ends        = 180            # margin along the bar axis (left/right on a horizontal bar)
+margin_edge        = 10             # margin from the screen edge the bar sits on
+padding            = 14
+widget_spacing     = 6
+scale              = 1.0
+shadow             = true
+auto_hide          = false
+reserve_space      = true
+capsule            = false
+# capsule_fill     = "surface_variant"
+# capsule_radius   = 8.0            # omit/blank in Settings for automatic pill radius; 0.0 = square
+# capsule_opacity  = 1.0
+# capsule_border   = "outline"      # uncomment for a border on all widgets
+
+start  = ["launcher", "wallpaper", "workspaces"]
+center = ["clock"]
+end    = ["media", "tray", "notifications", "clipboard", "network", "bluetooth", "volume", "brightness", "battery", "control-center", "session"]
+
+# Per-monitor override example — only the fields you list are overridden:
+# [bar.main.monitor.dp1]
+# match     = "DP-1"
+# thickness = 44
+
+# ── Dock ──────────────────────────────────────────────────────────────────────
+
+[dock]
+enabled             = false         # set true to activate
+position            = "bottom"      # top | bottom | left | right
+icon_size           = 48
+main_axis_padding   = 8             # padding along the dock axis
+item_spacing        = 6
+background_opacity  = 0.88
+radius              = 16
+radius_top_left     = 16
+radius_top_right    = 16
+radius_bottom_left  = 16
+radius_bottom_right = 16
+margin_ends         = 0             # margin along the dock axis
+margin_edge         = 8             # margin from the screen edge the dock sits on
+shadow              = true
+show_running        = true
+auto_hide           = false
+reserve_space       = false
+active_scale        = 1.0
+inactive_scale      = 0.85
+active_opacity      = 1.0
+inactive_opacity    = 0.85
+show_dots           = false
+show_instance_count = true
+launcher_position   = "none"       # none | start | end
+launcher_icon       = "grid-dots"  # Tabler glyph name
+active_monitor_only = false
+pinned              = []            # e.g. ["firefox", "code", "kitty"]
+
+# ── Desktop Widgets ───────────────────────────────────────────────────────────
+
+[desktop_widgets]
+enabled = false
+# When set, widget_order is the active widget list and stacking order.
+# widget_order = ["clock_main"]
+
+# [desktop_widgets.grid]
+# visible        = true
+# cell_size      = 16
+# major_interval = 4
+
+# [desktop_widgets.widget.clock_main]
+# type     = "clock"
+# output   = "DP-1"
+# cx       = 960.0
+# cy       = 540.0
+# scale    = 1.5
+# rotation = 0.0
+
+# [desktop_widgets.widget.clock_main.settings]
+# format = "{:%H:%M}"
+# background_opacity = 0.8
+
+# ── Control Center ────────────────────────────────────────────────────────────
+
+# Shortcut buttons shown on the right side of the dashboard (up to 6).
+# [[control_center.shortcuts]]
+# type = "wifi"
+# [[control_center.shortcuts]]
+# type = "bluetooth"
+# [[control_center.shortcuts]]
+# type = "nightlight"
+# [[control_center.shortcuts]]
+# type = "notification"
+# [[control_center.shortcuts]]
+# type = "wallpaper"
+# [[control_center.shortcuts]]
+# type = "session"
+
+# ── Battery ───────────────────────────────────────────────────────────────────
+
+[battery]
+warning_threshold = 0               # low-battery warning percent; 0 disables (v5 replacement for hooks.battery_low_percent_threshold)
+
+# ── Hooks ─────────────────────────────────────────────────────────────────────
+
+[hooks]
+# started           = "notify-send 'Noctalia' 'Shell started'"
+wallpaper_changed = "/home/don/bin/noctalia-wallpaper-to-obs.sh"
+colors_changed    = ["noctalia msg templates-apply", "/home/don/bin/noctalia-konsole-reload.sh"]
+# theme_mode_changed = "notify-send 'Noctalia' \"Theme mode: $NOCTALIA_THEME_MODE\""
+# session_locked    = []
+# session_unlocked  = []
+# logging_out       = []
+# rebooting         = []
+# shutting_down     = []
+# wifi_enabled      = []
+# wifi_disabled     = []
+# bluetooth_enabled  = []
+# bluetooth_disabled = []
+# battery_state_changed   = "notify-send 'Power' \"Battery: $NOCTALIA_BATTERY_STATE\""
+# battery_under_threshold = "notify-send 'Power' \"Battery at ${NOCTALIA_BATTERY_PERCENT}%\""
+# power_profile_changed   = "notify-send 'Power' \"Profile: $NOCTALIA_POWER_PROFILE\""
+# [widget.launcher]
+# custom_image = "/path/to/image.png"
+
+# [widget.control-center]
+# custom_image = "/path/to/image.png"
+
+# [widget.notifications]
+# hide_when_no_unread = true
+
+# [widget.lock_button]
+# type                = "custom_button"
+# glyph               = "lock"
+# tooltip             = "Lock screen"
+# command             = "loginctl lock-session"
+# right_command       = ""
+# middle_command      = ""
+# scroll_up_command   = ""
+# scroll_down_command = ""
+#
+# [widget.clock]
+# format = "{:%H:%M}\n{:%d/%m}"
+# vertical_format = "{:%H\n%M}"
+# tooltip_format = "{:%A, %B %d, %Y}"
+# scale = 1.0                         # multiplies the bar scale for this widget only
+# font_weight = 700

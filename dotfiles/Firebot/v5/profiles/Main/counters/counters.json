@@ -1,0 +1,70 @@
+{
+    "bc479c42-c30a-4a9a-a09d-1fc9c346819f": {
+        "name": "WordSalad",
+        "value": 186,
+        "saveToTxtFile": false,
+        "sortTags": [],
+        "updateEffects": {
+            "id": "52c3f915-d6b8-4dd1-9e7b-d51506bb36ff",
+            "list": [
+                {
+                    "id": "54e5d600-552e-4cf6-9b9b-4609f78c9d0a",
+                    "type": "firebot:show-text",
+                    "active": true,
+                    "fontOptions": {
+                        "family": "Bangers",
+                        "size": 40,
+                        "weight": 400,
+                        "italic": false
+                    },
+                    "height": 200,
+                    "width": 400,
+                    "justify": "center",
+                    "align": "center",
+                    "wrapText": true,
+                    "position": "Top Middle",
+                    "customCoords": {
+                        "top": 0,
+                        "bottom": null,
+                        "left": 0,
+                        "right": null
+                    },
+                    "rotType": "deg",
+                    "enterAnimation": "bounceIn",
+                    "exitAnimation": "fadeOut",
+                    "inbetweenAnimation": "none",
+                    "text": "\nWord Salad Counter $counter[WordSalad]  🥗",
+                    "duration": "6",
+                    "percentWeight": null,
+                    "enterDuration": "3s",
+                    "exitDuration": "3s"
+                },
+                {
+                    "id": "986bf42e-af40-41e1-849a-4106521d0924",
+                    "type": "firebot:playsound",
+                    "active": true,
+                    "soundType": "local",
+                    "volume": 5,
+                    "audioOutputDevice": {
+                        "label": "App Default",
+                        "deviceId": ""
+                    },
+                    "filepath": "/home/don/BlackDon/OBS Assets/SteamingSounds/woohoo.mp3",
+                    "percentWeight": null
+                }
+            ],
+            "runMode": "all"
+        },
+        "minimumEffects": {
+            "id": "b606cce1-2ff9-4f4e-8b09-608c41846d42",
+            "list": [],
+            "runMode": "all"
+        },
+        "maximumEffects": {
+            "id": "3770f5cf-1914-402d-9d8b-42ab2aeadf69",
+            "list": [],
+            "runMode": "all"
+        },
+        "id": "bc479c42-c30a-4a9a-a09d-1fc9c346819f"
+    }
+}

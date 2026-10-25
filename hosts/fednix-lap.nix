@@ -21,6 +21,8 @@
   packages = [
     "kitty"
     "nemo"
+    "nemo-terminal"
+    "nemo-fileroller"
     "gwenview"
     "mpv"
     "ark"
@@ -64,6 +66,7 @@
 
   # start empty; enable as the laptop gets set up
   enabled_modules = [
+    "dotfiles"
     # "vm-stuff"
     # "bootc"
     # "lgl"

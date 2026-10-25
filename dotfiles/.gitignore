@@ -1,0 +1,27 @@
+# Live credentials — copied locally so dcli symlinks keep working, but never
+# committed. A fresh clone must re-enter these values.
+obs-studio/basic/profiles/*/service.json
+obs-studio/plugin_config/aitum-multistream/config.json
+obs-studio/plugin_config/obs-websocket/config.json
+Firebot/v5/profiles/Main/auth-twitch.json
+Firebot/v5/profiles/Main/integrations.json
+
+# Application backups and temporary files.
+**/*.bak
+**/*.bak-*
+**/*.bak.*
+**/*.tmp.*
+**/__pycache__/
+**/*.pyc
+
+# BlackDon video files are local-only; the directory layout is kept with
+# .gitkeep files instead.
+BlackDon/**/*.[mM][pP]4
+BlackDon/**/*.[mM][kK][vV]
+BlackDon/**/*.[wW][eE][bB][mM]
+BlackDon/**/*.[mM][oO][vV]
+BlackDon/**/*.[aA][vV][iI]
+BlackDon/**/*.[fF][lL][vV]
+
+# This is an empty directory whose name happens to end in .mp4.
+!BlackDon/Recordings/BL_proxy/2026-06-03 12-47-20.mp4/

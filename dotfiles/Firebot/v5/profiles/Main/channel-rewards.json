@@ -1,0 +1,1551 @@
+{
+    "59688974-b897-4970-900d-28cc16b88b1e": {
+        "id": "59688974-b897-4970-900d-28cc16b88b1e",
+        "twitchData": {
+            "broadcasterId": "893193472",
+            "broadcasterLogin": "theblack_don",
+            "broadcasterName": "theblack_don",
+            "id": "59688974-b897-4970-900d-28cc16b88b1e",
+            "title": "Random Wallpaper Change!",
+            "prompt": "This will randomly change my wallpaer live!",
+            "cost": 250,
+            "image": {
+                "url1x": "https://static-cdn.jtvnw.net/custom-reward-images/893193472/59688974-b897-4970-900d-28cc16b88b1e/9dd66f38-0f32-4a29-9ed8-346e50a26582/custom-1.png",
+                "url2x": "https://static-cdn.jtvnw.net/custom-reward-images/893193472/59688974-b897-4970-900d-28cc16b88b1e/9dd66f38-0f32-4a29-9ed8-346e50a26582/custom-2.png",
+                "url4x": "https://static-cdn.jtvnw.net/custom-reward-images/893193472/59688974-b897-4970-900d-28cc16b88b1e/9dd66f38-0f32-4a29-9ed8-346e50a26582/custom-4.png"
+            },
+            "defaultImage": {
+                "url1x": "https://static-cdn.jtvnw.net/custom-reward-images/893193472/59688974-b897-4970-900d-28cc16b88b1e/9dd66f38-0f32-4a29-9ed8-346e50a26582/custom-1.png",
+                "url2x": "https://static-cdn.jtvnw.net/custom-reward-images/893193472/59688974-b897-4970-900d-28cc16b88b1e/9dd66f38-0f32-4a29-9ed8-346e50a26582/custom-2.png",
+                "url4x": "https://static-cdn.jtvnw.net/custom-reward-images/893193472/59688974-b897-4970-900d-28cc16b88b1e/9dd66f38-0f32-4a29-9ed8-346e50a26582/custom-4.png"
+            },
+            "backgroundColor": "#601780",
+            "isEnabled": true,
+            "isUserInputRequired": false,
+            "maxPerStreamSetting": {
+                "isEnabled": false,
+                "maxPerStream": null
+            },
+            "maxPerUserPerStreamSetting": {
+                "isEnabled": false,
+                "maxPerUserPerStream": null
+            },
+            "globalCooldownSetting": {
+                "isEnabled": true,
+                "globalCooldownSeconds": 300
+            },
+            "isPaused": false,
+            "isInStock": true,
+            "shouldRedemptionsSkipRequestQueue": true,
+            "cooldownExpiresAt": null
+        },
+        "manageable": true,
+        "sortTags": [
+            "83d06b0b-4568-4b2a-8654-de5001bd5a10"
+        ],
+        "effects": {
+            "id": "71bcb565-e659-45a6-a88c-3dfa9661694a",
+            "list": [
+                {
+                    "id": "42462dad-49d9-4540-a84d-0925bff9679e",
+                    "type": "firebot:customscript",
+                    "active": true,
+                    "scriptName": "random-wallpaper-theme.js",
+                    "parameters": null,
+                    "percentWeight": null
+                }
+            ],
+            "runMode": "all"
+        },
+        "restrictionData": {
+            "restrictions": [],
+            "mode": "all",
+            "sendFailMessage": true,
+            "useCustomFailMessage": false,
+            "failMessage": "Sorry @{user}, you cannot use this channel reward because: {reason}",
+            "sendAsReply": false
+        }
+    },
+    "d33c6986-a157-42f3-98d3-af6644da398a": {
+        "id": "d33c6986-a157-42f3-98d3-af6644da398a",
+        "twitchData": {
+            "broadcasterId": "893193472",
+            "broadcasterLogin": "theblack_don",
+            "broadcasterName": "theblack_don",
+            "id": "d33c6986-a157-42f3-98d3-af6644da398a",
+            "title": "65% Opacity On My Current Window!",
+            "prompt": "You will change the current opacity of my window to 65%",
+            "cost": 3000,
+            "image": {
+                "url1x": "https://static-cdn.jtvnw.net/custom-reward-images/default-1.png",
+                "url2x": "https://static-cdn.jtvnw.net/custom-reward-images/default-2.png",
+                "url4x": "https://static-cdn.jtvnw.net/custom-reward-images/default-4.png"
+            },
+            "defaultImage": {
+                "url1x": "https://static-cdn.jtvnw.net/custom-reward-images/default-1.png",
+                "url2x": "https://static-cdn.jtvnw.net/custom-reward-images/default-2.png",
+                "url4x": "https://static-cdn.jtvnw.net/custom-reward-images/default-4.png"
+            },
+            "backgroundColor": "#C0145A",
+            "isEnabled": true,
+            "isUserInputRequired": false,
+            "maxPerStreamSetting": {
+                "isEnabled": false,
+                "maxPerStream": null
+            },
+            "maxPerUserPerStreamSetting": {
+                "isEnabled": true,
+                "maxPerUserPerStream": 1
+            },
+            "globalCooldownSetting": {
+                "isEnabled": true,
+                "globalCooldownSeconds": 3600
+            },
+            "isPaused": false,
+            "isInStock": true,
+            "shouldRedemptionsSkipRequestQueue": true,
+            "cooldownExpiresAt": null
+        },
+        "manageable": true,
+        "sortTags": [],
+        "effects": {
+            "id": "63510848-c311-4d7c-9db5-d5b895477810",
+            "list": [
+                {
+                    "id": "932e984e-fa0a-4aa8-b162-434b989a6b74",
+                    "type": "firebot:customscript",
+                    "active": true,
+                    "scriptName": "set-window-opacity.js",
+                    "parameters": null,
+                    "percentWeight": null
+                }
+            ],
+            "runMode": "all"
+        },
+        "restrictionData": {
+            "restrictions": [],
+            "mode": "all",
+            "sendFailMessage": true,
+            "useCustomFailMessage": false,
+            "failMessage": "Sorry @{user}, you cannot use this channel reward because: {reason}",
+            "sendAsReply": false
+        }
+    },
+    "fa47addd-50bd-484a-8686-4049672ac73c": {
+        "id": "fa47addd-50bd-484a-8686-4049672ac73c",
+        "twitchData": {
+            "broadcasterId": "893193472",
+            "broadcasterLogin": "theblack_don",
+            "broadcasterName": "theblack_don",
+            "id": "fa47addd-50bd-484a-8686-4049672ac73c",
+            "title": "Toggle my dock",
+            "prompt": "Toggle my dock on and off!",
+            "cost": 1000,
+            "image": {
+                "url1x": "https://static-cdn.jtvnw.net/custom-reward-images/default-1.png",
+                "url2x": "https://static-cdn.jtvnw.net/custom-reward-images/default-2.png",
+                "url4x": "https://static-cdn.jtvnw.net/custom-reward-images/default-4.png"
+            },
+            "defaultImage": {
+                "url1x": "https://static-cdn.jtvnw.net/custom-reward-images/default-1.png",
+                "url2x": "https://static-cdn.jtvnw.net/custom-reward-images/default-2.png",
+                "url4x": "https://static-cdn.jtvnw.net/custom-reward-images/default-4.png"
+            },
+            "backgroundColor": "#48F1E0",
+            "isEnabled": true,
+            "isUserInputRequired": false,
+            "maxPerStreamSetting": {
+                "isEnabled": false,
+                "maxPerStream": null
+            },
+            "maxPerUserPerStreamSetting": {
+                "isEnabled": true,
+                "maxPerUserPerStream": 5
+            },
+            "globalCooldownSetting": {
+                "isEnabled": true,
+                "globalCooldownSeconds": 25
+            },
+            "isPaused": false,
+            "isInStock": true,
+            "shouldRedemptionsSkipRequestQueue": true,
+            "cooldownExpiresAt": null
+        },
+        "manageable": true,
+        "sortTags": [],
+        "effects": {
+            "id": "44d23f74-6366-42a8-8481-904862280e93",
+            "list": [
+                {
+                    "id": "f9860546-588d-4792-a5ca-632b2ffa7370",
+                    "type": "firebot:customscript",
+                    "active": true,
+                    "scriptName": "toggle-dock.js",
+                    "parameters": null,
+                    "percentWeight": null
+                },
+                {
+                    "id": "dd27dc35-c85a-4a1e-bd04-fc0b1da81a76",
+                    "type": "firebot:delay",
+                    "active": true,
+                    "delay": "300",
+                    "percentWeight": null
+                },
+                {
+                    "id": "b1ab4a1b-549b-4c78-83ea-90da8ff5d030",
+                    "type": "firebot:customscript",
+                    "active": true,
+                    "scriptName": "toggle-dock.js",
+                    "parameters": null,
+                    "percentWeight": null
+                }
+            ],
+            "runMode": "all"
+        },
+        "restrictionData": {
+            "restrictions": [],
+            "mode": "all",
+            "sendFailMessage": true,
+            "useCustomFailMessage": false,
+            "failMessage": "Sorry @{user}, you cannot use this channel reward because: {reason}",
+            "sendAsReply": false
+        }
+    },
+    "2e3af137-b201-4811-b197-12bb628c4105": {
+        "id": "2e3af137-b201-4811-b197-12bb628c4105",
+        "twitchData": {
+            "broadcasterId": "893193472",
+            "broadcasterLogin": "theblack_don",
+            "broadcasterName": "theblack_don",
+            "id": "2e3af137-b201-4811-b197-12bb628c4105",
+            "title": "Toggle My Bar!",
+            "prompt": "Toggle My Bar on and off",
+            "cost": 1000,
+            "image": {
+                "url1x": "https://static-cdn.jtvnw.net/custom-reward-images/default-1.png",
+                "url2x": "https://static-cdn.jtvnw.net/custom-reward-images/default-2.png",
+                "url4x": "https://static-cdn.jtvnw.net/custom-reward-images/default-4.png"
+            },
+            "defaultImage": {
+                "url1x": "https://static-cdn.jtvnw.net/custom-reward-images/default-1.png",
+                "url2x": "https://static-cdn.jtvnw.net/custom-reward-images/default-2.png",
+                "url4x": "https://static-cdn.jtvnw.net/custom-reward-images/default-4.png"
+            },
+            "backgroundColor": "#1196E0",
+            "isEnabled": true,
+            "isUserInputRequired": false,
+            "maxPerStreamSetting": {
+                "isEnabled": false,
+                "maxPerStream": null
+            },
+            "maxPerUserPerStreamSetting": {
+                "isEnabled": true,
+                "maxPerUserPerStream": 5
+            },
+            "globalCooldownSetting": {
+                "isEnabled": true,
+                "globalCooldownSeconds": 600
+            },
+            "isPaused": false,
+            "isInStock": true,
+            "shouldRedemptionsSkipRequestQueue": true,
+            "cooldownExpiresAt": null
+        },
+        "manageable": true,
+        "sortTags": [],
+        "effects": {
+            "id": "4d9d74d1-8980-4aa7-8a44-bbb260fd7294",
+            "list": [
+                {
+                    "id": "d91b5789-7b8d-4ec5-8699-0e09612a4692",
+                    "type": "firebot:customscript",
+                    "active": true,
+                    "scriptName": "toggle-bar.js",
+                    "parameters": null,
+                    "percentWeight": null
+                },
+                {
+                    "id": "05009c86-f0b3-4acb-933c-57188a848da4",
+                    "type": "firebot:delay",
+                    "active": true,
+                    "delay": "300",
+                    "percentWeight": null
+                },
+                {
+                    "id": "37a9bcf8-75dc-455a-a17f-c33a75f1bc67",
+                    "type": "firebot:customscript",
+                    "active": true,
+                    "scriptName": "toggle-bar.js",
+                    "parameters": null,
+                    "percentWeight": null
+                }
+            ],
+            "runMode": "all"
+        },
+        "restrictionData": {
+            "restrictions": [],
+            "mode": "all",
+            "sendFailMessage": true,
+            "useCustomFailMessage": false,
+            "failMessage": "Sorry @{user}, you cannot use this channel reward because: {reason}",
+            "sendAsReply": false
+        }
+    },
+    "73f7d9b7-359c-452e-bda8-e8beed9b5f63": {
+        "id": "73f7d9b7-359c-452e-bda8-e8beed9b5f63",
+        "twitchData": {
+            "broadcasterId": "893193472",
+            "broadcasterLogin": "theblack_don",
+            "broadcasterName": "theblack_don",
+            "id": "73f7d9b7-359c-452e-bda8-e8beed9b5f63",
+            "title": "Toggle Fullscreen",
+            "prompt": "Will toggle my current focused app to Full Screen",
+            "cost": 1000,
+            "image": {
+                "url1x": "https://static-cdn.jtvnw.net/custom-reward-images/default-1.png",
+                "url2x": "https://static-cdn.jtvnw.net/custom-reward-images/default-2.png",
+                "url4x": "https://static-cdn.jtvnw.net/custom-reward-images/default-4.png"
+            },
+            "defaultImage": {
+                "url1x": "https://static-cdn.jtvnw.net/custom-reward-images/default-1.png",
+                "url2x": "https://static-cdn.jtvnw.net/custom-reward-images/default-2.png",
+                "url4x": "https://static-cdn.jtvnw.net/custom-reward-images/default-4.png"
+            },
+            "backgroundColor": "#604EC3",
+            "isEnabled": true,
+            "isUserInputRequired": false,
+            "maxPerStreamSetting": {
+                "isEnabled": false,
+                "maxPerStream": null
+            },
+            "maxPerUserPerStreamSetting": {
+                "isEnabled": false,
+                "maxPerUserPerStream": null
+            },
+            "globalCooldownSetting": {
+                "isEnabled": true,
+                "globalCooldownSeconds": 600
+            },
+            "isPaused": false,
+            "isInStock": true,
+            "shouldRedemptionsSkipRequestQueue": true,
+            "cooldownExpiresAt": null
+        },
+        "manageable": true,
+        "sortTags": [],
+        "effects": {
+            "id": "dfadd9a5-916e-4c46-b734-33403a51a608",
+            "list": [
+                {
+                    "id": "b611ae6b-bb87-45ab-a386-1614142d06ee",
+                    "type": "firebot:customscript",
+                    "active": true,
+                    "scriptName": "toggle-fullscreen.js",
+                    "parameters": null,
+                    "percentWeight": null
+                },
+                {
+                    "id": "bc0d4838-7896-454d-b679-64c5bfa8fecc",
+                    "type": "firebot:delay",
+                    "active": true,
+                    "delay": "300",
+                    "percentWeight": null
+                },
+                {
+                    "id": "cb4bf082-afb7-4b38-8edf-dec91dc76c4e",
+                    "type": "firebot:customscript",
+                    "active": true,
+                    "scriptName": "toggle-fullscreen.js",
+                    "parameters": null,
+                    "percentWeight": null
+                }
+            ],
+            "runMode": "all"
+        },
+        "restrictionData": {
+            "restrictions": [],
+            "mode": "all",
+            "sendFailMessage": true,
+            "useCustomFailMessage": false,
+            "failMessage": "Sorry @{user}, you cannot use this channel reward because: {reason}",
+            "sendAsReply": false
+        }
+    },
+    "aa9b007c-3679-494f-999c-bdc09b6bed82": {
+        "id": "aa9b007c-3679-494f-999c-bdc09b6bed82",
+        "twitchData": {
+            "broadcasterId": "893193472",
+            "broadcasterLogin": "theblack_don",
+            "broadcasterName": "theblack_don",
+            "id": "aa9b007c-3679-494f-999c-bdc09b6bed82",
+            "title": "CatCam",
+            "prompt": "Make the Cat Cam Bigger!",
+            "cost": 1000,
+            "image": {
+                "url1x": "https://static-cdn.jtvnw.net/custom-reward-images/default-1.png",
+                "url2x": "https://static-cdn.jtvnw.net/custom-reward-images/default-2.png",
+                "url4x": "https://static-cdn.jtvnw.net/custom-reward-images/default-4.png"
+            },
+            "defaultImage": {
+                "url1x": "https://static-cdn.jtvnw.net/custom-reward-images/default-1.png",
+                "url2x": "https://static-cdn.jtvnw.net/custom-reward-images/default-2.png",
+                "url4x": "https://static-cdn.jtvnw.net/custom-reward-images/default-4.png"
+            },
+            "backgroundColor": "#18C71D",
+            "isEnabled": false,
+            "isUserInputRequired": false,
+            "maxPerStreamSetting": {
+                "isEnabled": true,
+                "maxPerStream": 5
+            },
+            "maxPerUserPerStreamSetting": {
+                "isEnabled": true,
+                "maxPerUserPerStream": 2
+            },
+            "globalCooldownSetting": {
+                "isEnabled": true,
+                "globalCooldownSeconds": 1800
+            },
+            "isPaused": false,
+            "isInStock": false,
+            "shouldRedemptionsSkipRequestQueue": true,
+            "cooldownExpiresAt": null
+        },
+        "manageable": true,
+        "sortTags": [],
+        "effects": {
+            "id": "8d5c73ed-e05e-48ec-8d03-7e1cfb30d3fb",
+            "list": [
+                {
+                    "id": "e843bf41-d539-4a78-a1b8-704f9fb9584f",
+                    "type": "ebiggz:obs-change-scene",
+                    "active": true,
+                    "custom": false,
+                    "sceneName": "StreamingCat",
+                    "percentWeight": null
+                },
+                {
+                    "id": "441d1af6-080d-4f48-9dcb-eef3f9e9d70f",
+                    "type": "firebot:delay",
+                    "active": true,
+                    "delay": "45",
+                    "percentWeight": null
+                },
+                {
+                    "id": "28a8019d-8df2-4da1-b721-b28adc677c49",
+                    "type": "ebiggz:obs-change-scene",
+                    "active": true,
+                    "custom": false,
+                    "sceneName": "Streaming",
+                    "percentWeight": null
+                }
+            ],
+            "runMode": "all"
+        },
+        "restrictionData": {
+            "restrictions": [],
+            "mode": "all",
+            "sendFailMessage": true,
+            "useCustomFailMessage": false,
+            "failMessage": "Sorry @{user}, you cannot use this channel reward because: {reason}",
+            "sendAsReply": false
+        }
+    },
+    "279cf357-8275-4824-804d-a36ad301c240": {
+        "id": "279cf357-8275-4824-804d-a36ad301c240",
+        "twitchData": {
+            "broadcasterId": "893193472",
+            "broadcasterLogin": "theblack_don",
+            "broadcasterName": "theblack_don",
+            "id": "279cf357-8275-4824-804d-a36ad301c240",
+            "title": "ShoulderCam",
+            "prompt": "Toggles to the Shoulder Cam",
+            "cost": 1500,
+            "image": {
+                "url1x": "https://static-cdn.jtvnw.net/custom-reward-images/default-1.png",
+                "url2x": "https://static-cdn.jtvnw.net/custom-reward-images/default-2.png",
+                "url4x": "https://static-cdn.jtvnw.net/custom-reward-images/default-4.png"
+            },
+            "defaultImage": {
+                "url1x": "https://static-cdn.jtvnw.net/custom-reward-images/default-1.png",
+                "url2x": "https://static-cdn.jtvnw.net/custom-reward-images/default-2.png",
+                "url4x": "https://static-cdn.jtvnw.net/custom-reward-images/default-4.png"
+            },
+            "backgroundColor": "#84F329",
+            "isEnabled": false,
+            "isUserInputRequired": false,
+            "maxPerStreamSetting": {
+                "isEnabled": true,
+                "maxPerStream": 3
+            },
+            "maxPerUserPerStreamSetting": {
+                "isEnabled": true,
+                "maxPerUserPerStream": 2
+            },
+            "globalCooldownSetting": {
+                "isEnabled": true,
+                "globalCooldownSeconds": 600
+            },
+            "isPaused": false,
+            "isInStock": false,
+            "shouldRedemptionsSkipRequestQueue": true,
+            "cooldownExpiresAt": null
+        },
+        "manageable": true,
+        "sortTags": [],
+        "effects": {
+            "id": "fde8dc88-784d-44fb-8685-4b5e700dbbc0",
+            "list": [
+                {
+                    "id": "5c9369f2-395a-4dc3-aea0-89e5a5716988",
+                    "type": "ebiggz:obs-toggle-source-visibility",
+                    "active": true,
+                    "selectedSources": [
+                        {
+                            "sceneName": "Streaming",
+                            "sourceId": 28,
+                            "sourceName": "DroidCam OBS",
+                            "action": true
+                        },
+                        {
+                            "sceneName": "Streaming",
+                            "sourceId": 26,
+                            "sourceName": "ShoulderCam",
+                            "action": true
+                        }
+                    ],
+                    "percentWeight": null
+                },
+                {
+                    "id": "05d2a11f-495e-47ba-a89c-60082902fd93",
+                    "type": "firebot:delay",
+                    "active": true,
+                    "delay": "30",
+                    "percentWeight": null
+                },
+                {
+                    "id": "33d6dc90-c7c2-4a83-b345-bd67840d5d49",
+                    "type": "ebiggz:obs-toggle-source-visibility",
+                    "active": true,
+                    "selectedSources": [
+                        {
+                            "sceneName": "Streaming",
+                            "sourceId": 26,
+                            "sourceName": "ShoulderCam",
+                            "action": false
+                        }
+                    ],
+                    "percentWeight": null
+                }
+            ],
+            "runMode": "all"
+        },
+        "restrictionData": {
+            "restrictions": [],
+            "mode": "all",
+            "sendFailMessage": true,
+            "useCustomFailMessage": false,
+            "failMessage": "Sorry @{user}, you cannot use this channel reward because: {reason}",
+            "sendAsReply": false
+        }
+    },
+    "925306b6-ccce-475f-9e5e-0c7d561c7dfa": {
+        "id": "925306b6-ccce-475f-9e5e-0c7d561c7dfa",
+        "twitchData": {
+            "broadcasterId": "893193472",
+            "broadcasterLogin": "theblack_don",
+            "broadcasterName": "theblack_don",
+            "id": "925306b6-ccce-475f-9e5e-0c7d561c7dfa",
+            "title": "Zoom Zoom Zoom",
+            "prompt": "",
+            "cost": 1500,
+            "image": {
+                "url1x": "https://static-cdn.jtvnw.net/custom-reward-images/default-1.png",
+                "url2x": "https://static-cdn.jtvnw.net/custom-reward-images/default-2.png",
+                "url4x": "https://static-cdn.jtvnw.net/custom-reward-images/default-4.png"
+            },
+            "defaultImage": {
+                "url1x": "https://static-cdn.jtvnw.net/custom-reward-images/default-1.png",
+                "url2x": "https://static-cdn.jtvnw.net/custom-reward-images/default-2.png",
+                "url4x": "https://static-cdn.jtvnw.net/custom-reward-images/default-4.png"
+            },
+            "backgroundColor": "#D1B3FF",
+            "isEnabled": true,
+            "isUserInputRequired": false,
+            "maxPerStreamSetting": {
+                "isEnabled": false,
+                "maxPerStream": null
+            },
+            "maxPerUserPerStreamSetting": {
+                "isEnabled": true,
+                "maxPerUserPerStream": 2
+            },
+            "globalCooldownSetting": {
+                "isEnabled": true,
+                "globalCooldownSeconds": 1200
+            },
+            "isPaused": false,
+            "isInStock": true,
+            "shouldRedemptionsSkipRequestQueue": false,
+            "cooldownExpiresAt": null
+        },
+        "manageable": true,
+        "restrictionData": {
+            "restrictions": [
+                {
+                    "id": "75f6ddf8-d5ca-4b36-8e66-314e3c13af1c",
+                    "type": "firebot:permissions",
+                    "mode": "roles",
+                    "roleIds": [
+                        "sub",
+                        "broadcaster",
+                        "mod",
+                        "vip"
+                    ],
+                    "ranks": [],
+                    "$$hashKey": "object:1574"
+                }
+            ],
+            "mode": "all",
+            "sendFailMessage": true,
+            "useCustomFailMessage": false,
+            "failMessage": "Sorry @{user}, you cannot use this channel reward because: {reason}",
+            "sendAsReply": false
+        },
+        "effects": {
+            "id": "0e9d65ce-9763-4652-b1b7-4e7c88c898ad",
+            "list": [
+                {
+                    "id": "ec7da12c-2d03-4a69-9420-5fc360c1aefb",
+                    "type": "firebot:playsound",
+                    "active": true,
+                    "soundType": "local",
+                    "volume": 3,
+                    "audioOutputDevice": {
+                        "label": "App Default",
+                        "deviceId": ""
+                    },
+                    "filepath": "/home/don/BlackDon/OBS Assets/SteamingSounds/Zoom Boom.mp3",
+                    "percentWeight": null
+                },
+                {
+                    "id": "be73ffa4-f703-4851-ab37-74abfd333e7a",
+                    "type": "firebot:delay",
+                    "active": true,
+                    "delay": "4",
+                    "percentWeight": null
+                },
+                {
+                    "id": "a6f157d7-b39c-4922-bc7c-00d483a82e9f",
+                    "type": "firebot:customscript",
+                    "active": true,
+                    "scriptName": "kwin-zoom.js",
+                    "parameters": {
+                        "zoomDelay": {
+                            "type": "number",
+                            "description": "Delay between zoom steps (milliseconds)",
+                            "secondaryDescription": "Default 400 — raise it if zoom steps feel cut short",
+                            "default": 400,
+                            "value": 250
+                        }
+                    },
+                    "percentWeight": null
+                }
+            ],
+            "runMode": "all"
+        },
+        "effectsFulfilled": {
+            "id": "0ac140e7-f194-4cfa-a1db-6f4f8be6952f",
+            "list": [],
+            "runMode": "all"
+        },
+        "effectsCanceled": {
+            "id": "506381ff-f585-40f4-86aa-7b00292182cf",
+            "list": [],
+            "runMode": "all"
+        }
+    },
+    "4068e660-693e-4f22-8292-24f9519be304": {
+        "id": "4068e660-693e-4f22-8292-24f9519be304",
+        "twitchData": {
+            "broadcasterId": "893193472",
+            "broadcasterLogin": "theblack_don",
+            "broadcasterName": "theblack_don",
+            "id": "4068e660-693e-4f22-8292-24f9519be304",
+            "title": "Big Don",
+            "prompt": "Makes Donnie Super Big!",
+            "cost": 2500,
+            "image": {
+                "url1x": "https://static-cdn.jtvnw.net/custom-reward-images/default-1.png",
+                "url2x": "https://static-cdn.jtvnw.net/custom-reward-images/default-2.png",
+                "url4x": "https://static-cdn.jtvnw.net/custom-reward-images/default-4.png"
+            },
+            "defaultImage": {
+                "url1x": "https://static-cdn.jtvnw.net/custom-reward-images/default-1.png",
+                "url2x": "https://static-cdn.jtvnw.net/custom-reward-images/default-2.png",
+                "url4x": "https://static-cdn.jtvnw.net/custom-reward-images/default-4.png"
+            },
+            "backgroundColor": "#0D2247",
+            "isEnabled": true,
+            "isUserInputRequired": false,
+            "maxPerStreamSetting": {
+                "isEnabled": true,
+                "maxPerStream": 1
+            },
+            "maxPerUserPerStreamSetting": {
+                "isEnabled": true,
+                "maxPerUserPerStream": 3
+            },
+            "globalCooldownSetting": {
+                "isEnabled": true,
+                "globalCooldownSeconds": 1200
+            },
+            "isPaused": false,
+            "isInStock": false,
+            "shouldRedemptionsSkipRequestQueue": true,
+            "cooldownExpiresAt": null
+        },
+        "manageable": true,
+        "sortTags": [],
+        "effects": {
+            "id": "160348be-1770-434d-8467-1f7cce78cedf",
+            "list": [
+                {
+                    "id": "58479f73-36cc-4c50-a1ce-144e31f69066",
+                    "type": "ebiggz:obs-toggle-source-visibility",
+                    "active": true,
+                    "selectedSources": [
+                        {
+                            "sceneName": "Streaming 16:9",
+                            "sourceId": 7,
+                            "sourceName": "BigDon",
+                            "action": true
+                        },
+                        {
+                            "sceneName": "Streaming 16:9",
+                            "sourceId": 6,
+                            "sourceName": "talkingdon",
+                            "action": false
+                        }
+                    ],
+                    "percentWeight": null
+                },
+                {
+                    "id": "56847a52-3ea1-4585-848b-11d5d9cbd792",
+                    "type": "firebot:delay",
+                    "active": true,
+                    "delay": "30",
+                    "percentWeight": null
+                },
+                {
+                    "id": "3f788899-9122-40d0-bd8c-3b09c2894058",
+                    "type": "ebiggz:obs-toggle-source-visibility",
+                    "active": true,
+                    "selectedSources": [
+                        {
+                            "sceneName": "Streaming 16:9",
+                            "sourceId": 7,
+                            "sourceName": "BigDon",
+                            "action": false
+                        },
+                        {
+                            "sceneName": "Streaming 16:9",
+                            "sourceId": 6,
+                            "sourceName": "talkingdon",
+                            "action": true
+                        }
+                    ],
+                    "percentWeight": null
+                }
+            ],
+            "runMode": "all"
+        },
+        "restrictionData": {
+            "restrictions": [],
+            "mode": "all",
+            "sendFailMessage": true,
+            "useCustomFailMessage": false,
+            "failMessage": "Sorry @{user}, you cannot use this channel reward because: {reason}",
+            "sendAsReply": false
+        }
+    },
+    "615e937a-bfae-41a2-a6d2-a58fa08ae9cc": {
+        "id": "615e937a-bfae-41a2-a6d2-a58fa08ae9cc",
+        "twitchData": {
+            "broadcasterId": "893193472",
+            "broadcasterLogin": "theblack_don",
+            "broadcasterName": "theblack_don",
+            "id": "615e937a-bfae-41a2-a6d2-a58fa08ae9cc",
+            "title": "Mocha Pink Theme",
+            "prompt": "Changes my theme to Mocha Pink Theme!",
+            "cost": 500,
+            "image": {
+                "url1x": "https://static-cdn.jtvnw.net/custom-reward-images/default-1.png",
+                "url2x": "https://static-cdn.jtvnw.net/custom-reward-images/default-2.png",
+                "url4x": "https://static-cdn.jtvnw.net/custom-reward-images/default-4.png"
+            },
+            "defaultImage": {
+                "url1x": "https://static-cdn.jtvnw.net/custom-reward-images/default-1.png",
+                "url2x": "https://static-cdn.jtvnw.net/custom-reward-images/default-2.png",
+                "url4x": "https://static-cdn.jtvnw.net/custom-reward-images/default-4.png"
+            },
+            "backgroundColor": "#F9BBEA",
+            "isEnabled": true,
+            "isUserInputRequired": false,
+            "maxPerStreamSetting": {
+                "isEnabled": false,
+                "maxPerStream": null
+            },
+            "maxPerUserPerStreamSetting": {
+                "isEnabled": false,
+                "maxPerUserPerStream": null
+            },
+            "globalCooldownSetting": {
+                "isEnabled": true,
+                "globalCooldownSeconds": 300
+            },
+            "isPaused": false,
+            "isInStock": true,
+            "shouldRedemptionsSkipRequestQueue": true,
+            "cooldownExpiresAt": null
+        },
+        "manageable": true,
+        "sortTags": [],
+        "effects": {
+            "id": "a68ae270-2747-4db4-a494-2beeca206bab",
+            "list": [
+                {
+                    "id": "87b98bdc-b207-4068-b0fc-96d7b4ac4431",
+                    "type": "firebot:customscript",
+                    "active": true,
+                    "scriptName": "set-theme.js",
+                    "parameters": {
+                        "themeName": {
+                            "type": "string",
+                            "title": "Theme Name",
+                            "description": "Noctalia theme to apply, exactly as named (e.g. `Mocha Pink`).",
+                            "default": "Mocha Pink",
+                            "value": "Mocha Pink"
+                        }
+                    },
+                    "percentWeight": null
+                }
+            ],
+            "runMode": "all"
+        },
+        "restrictionData": {
+            "restrictions": [],
+            "mode": "all",
+            "sendFailMessage": true,
+            "useCustomFailMessage": false,
+            "failMessage": "Sorry @{user}, you cannot use this channel reward because: {reason}",
+            "sendAsReply": false
+        }
+    },
+    "a6962d9b-2832-448b-9de3-d2af5670f4d8": {
+        "id": "a6962d9b-2832-448b-9de3-d2af5670f4d8",
+        "twitchData": {
+            "broadcasterId": "893193472",
+            "broadcasterLogin": "theblack_don",
+            "broadcasterName": "theblack_don",
+            "id": "a6962d9b-2832-448b-9de3-d2af5670f4d8",
+            "title": "Monochrome Theme",
+            "prompt": "Change my theme to Monochrome!",
+            "cost": 500,
+            "image": {
+                "url1x": "https://static-cdn.jtvnw.net/custom-reward-images/default-1.png",
+                "url2x": "https://static-cdn.jtvnw.net/custom-reward-images/default-2.png",
+                "url4x": "https://static-cdn.jtvnw.net/custom-reward-images/default-4.png"
+            },
+            "defaultImage": {
+                "url1x": "https://static-cdn.jtvnw.net/custom-reward-images/default-1.png",
+                "url2x": "https://static-cdn.jtvnw.net/custom-reward-images/default-2.png",
+                "url4x": "https://static-cdn.jtvnw.net/custom-reward-images/default-4.png"
+            },
+            "backgroundColor": "#E1ECEB",
+            "isEnabled": true,
+            "isUserInputRequired": false,
+            "maxPerStreamSetting": {
+                "isEnabled": false,
+                "maxPerStream": null
+            },
+            "maxPerUserPerStreamSetting": {
+                "isEnabled": false,
+                "maxPerUserPerStream": null
+            },
+            "globalCooldownSetting": {
+                "isEnabled": true,
+                "globalCooldownSeconds": 300
+            },
+            "isPaused": false,
+            "isInStock": true,
+            "shouldRedemptionsSkipRequestQueue": true,
+            "cooldownExpiresAt": null
+        },
+        "manageable": true,
+        "sortTags": [],
+        "effects": {
+            "id": "488b90c7-02d8-40c9-8624-fc4a28911aef",
+            "list": [
+                {
+                    "id": "405186d5-6915-42f5-9e6c-79c7de8d5f56",
+                    "type": "firebot:customscript",
+                    "active": true,
+                    "scriptName": "monochrome.js",
+                    "parameters": {
+                        "themeName": {
+                            "type": "string",
+                            "title": "Theme Name",
+                            "description": "Noctalia theme to apply, exactly as named (e.g. `Mocha Pink`).",
+                            "default": "Monochrome",
+                            "value": "Monochrome"
+                        },
+                        "iconColor": {
+                            "type": "string",
+                            "title": "Icon Color",
+                            "description": "Tela icon color (e.g. `pink`, `grey`, `green`).",
+                            "default": "grey",
+                            "value": "grey"
+                        }
+                    },
+                    "percentWeight": null
+                }
+            ],
+            "runMode": "all"
+        },
+        "restrictionData": {
+            "restrictions": [],
+            "mode": "all",
+            "sendFailMessage": true,
+            "useCustomFailMessage": false,
+            "failMessage": "Sorry @{user}, you cannot use this channel reward because: {reason}",
+            "sendAsReply": false
+        }
+    },
+    "7da12caf-dec0-4338-822b-681c5da01176": {
+        "id": "7da12caf-dec0-4338-822b-681c5da01176",
+        "twitchData": {
+            "broadcasterId": "893193472",
+            "broadcasterLogin": "theblack_don",
+            "broadcasterName": "theblack_don",
+            "id": "7da12caf-dec0-4338-822b-681c5da01176",
+            "title": "Gruvbox Theme",
+            "prompt": "Change my Theme to Gruvbox",
+            "cost": 500,
+            "image": {
+                "url1x": "https://static-cdn.jtvnw.net/custom-reward-images/default-1.png",
+                "url2x": "https://static-cdn.jtvnw.net/custom-reward-images/default-2.png",
+                "url4x": "https://static-cdn.jtvnw.net/custom-reward-images/default-4.png"
+            },
+            "defaultImage": {
+                "url1x": "https://static-cdn.jtvnw.net/custom-reward-images/default-1.png",
+                "url2x": "https://static-cdn.jtvnw.net/custom-reward-images/default-2.png",
+                "url4x": "https://static-cdn.jtvnw.net/custom-reward-images/default-4.png"
+            },
+            "backgroundColor": "#7C9E0C",
+            "isEnabled": true,
+            "isUserInputRequired": false,
+            "maxPerStreamSetting": {
+                "isEnabled": false,
+                "maxPerStream": null
+            },
+            "maxPerUserPerStreamSetting": {
+                "isEnabled": false,
+                "maxPerUserPerStream": null
+            },
+            "globalCooldownSetting": {
+                "isEnabled": true,
+                "globalCooldownSeconds": 300
+            },
+            "isPaused": false,
+            "isInStock": true,
+            "shouldRedemptionsSkipRequestQueue": true,
+            "cooldownExpiresAt": null
+        },
+        "manageable": true,
+        "sortTags": [],
+        "effects": {
+            "id": "e626e36a-f3f3-4963-969c-0e9c9e278133",
+            "list": [
+                {
+                    "id": "d638ddc7-7551-4375-af1e-cbf85477c0dd",
+                    "type": "firebot:customscript",
+                    "active": true,
+                    "scriptName": "gruvbox.js",
+                    "parameters": {
+                        "themeName": {
+                            "type": "string",
+                            "title": "Theme Name",
+                            "description": "Noctalia theme to apply, exactly as named (e.g. `Mocha Pink`).",
+                            "default": "Gruvbox",
+                            "value": "Gruvbox"
+                        }
+                    },
+                    "percentWeight": null
+                }
+            ],
+            "runMode": "all"
+        },
+        "restrictionData": {
+            "restrictions": [],
+            "mode": "all",
+            "sendFailMessage": true,
+            "useCustomFailMessage": false,
+            "failMessage": "Sorry @{user}, you cannot use this channel reward because: {reason}",
+            "sendAsReply": false
+        }
+    },
+    "bd78e073-cbb2-49f2-99a4-a4c4de6f2042": {
+        "id": "bd78e073-cbb2-49f2-99a4-a4c4de6f2042",
+        "twitchData": {
+            "broadcasterId": "893193472",
+            "broadcasterLogin": "theblack_don",
+            "broadcasterName": "theblack_don",
+            "id": "bd78e073-cbb2-49f2-99a4-a4c4de6f2042",
+            "title": "Ruby Theme",
+            "prompt": "Changes my theme to Ruby!",
+            "cost": 500,
+            "image": {
+                "url1x": "https://static-cdn.jtvnw.net/custom-reward-images/default-1.png",
+                "url2x": "https://static-cdn.jtvnw.net/custom-reward-images/default-2.png",
+                "url4x": "https://static-cdn.jtvnw.net/custom-reward-images/default-4.png"
+            },
+            "defaultImage": {
+                "url1x": "https://static-cdn.jtvnw.net/custom-reward-images/default-1.png",
+                "url2x": "https://static-cdn.jtvnw.net/custom-reward-images/default-2.png",
+                "url4x": "https://static-cdn.jtvnw.net/custom-reward-images/default-4.png"
+            },
+            "backgroundColor": "#DB1717",
+            "isEnabled": true,
+            "isUserInputRequired": false,
+            "maxPerStreamSetting": {
+                "isEnabled": false,
+                "maxPerStream": null
+            },
+            "maxPerUserPerStreamSetting": {
+                "isEnabled": false,
+                "maxPerUserPerStream": null
+            },
+            "globalCooldownSetting": {
+                "isEnabled": true,
+                "globalCooldownSeconds": 300
+            },
+            "isPaused": false,
+            "isInStock": true,
+            "shouldRedemptionsSkipRequestQueue": true,
+            "cooldownExpiresAt": null
+        },
+        "manageable": true,
+        "sortTags": [],
+        "effects": {
+            "id": "5dfa07ab-1e27-4f39-853a-09582874b23f",
+            "list": [
+                {
+                    "id": "5b1d95a4-0537-4114-9988-d31fb9658757",
+                    "type": "firebot:customscript",
+                    "active": true,
+                    "scriptName": "set-theme.js",
+                    "parameters": {
+                        "themeName": {
+                            "type": "string",
+                            "title": "Theme Name",
+                            "description": "Noctalia theme to apply, exactly as named (e.g. `Mocha Pink`).",
+                            "default": "Mocha Pink",
+                            "value": "Ruby"
+                        },
+                        "iconColor": {
+                            "type": "string",
+                            "title": "Icon Color",
+                            "description": "Tela icon color (e.g. `pink`, `grey`, `green`).",
+                            "default": "pink",
+                            "value": "red"
+                        }
+                    },
+                    "percentWeight": null
+                }
+            ],
+            "runMode": "all"
+        },
+        "restrictionData": {
+            "restrictions": [],
+            "mode": "all",
+            "sendFailMessage": true,
+            "useCustomFailMessage": false,
+            "failMessage": "Sorry @{user}, you cannot use this channel reward because: {reason}",
+            "sendAsReply": false
+        }
+    },
+    "e369e083-91d3-4245-86fe-7cc44b8ad3d5": {
+        "id": "e369e083-91d3-4245-86fe-7cc44b8ad3d5",
+        "twitchData": {
+            "broadcasterId": "893193472",
+            "broadcasterLogin": "theblack_don",
+            "broadcasterName": "theblack_don",
+            "id": "e369e083-91d3-4245-86fe-7cc44b8ad3d5",
+            "title": "Tokyo Night Theme",
+            "prompt": "Change my theme to Tokyo Night",
+            "cost": 500,
+            "image": {
+                "url1x": "https://static-cdn.jtvnw.net/custom-reward-images/default-1.png",
+                "url2x": "https://static-cdn.jtvnw.net/custom-reward-images/default-2.png",
+                "url4x": "https://static-cdn.jtvnw.net/custom-reward-images/default-4.png"
+            },
+            "defaultImage": {
+                "url1x": "https://static-cdn.jtvnw.net/custom-reward-images/default-1.png",
+                "url2x": "https://static-cdn.jtvnw.net/custom-reward-images/default-2.png",
+                "url4x": "https://static-cdn.jtvnw.net/custom-reward-images/default-4.png"
+            },
+            "backgroundColor": "#0F89CC",
+            "isEnabled": true,
+            "isUserInputRequired": false,
+            "maxPerStreamSetting": {
+                "isEnabled": false,
+                "maxPerStream": null
+            },
+            "maxPerUserPerStreamSetting": {
+                "isEnabled": false,
+                "maxPerUserPerStream": null
+            },
+            "globalCooldownSetting": {
+                "isEnabled": true,
+                "globalCooldownSeconds": 300
+            },
+            "isPaused": false,
+            "isInStock": true,
+            "shouldRedemptionsSkipRequestQueue": true,
+            "cooldownExpiresAt": null
+        },
+        "manageable": true,
+        "sortTags": [],
+        "effects": {
+            "id": "0d86aa34-f79f-4b74-af23-7dbe6e018196",
+            "list": [
+                {
+                    "id": "b853a9ad-c7e8-4179-a334-243ada261c38",
+                    "type": "firebot:customscript",
+                    "active": true,
+                    "scriptName": "set-theme.js",
+                    "parameters": {
+                        "themeName": {
+                            "type": "string",
+                            "title": "Theme Name",
+                            "description": "Noctalia theme to apply, exactly as named (e.g. `Mocha Pink`).",
+                            "default": "Mocha Pink",
+                            "value": "Tokyo Night"
+                        },
+                        "iconColor": {
+                            "type": "string",
+                            "title": "Icon Color",
+                            "description": "Tela icon color (e.g. `pink`, `grey`, `green`).",
+                            "default": "pink",
+                            "value": "blue"
+                        }
+                    },
+                    "percentWeight": null
+                }
+            ],
+            "runMode": "all"
+        },
+        "restrictionData": {
+            "restrictions": [],
+            "mode": "all",
+            "sendFailMessage": true,
+            "useCustomFailMessage": false,
+            "failMessage": "Sorry @{user}, you cannot use this channel reward because: {reason}",
+            "sendAsReply": false
+        }
+    },
+    "989c02cb-5762-47b6-88fe-e1b9ef0b83b3": {
+        "id": "989c02cb-5762-47b6-88fe-e1b9ef0b83b3",
+        "twitchData": {
+            "broadcasterId": "893193472",
+            "broadcasterLogin": "theblack_don",
+            "broadcasterName": "theblack_don",
+            "id": "989c02cb-5762-47b6-88fe-e1b9ef0b83b3",
+            "title": "Deep Black Theme",
+            "prompt": "Change my theme to Deep Black",
+            "cost": 500,
+            "image": {
+                "url1x": "https://static-cdn.jtvnw.net/custom-reward-images/default-1.png",
+                "url2x": "https://static-cdn.jtvnw.net/custom-reward-images/default-2.png",
+                "url4x": "https://static-cdn.jtvnw.net/custom-reward-images/default-4.png"
+            },
+            "defaultImage": {
+                "url1x": "https://static-cdn.jtvnw.net/custom-reward-images/default-1.png",
+                "url2x": "https://static-cdn.jtvnw.net/custom-reward-images/default-2.png",
+                "url4x": "https://static-cdn.jtvnw.net/custom-reward-images/default-4.png"
+            },
+            "backgroundColor": "#110C12",
+            "isEnabled": true,
+            "isUserInputRequired": false,
+            "maxPerStreamSetting": {
+                "isEnabled": false,
+                "maxPerStream": null
+            },
+            "maxPerUserPerStreamSetting": {
+                "isEnabled": false,
+                "maxPerUserPerStream": null
+            },
+            "globalCooldownSetting": {
+                "isEnabled": true,
+                "globalCooldownSeconds": 300
+            },
+            "isPaused": false,
+            "isInStock": false,
+            "shouldRedemptionsSkipRequestQueue": true,
+            "cooldownExpiresAt": "2026-10-23T20:24:25.000Z"
+        },
+        "manageable": true,
+        "sortTags": [],
+        "effects": {
+            "id": "02ec08a6-b926-4dd1-b14a-2128ad16fca2",
+            "list": [
+                {
+                    "id": "ea3ba054-f928-42b9-8e4d-b4e72049df3c",
+                    "type": "firebot:customscript",
+                    "active": true,
+                    "scriptName": "set-theme.js",
+                    "parameters": {
+                        "themeName": {
+                            "type": "string",
+                            "title": "Theme Name",
+                            "description": "Noctalia theme to apply, exactly as named (e.g. `Mocha Pink`).",
+                            "default": "Mocha Pink",
+                            "value": "Deep Black"
+                        },
+                        "iconColor": {
+                            "type": "string",
+                            "title": "Icon Color",
+                            "description": "Tela icon color (e.g. `pink`, `grey`, `green`).",
+                            "default": "pink",
+                            "value": "black"
+                        }
+                    },
+                    "percentWeight": null
+                }
+            ],
+            "runMode": "all"
+        },
+        "restrictionData": {
+            "restrictions": [],
+            "mode": "all",
+            "sendFailMessage": true,
+            "useCustomFailMessage": false,
+            "failMessage": "Sorry @{user}, you cannot use this channel reward because: {reason}",
+            "sendAsReply": false
+        }
+    },
+    "25d32708-162a-44b5-90cb-943ff9fdcf20": {
+        "id": "25d32708-162a-44b5-90cb-943ff9fdcf20",
+        "twitchData": {
+            "broadcasterId": "893193472",
+            "broadcasterLogin": "theblack_don",
+            "broadcasterName": "theblack_don",
+            "id": "25d32708-162a-44b5-90cb-943ff9fdcf20",
+            "title": "Gold Theme",
+            "prompt": "Change my Theme to Gold Theme",
+            "cost": 500,
+            "image": {
+                "url1x": "https://static-cdn.jtvnw.net/custom-reward-images/default-1.png",
+                "url2x": "https://static-cdn.jtvnw.net/custom-reward-images/default-2.png",
+                "url4x": "https://static-cdn.jtvnw.net/custom-reward-images/default-4.png"
+            },
+            "defaultImage": {
+                "url1x": "https://static-cdn.jtvnw.net/custom-reward-images/default-1.png",
+                "url2x": "https://static-cdn.jtvnw.net/custom-reward-images/default-2.png",
+                "url4x": "https://static-cdn.jtvnw.net/custom-reward-images/default-4.png"
+            },
+            "backgroundColor": "#CFD60E",
+            "isEnabled": true,
+            "isUserInputRequired": false,
+            "maxPerStreamSetting": {
+                "isEnabled": false,
+                "maxPerStream": null
+            },
+            "maxPerUserPerStreamSetting": {
+                "isEnabled": false,
+                "maxPerUserPerStream": null
+            },
+            "globalCooldownSetting": {
+                "isEnabled": true,
+                "globalCooldownSeconds": 300
+            },
+            "isPaused": false,
+            "isInStock": true,
+            "shouldRedemptionsSkipRequestQueue": true,
+            "cooldownExpiresAt": null
+        },
+        "manageable": true,
+        "sortTags": [],
+        "effects": {
+            "id": "26ee9aaf-ef11-476e-a81f-cc264e14a026",
+            "list": [
+                {
+                    "id": "4caac4fd-e186-467d-9388-e39c0f1a292f",
+                    "type": "firebot:customscript",
+                    "active": true,
+                    "scriptName": "set-theme.js",
+                    "parameters": {
+                        "themeName": {
+                            "type": "string",
+                            "title": "Theme Name",
+                            "description": "Noctalia theme to apply, exactly as named (e.g. `Mocha Pink`).",
+                            "default": "Mocha Pink",
+                            "value": "Gold"
+                        },
+                        "iconColor": {
+                            "type": "string",
+                            "title": "Icon Color",
+                            "description": "Tela icon color (e.g. `pink`, `grey`, `green`).",
+                            "default": "pink",
+                            "value": "yellow"
+                        }
+                    },
+                    "percentWeight": null
+                }
+            ],
+            "runMode": "all"
+        },
+        "restrictionData": {
+            "restrictions": [],
+            "mode": "all",
+            "sendFailMessage": true,
+            "useCustomFailMessage": false,
+            "failMessage": "Sorry @{user}, you cannot use this channel reward because: {reason}",
+            "sendAsReply": false
+        }
+    },
+    "7ae97d87-143d-43a0-aa26-e1df69eb9dbe": {
+        "id": "7ae97d87-143d-43a0-aa26-e1df69eb9dbe",
+        "twitchData": {
+            "broadcasterId": "893193472",
+            "broadcasterLogin": "theblack_don",
+            "broadcasterName": "theblack_don",
+            "id": "7ae97d87-143d-43a0-aa26-e1df69eb9dbe",
+            "title": "Cream Autumn Theme",
+            "prompt": "Change my theme to Cream Autumn",
+            "cost": 500,
+            "image": {
+                "url1x": "https://static-cdn.jtvnw.net/custom-reward-images/default-1.png",
+                "url2x": "https://static-cdn.jtvnw.net/custom-reward-images/default-2.png",
+                "url4x": "https://static-cdn.jtvnw.net/custom-reward-images/default-4.png"
+            },
+            "defaultImage": {
+                "url1x": "https://static-cdn.jtvnw.net/custom-reward-images/default-1.png",
+                "url2x": "https://static-cdn.jtvnw.net/custom-reward-images/default-2.png",
+                "url4x": "https://static-cdn.jtvnw.net/custom-reward-images/default-4.png"
+            },
+            "backgroundColor": "#D9D69A",
+            "isEnabled": true,
+            "isUserInputRequired": false,
+            "maxPerStreamSetting": {
+                "isEnabled": false,
+                "maxPerStream": null
+            },
+            "maxPerUserPerStreamSetting": {
+                "isEnabled": false,
+                "maxPerUserPerStream": null
+            },
+            "globalCooldownSetting": {
+                "isEnabled": true,
+                "globalCooldownSeconds": 300
+            },
+            "isPaused": false,
+            "isInStock": true,
+            "shouldRedemptionsSkipRequestQueue": true,
+            "cooldownExpiresAt": null
+        },
+        "manageable": true,
+        "sortTags": [],
+        "effects": {
+            "id": "f0be7bdc-9ab9-4150-8ad5-f7f37f343cac",
+            "list": [
+                {
+                    "id": "bc9c86fb-9652-4f6f-8033-ef20ffec1e39",
+                    "type": "firebot:customscript",
+                    "active": true,
+                    "scriptName": "set-theme.js",
+                    "parameters": {
+                        "themeName": {
+                            "type": "string",
+                            "title": "Theme Name",
+                            "description": "Noctalia theme to apply, exactly as named (e.g. `Mocha Pink`).",
+                            "default": "Mocha Pink",
+                            "value": "Cream Autumn"
+                        }
+                    },
+                    "percentWeight": null
+                }
+            ],
+            "runMode": "all"
+        },
+        "restrictionData": {
+            "restrictions": [],
+            "mode": "all",
+            "sendFailMessage": true,
+            "useCustomFailMessage": false,
+            "failMessage": "Sorry @{user}, you cannot use this channel reward because: {reason}",
+            "sendAsReply": false
+        }
+    },
+    "b61a44b9-b616-4c98-8383-180069b52ab5": {
+        "id": "b61a44b9-b616-4c98-8383-180069b52ab5",
+        "twitchData": {
+            "broadcasterId": "893193472",
+            "broadcasterLogin": "theblack_don",
+            "broadcasterName": "theblack_don",
+            "id": "b61a44b9-b616-4c98-8383-180069b52ab5",
+            "title": "Mocha Lavender Theme",
+            "prompt": "Change my theme to Mocha Lavender",
+            "cost": 500,
+            "image": {
+                "url1x": "https://static-cdn.jtvnw.net/custom-reward-images/default-1.png",
+                "url2x": "https://static-cdn.jtvnw.net/custom-reward-images/default-2.png",
+                "url4x": "https://static-cdn.jtvnw.net/custom-reward-images/default-4.png"
+            },
+            "defaultImage": {
+                "url1x": "https://static-cdn.jtvnw.net/custom-reward-images/default-1.png",
+                "url2x": "https://static-cdn.jtvnw.net/custom-reward-images/default-2.png",
+                "url4x": "https://static-cdn.jtvnw.net/custom-reward-images/default-4.png"
+            },
+            "backgroundColor": "#9A0ABE",
+            "isEnabled": true,
+            "isUserInputRequired": false,
+            "maxPerStreamSetting": {
+                "isEnabled": false,
+                "maxPerStream": null
+            },
+            "maxPerUserPerStreamSetting": {
+                "isEnabled": false,
+                "maxPerUserPerStream": null
+            },
+            "globalCooldownSetting": {
+                "isEnabled": true,
+                "globalCooldownSeconds": 300
+            },
+            "isPaused": false,
+            "isInStock": true,
+            "shouldRedemptionsSkipRequestQueue": true,
+            "cooldownExpiresAt": null
+        },
+        "manageable": true,
+        "sortTags": [],
+        "effects": {
+            "id": "01d19369-2f61-47fb-a792-3954210c3393",
+            "list": [
+                {
+                    "id": "115a6ffc-4131-4312-a7c0-31ab6ec1f049",
+                    "type": "firebot:customscript",
+                    "active": true,
+                    "scriptName": "set-theme.js",
+                    "parameters": {
+                        "themeName": {
+                            "type": "string",
+                            "title": "Theme Name",
+                            "description": "Noctalia theme to apply, exactly as named (e.g. `Mocha Pink`).",
+                            "default": "Mocha Pink",
+                            "value": "Mocha Lavender"
+                        },
+                        "iconColor": {
+                            "type": "string",
+                            "title": "Icon Color",
+                            "description": "Tela icon color (e.g. `pink`, `grey`, `green`).",
+                            "default": "pink",
+                            "value": "purple"
+                        }
+                    },
+                    "percentWeight": null
+                }
+            ],
+            "runMode": "all"
+        },
+        "restrictionData": {
+            "restrictions": [],
+            "mode": "all",
+            "sendFailMessage": true,
+            "useCustomFailMessage": false,
+            "failMessage": "Sorry @{user}, you cannot use this channel reward because: {reason}",
+            "sendAsReply": false
+        }
+    },
+    "9361ce3c-8e11-4ef4-8dbb-67a99cfb32f8": {
+        "id": "9361ce3c-8e11-4ef4-8dbb-67a99cfb32f8",
+        "twitchData": {
+            "broadcasterId": "893193472",
+            "broadcasterLogin": "theblack_don",
+            "broadcasterName": "theblack_don",
+            "id": "9361ce3c-8e11-4ef4-8dbb-67a99cfb32f8",
+            "title": "Nord Pink",
+            "prompt": "Change my theme to Nord Pink",
+            "cost": 500,
+            "image": {
+                "url1x": "https://static-cdn.jtvnw.net/custom-reward-images/default-1.png",
+                "url2x": "https://static-cdn.jtvnw.net/custom-reward-images/default-2.png",
+                "url4x": "https://static-cdn.jtvnw.net/custom-reward-images/default-4.png"
+            },
+            "defaultImage": {
+                "url1x": "https://static-cdn.jtvnw.net/custom-reward-images/default-1.png",
+                "url2x": "https://static-cdn.jtvnw.net/custom-reward-images/default-2.png",
+                "url4x": "https://static-cdn.jtvnw.net/custom-reward-images/default-4.png"
+            },
+            "backgroundColor": "#E07EEC",
+            "isEnabled": true,
+            "isUserInputRequired": false,
+            "maxPerStreamSetting": {
+                "isEnabled": false,
+                "maxPerStream": null
+            },
+            "maxPerUserPerStreamSetting": {
+                "isEnabled": false,
+                "maxPerUserPerStream": null
+            },
+            "globalCooldownSetting": {
+                "isEnabled": true,
+                "globalCooldownSeconds": 300
+            },
+            "isPaused": false,
+            "isInStock": true,
+            "shouldRedemptionsSkipRequestQueue": true,
+            "cooldownExpiresAt": null
+        },
+        "manageable": true,
+        "sortTags": [],
+        "effects": {
+            "id": "85858d3d-d5f0-4314-bef1-5596fff0c2cc",
+            "list": [
+                {
+                    "id": "3fd3af3d-2fb4-4d54-8404-ad03bd36fcb2",
+                    "type": "firebot:customscript",
+                    "active": true,
+                    "scriptName": "set-theme.js",
+                    "parameters": {
+                        "themeName": {
+                            "type": "string",
+                            "title": "Theme Name",
+                            "description": "Noctalia theme to apply, exactly as named (e.g. `Mocha Pink`).",
+                            "default": "Mocha Pink",
+                            "value": "Nord Pink"
+                        },
+                        "iconColor": {
+                            "type": "string",
+                            "title": "Icon Color",
+                            "description": "Tela icon color (e.g. `pink`, `grey`, `green`).",
+                            "default": "pink",
+                            "value": "pink"
+                        }
+                    },
+                    "percentWeight": null
+                }
+            ],
+            "runMode": "all"
+        },
+        "restrictionData": {
+            "restrictions": [],
+            "mode": "all",
+            "sendFailMessage": true,
+            "useCustomFailMessage": false,
+            "failMessage": "Sorry @{user}, you cannot use this channel reward because: {reason}",
+            "sendAsReply": false
+        }
+    }
+}

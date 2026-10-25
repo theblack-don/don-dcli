@@ -1,0 +1,5 @@
+{ system, pkgs }:
+
+{
+  host = "fednix";
+}

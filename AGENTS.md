@@ -22,7 +22,8 @@ user-owned, hand-maintained configuration — treat it accordingly.
 
 ## Context
 
-- `config.nix` — pointer config: `host = "fednix"`.
+- `config.nix` — pointer config: `host = system.hostname`, which resolves to
+  `hosts/<hostname>.nix`. The machine hostname must match the host file name.
 - `hosts/fednix.nix` — full host configuration (packages, services, nix).
 - `modules/` — Nix modules (`base.nix`, `example.nix`).
 - `state/` — dcli state and `yaml-backup-*` (old YAML configs; do not edit or

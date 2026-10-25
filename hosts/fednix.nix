@@ -11,6 +11,15 @@
   # module hooks through sudo (root), breaking per-user nix profile installs.
   module_processing = "sequential";
 
+  # COPR repositories enabled before native packages
+  copr_repos = [
+    "theblackdon/dcli"                    # dcli
+    "theblackdon/kwee"                    # kineticwe (kineticwe-dev module)
+    "bieszczaders/kernel-cachyos-addons"  # scx-scheds/scx-tools (lgl deps)
+    "imput/helium"                        # helium-bin
+    "lemmy/favorites"                     # fluxer-canary
+  ];
+
   # packages managed by native package manager (dnf)
   packages = [
     "kitty"

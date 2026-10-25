@@ -3,6 +3,11 @@
 {
   description = "Bootc Module";
 
+  # COPR providing dcli-bootc
+  copr_repos = [
+    "theblackdon/dcli-bootc"
+  ];
+
   packages = [
     "bootc"
     "podman"

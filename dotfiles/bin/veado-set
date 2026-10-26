@@ -1,0 +1,197 @@
+#!/usr/bin/env python3
+"""Switch a veadotube mini avatar state over its built-in WebSocket API.
+
+This talks to the same control server that veadotube's own web remote uses
+(the little page at http://127.0.0.1:<port>).  It needs no keyboard focus,
+no ydotool and no root.
+
+Usage:
+    veado-set Normal
+    veado-set "Hulk Don"
+    veado-set --list            # print available states, one per line
+    veado-set --port 43909 Angry
+
+The server port is random each launch, so it is discovered from
+~/.veadotube/instances/<instance> (the "server" field).
+"""
+
+import base64
+import glob
+import json
+import os
+import socket
+import struct
+import sys
+import time
+
+
+def _instances():
+    """Yield (host, port) for every running veadotube instance, newest first."""
+    pattern = os.path.expanduser("~/.veadotube/instances/*")
+    files = [f for f in glob.glob(pattern) if os.path.isfile(f)]
+    files.sort(key=os.path.getmtime, reverse=True)
+    for path in files:
+        try:
+            with open(path) as fh:
+                server = json.load(fh).get("server") or ""
+            host, _, port = server.rpartition(":")
+            yield host or "127.0.0.1", int(port)
+        except (OSError, ValueError, AttributeError):
+            continue
+
+
+class WebSocket:
+    """Tiny RFC6455 client, standard library only."""
+
+    def __init__(self, host, port, name, timeout=5.0):
+        self.sock = socket.create_connection((host, port), timeout=timeout)
+        key = base64.b64encode(os.urandom(16)).decode()
+        request = (
+            f"GET /?n={name} HTTP/1.1\r\n"
+            f"Host: {host}:{port}\r\n"
+            "Upgrade: websocket\r\n"
+            "Connection: Upgrade\r\n"
+            f"Sec-WebSocket-Key: {key}\r\n"
+            "Sec-WebSocket-Version: 13\r\n\r\n"
+        )
+        self.sock.sendall(request.encode())
+        buf = b""
+        while b"\r\n\r\n" not in buf:
+            buf += self.sock.recv(4096)
+        head, _, self._buf = buf.partition(b"\r\n\r\n")
+        if b" 101 " not in head.split(b"\r\n", 1)[0] + b" ":
+            raise ConnectionError("websocket upgrade refused")
+
+    def send(self, text):
+        data = text.encode()
+        mask = os.urandom(4)
+        header = bytearray([0x81])
+        n = len(data)
+        if n < 126:
+            header.append(0x80 | n)
+        elif n < 65536:
+            header.append(0x80 | 126)
+            header += struct.pack(">H", n)
+        else:
+            header.append(0x80 | 127)
+            header += struct.pack(">Q", n)
+        masked = bytes(b ^ mask[i % 4] for i, b in enumerate(data))
+        self.sock.sendall(bytes(header) + mask + masked)
+
+    def send_state_event(self, payload):
+        self.send("nodes:" + json.dumps({
+            "event": "payload", "type": "stateEvents",
+            "id": "mini", "payload": payload,
+        }))
+
+    def messages(self, seconds=1.5):
+        """Yield decoded text frames for `seconds`."""
+        deadline = time.time() + seconds
+        self.sock.settimeout(0.35)
+        while time.time() < deadline:
+            try:
+                self._buf += self.sock.recv(65536)
+            except socket.timeout:
+                continue
+            except OSError:
+                return
+            while len(self._buf) >= 2:
+                opcode = self._buf[0] & 0x0F
+                length = self._buf[1] & 0x7F
+                offset = 2
+                if length == 126:
+                    if len(self._buf) < 4:
+                        break
+                    length = struct.unpack(">H", self._buf[2:4])[0]
+                    offset = 4
+                elif length == 127:
+                    if len(self._buf) < 10:
+                        break
+                    length = struct.unpack(">Q", self._buf[2:10])[0]
+                    offset = 10
+                if len(self._buf) < offset + length:
+                    break
+                frame = self._buf[offset:offset + length]
+                self._buf = self._buf[offset + length:]
+                if opcode == 0x1:
+                    yield frame.decode(errors="replace")
+                elif opcode == 0x8:
+                    return
+
+    def close(self):
+        try:
+            self.sock.close()
+        except OSError:
+            pass
+
+
+def _connect(name):
+    errors = []
+    for host, port in _instances():
+        try:
+            return WebSocket(host, port, name)
+        except OSError as exc:
+            errors.append(f"{host}:{port}: {exc}")
+    hint = "is veadotube mini running?"
+    if errors:
+        hint += " (tried " + ", ".join(errors) + ")"
+    raise SystemExit("veado-set: no reachable veadotube server; " + hint)
+
+
+def _states(ws):
+    ws.send_state_event({"event": "listen"})
+    for message in ws.messages(2.0):
+        if not message.startswith("nodes:"):
+            continue
+        try:
+            data = json.loads(message[6:]).get("payload", {})
+        except ValueError:
+            continue
+        if data.get("event") == "list":
+            return [s["id"] for s in data.get("states", [])]
+    return []
+
+
+def main(argv):
+    args = argv[1:]
+    port = None
+    name = "veado-set"
+    if "--port" in args:
+        i = args.index("--port")
+        try:
+            port = int(args[i + 1])
+        except (IndexError, ValueError):
+            raise SystemExit("veado-set: --port needs a number")
+        del args[i:i + 2]
+
+    if not args:
+        raise SystemExit(__doc__.strip())
+
+    if port is not None:
+        ws = WebSocket("127.0.0.1", port, name)
+    else:
+        ws = _connect(name)
+
+    try:
+        if args[0] in ("--list", "-l", "list"):
+            for state in _states(ws):
+                print(state)
+            return 0
+
+        state = args[0]
+        known = _states(ws)
+        if known and state not in known:
+            raise SystemExit(
+                f"veado-set: no state named '{state}'. "
+                f"Valid states: {', '.join(known)}")
+        ws.send_state_event({"event": "set", "state": state})
+        # Give the server a moment to apply the change before we disconnect.
+        for _ in ws.messages(0.8):
+            pass
+        return 0
+    finally:
+        ws.close()
+
+
+if __name__ == "__main__":
+    sys.exit(main(sys.argv))

@@ -236,7 +236,7 @@ tiles={"layoutDirection":"floating","tiles":[{"height":1,"width":1,"x":0,"y":0}]
 
 [Tiling][34915ed2-21b9-4bcf-b56a-f78bc974bc25][8f7c5734-2aaa-4538-bfea-9cbc70529d25]
 padding=4
-tiles={"layoutDirection":"floating","tiles":[]}
+tiles={"layoutDirection":"floating","tiles":[{"height":1,"width":1,"x":0,"y":0}]}
 
 [Tiling][34915ed2-21b9-4bcf-b56a-f78bc974bc25][aef37a2f-a30f-444f-b4a1-327b1776728c]
 padding=4
@@ -272,7 +272,7 @@ tiles={"layoutDirection":"floating","tiles":[]}
 
 [Tiling][381b5b60-d2bc-4f28-ac42-63ad0b58971c][8f7c5734-2aaa-4538-bfea-9cbc70529d25]
 padding=4
-tiles={"layoutDirection":"floating","tiles":[]}
+tiles={"layoutDirection":"floating","tiles":[{"height":1,"width":1,"x":0,"y":0}]}
 
 [Tiling][381b5b60-d2bc-4f28-ac42-63ad0b58971c][aef37a2f-a30f-444f-b4a1-327b1776728c]
 padding=4
@@ -380,7 +380,7 @@ tiles={"layoutDirection":"floating","tiles":[]}
 
 [Tiling][61cbea25-24ec-4af3-8014-de7aefb04717][8f7c5734-2aaa-4538-bfea-9cbc70529d25]
 padding=4
-tiles={"layoutDirection":"floating","tiles":[{"height":0.9923611111111111,"width":0.5,"x":0,"y":0},{"height":0.9923611111111111,"width":0.5,"x":0.5,"y":0},{"height":1,"width":1,"x":0,"y":0.9923611111111111}]}
+tiles={"layoutDirection":"floating","tiles":[{"height":1,"width":0.5,"x":0,"y":0},{"height":1,"width":0.5,"x":0.5,"y":0}]}
 
 [Tiling][61cbea25-24ec-4af3-8014-de7aefb04717][aef37a2f-a30f-444f-b4a1-327b1776728c]
 padding=4
@@ -504,8 +504,8 @@ DefaultLayout=AutoGrid
 [Tiling][Output DP-1]
 GapBetween=10
 GapBottom=10
-GapLeft=450
-GapRight=450
+GapLeft=15
+GapRight=15
 GapTop=10
 
 [Tiling][Output DP-3]
@@ -558,7 +558,7 @@ tiles={"layoutDirection":"floating","tiles":[]}
 
 [Tiling][cb1c3e08-4020-4e10-b025-13fc7891ab55][3b5277e2-d243-4861-9f1c-4bdc3b4d2509]
 padding=4
-tiles={"layoutDirection":"floating","tiles":[]}
+tiles={"layoutDirection":"floating","tiles":[{"height":1,"width":1,"x":0,"y":0}]}
 
 [Tiling][cb1c3e08-4020-4e10-b025-13fc7891ab55][6323a9c8-0ae6-4211-b92b-6704d95aa0f0]
 padding=4
@@ -694,7 +694,7 @@ tiles={"layoutDirection":"floating","tiles":[{"height":1,"width":1,"x":0,"y":0}]
 
 [Tiling][ecdd55dc-208f-441b-93ab-f9a5721266c1][8f7c5734-2aaa-4538-bfea-9cbc70529d25]
 padding=4
-tiles={"layoutDirection":"floating","tiles":[]}
+tiles={"layoutDirection":"floating","tiles":[{"height":1,"width":1,"x":0,"y":0}]}
 
 [Tiling][ecdd55dc-208f-441b-93ab-f9a5721266c1][aef37a2f-a30f-444f-b4a1-327b1776728c]
 padding=4

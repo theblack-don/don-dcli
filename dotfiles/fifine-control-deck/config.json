@@ -1,0 +1,946 @@
+{
+  "version": 1,
+  "brightness": 94,
+  "glow": false,
+  "snap_hint_dismissed": false,
+  "sleep_with_screen": true,
+  "active_profile_id": "d5c77ed8",
+  "profiles": [
+    {
+      "name": "Default",
+      "id": "d5c77ed8",
+      "wm_class": "",
+      "pages": [
+        {
+          "name": "Main",
+          "id": "d3e3ea4d",
+          "keys": {
+            "1": {
+              "label": "",
+              "icon": "/home/don/BlackDon/logos/0a55ed35-24e4-441a-81ca-afb718e9d88e-2120555628.png",
+              "bg_color": "#000000",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "launch_app",
+                "params": {
+                  "command": "kitty --hold fastfetch"
+                }
+              }
+            },
+            "5": {
+              "label": "Volume",
+              "icon": "lib:volume_up",
+              "bg_color": "#000000",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "volume",
+                "params": {
+                  "cmd": "up",
+                  "step": ""
+                }
+              }
+            },
+            "4": {
+              "label": "Volume",
+              "icon": "lib:volume_down",
+              "bg_color": "#000000",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "volume",
+                "params": {
+                  "cmd": "down",
+                  "step": ""
+                }
+              }
+            },
+            "15": {
+              "label": "Next",
+              "icon": "lib:next_page",
+              "bg_color": "#000000",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "next_page",
+                "params": {}
+              }
+            },
+            "10": {
+              "label": "Nocatalia",
+              "icon": "/home/don/BlackDon/logos/noct.png",
+              "bg_color": "#101020",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "run_command",
+                "params": {
+                  "command": "noctalia-kwe"
+                }
+              }
+            },
+            "9": {
+              "label": "",
+              "icon": "/home/don/BlackDon/logos/tela folders/purple.png",
+              "bg_color": "#101020",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "goto_page",
+                "params": {
+                  "page": "5"
+                }
+              }
+            },
+            "3": {
+              "label": "Deafen",
+              "icon": "lib:mute",
+              "bg_color": "#101020",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "hotkey",
+                "params": {
+                  "keys": "ctrl+shift+D"
+                }
+              }
+            },
+            "2": {
+              "label": "",
+              "icon": "/home/don/BlackDon/logos/kineticwe_logo.png",
+              "bg_color": "#000000",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "launch_app",
+                "params": {
+                  "command": "noctalia-kwe msg kinetic-settings-open"
+                }
+              }
+            },
+            "11": {
+              "label": "",
+              "icon": "/home/don/BlackDon/logos/steam-icon-transparent-8-130334866.png",
+              "bg_color": "#000000",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "launch_app",
+                "params": {
+                  "command": "steam"
+                }
+              }
+            },
+            "6": {
+              "label": "",
+              "icon": "",
+              "bg_color": "#101020",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "monitor",
+                "params": {}
+              }
+            },
+            "13": {
+              "label": "",
+              "icon": "/home/don/BlackDon/logos/synchra-icon.png",
+              "bg_color": "#000000",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "launch_app",
+                "params": {
+                  "command": "chromium --app=\"https://dash.synchra.net/channels/\""
+                }
+              }
+            },
+            "14": {
+              "label": "",
+              "icon": "/home/don/BlackDon/logos/obslogo.png",
+              "bg_color": "#000000",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "launch_app",
+                "params": {
+                  "command": "flatpak run com.obsproject.Studio"
+                }
+              }
+            },
+            "7": {
+              "label": "",
+              "icon": "",
+              "bg_color": "#101020",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "monitor",
+                "params": {
+                  "metric": "ram",
+                  "style": "number",
+                  "interval": "",
+                  "target": "",
+                  "clock_format": "auto",
+                  "clock_date": "auto"
+                }
+              }
+            },
+            "8": {
+              "label": "",
+              "icon": "/home/don/BlackDon/logos/themes/mocha pink.png",
+              "bg_color": "#101020",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "goto_page",
+                "params": {
+                  "page": "6"
+                }
+              }
+            },
+            "12": {
+              "label": "",
+              "icon": "/home/don/BlackDon/logos/Firebot-app-icon-optimized-17dd9cf9-c635-4f27-8326-1ffcef47a53a-4041994069.png",
+              "bg_color": "#000000",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "launch_app",
+                "params": {
+                  "command": "firebotv5"
+                }
+              }
+            }
+          },
+          "knobs": {}
+        },
+        {
+          "name": "Page",
+          "id": "e40ebf76",
+          "keys": {
+            "15": {
+              "label": "Prev",
+              "icon": "lib:prev_page",
+              "bg_color": "#101020",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "prev_page",
+                "params": {}
+              }
+            },
+            "1": {
+              "label": "Normal",
+              "icon": "/home/don/BlackDon/talkingdon/3.png",
+              "bg_color": "#101020",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "run_command",
+                "params": {
+                  "command": "\"$HOME/.local/bin/veado-set\" Normal"
+                }
+              }
+            },
+            "2": {
+              "label": "Angry",
+              "icon": "/home/don/BlackDon/talkingdon/2.png",
+              "bg_color": "#101020",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "run_command",
+                "params": {
+                  "command": "\"$HOME/.local/bin/veado-set\" Angry"
+                }
+              }
+            },
+            "3": {
+              "label": "Excited",
+              "icon": "/home/don/BlackDon/talkingdon/4.png",
+              "bg_color": "#101020",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "run_command",
+                "params": {
+                  "command": "\"$HOME/.local/bin/veado-set\" Excited"
+                }
+              }
+            },
+            "4": {
+              "label": "Laughing",
+              "icon": "/home/don/BlackDon/talkingdon/12.png",
+              "bg_color": "#101020",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "run_command",
+                "params": {
+                  "command": "\"$HOME/.local/bin/veado-set\" laughing"
+                }
+              }
+            },
+            "6": {
+              "label": "BIG",
+              "icon": "/home/don/BlackDon/talkingdon/Main/1.png",
+              "bg_color": "#000000",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "run_command",
+                "params": {
+                  "command": "/home/don/.local/bin/firebot-command bdon"
+                }
+              }
+            },
+            "7": {
+              "label": "Pointing",
+              "icon": "/home/don/BlackDon/talkingdon/13.png",
+              "bg_color": "#101020",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "run_command",
+                "params": {
+                  "command": "\"$HOME/.local/bin/veado-set\" Pointing"
+                }
+              }
+            },
+            "8": {
+              "label": "CatCam",
+              "icon": "lib:camera",
+              "bg_color": "#101020",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "run_command",
+                "params": {
+                  "command": "/home/don/.local/bin/firebot-command catcam"
+                }
+              }
+            },
+            "9": {
+              "label": "HandCam",
+              "icon": "lib:camera",
+              "bg_color": "#101020",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "run_command",
+                "params": {
+                  "command": "/home/don/.local/bin/firebot-command handcam"
+                }
+              }
+            },
+            "10": {
+              "label": "Sounds",
+              "icon": "lib:next_page",
+              "bg_color": "#101020",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "goto_page",
+                "params": {
+                  "page": "4"
+                }
+              }
+            },
+            "11": {
+              "label": "",
+              "icon": "/home/don/BlackDon/logos/startingsoon.png",
+              "bg_color": "#101020",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "run_command",
+                "params": {
+                  "command": "/home/don/.local/bin/firebot-command startingsoon"
+                }
+              }
+            },
+            "12": {
+              "label": "",
+              "icon": "/home/don/BlackDon/logos/BRB.png",
+              "bg_color": "#101020",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "run_command",
+                "params": {
+                  "command": "/home/don/.local/bin/firebot-command brb"
+                }
+              }
+            },
+            "14": {
+              "label": "",
+              "icon": "/home/don/BlackDon/OBS Assets/recordingbutton.png",
+              "bg_color": "#101020",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "run_command",
+                "params": {
+                  "command": "/home/don/.local/bin/firebot-command rec"
+                }
+              }
+            },
+            "13": {
+              "label": "discordcam",
+              "icon": "/home/don/BlackDon/scribble-icons/scribcord.png",
+              "bg_color": "#101020",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "run_command",
+                "params": {
+                  "command": "/home/don/.local/bin/firebot-command lglcam"
+                }
+              }
+            },
+            "5": {
+              "label": "Gaming",
+              "icon": "/home/don/BlackDon/talkingdon/5.png",
+              "bg_color": "#101020",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "run_command",
+                "params": {
+                  "command": "\"$HOME/.local/bin/veado-set\" Sitting"
+                }
+              }
+            }
+          },
+          "knobs": {}
+        },
+        {
+          "name": "States",
+          "id": "2fa90399",
+          "keys": {
+            "1": {
+              "label": "Normal",
+              "icon": "",
+              "bg_color": "#101020",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "run_command",
+                "params": {
+                  "command": "\"$HOME/.local/bin/veado-set\" Normal"
+                }
+              }
+            },
+            "2": {
+              "label": "Angry",
+              "icon": "",
+              "bg_color": "#101020",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "run_command",
+                "params": {
+                  "command": "\"$HOME/.local/bin/veado-set\" Angry"
+                }
+              }
+            },
+            "3": {
+              "label": "Excited",
+              "icon": "",
+              "bg_color": "#101020",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "run_command",
+                "params": {
+                  "command": "\"$HOME/.local/bin/veado-set\" Excited"
+                }
+              }
+            },
+            "4": {
+              "label": "Sitting",
+              "icon": "",
+              "bg_color": "#101020",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "run_command",
+                "params": {
+                  "command": "\"$HOME/.local/bin/veado-set\" Sitting"
+                }
+              }
+            },
+            "5": {
+              "label": "Hulk Don",
+              "icon": "",
+              "bg_color": "#101020",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "run_command",
+                "params": {
+                  "command": "\"$HOME/.local/bin/veado-set\" \"Hulk Don\""
+                }
+              }
+            },
+            "6": {
+              "label": "laughing",
+              "icon": "",
+              "bg_color": "#101020",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "run_command",
+                "params": {
+                  "command": "\"$HOME/.local/bin/veado-set\" laughing"
+                }
+              }
+            },
+            "15": {
+              "label": "Prev",
+              "icon": "lib:prev_page",
+              "bg_color": "#101020",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "prev_page",
+                "params": {}
+              }
+            }
+          },
+          "knobs": {}
+        },
+        {
+          "name": "Page",
+          "id": "6c082db2",
+          "keys": {
+            "1": {
+              "label": "",
+              "icon": "",
+              "bg_color": "#101020",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "none",
+                "params": {}
+              }
+            },
+            "15": {
+              "label": "",
+              "icon": "lib:prev_page",
+              "bg_color": "#101020",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "goto_page",
+                "params": {
+                  "page": "2"
+                }
+              }
+            },
+            "2": {
+              "label": "",
+              "icon": "",
+              "bg_color": "#101020",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "none",
+                "params": {}
+              }
+            },
+            "3": {
+              "label": "",
+              "icon": "",
+              "bg_color": "#101020",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "none",
+                "params": {}
+              }
+            },
+            "4": {
+              "label": "",
+              "icon": "",
+              "bg_color": "#101020",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "none",
+                "params": {}
+              }
+            },
+            "5": {
+              "label": "",
+              "icon": "",
+              "bg_color": "#101020",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "none",
+                "params": {}
+              }
+            },
+            "6": {
+              "label": "Zoom",
+              "icon": "/home/don/BlackDon/logos/Firebot-app-icon-optimized-17dd9cf9-c635-4f27-8326-1ffcef47a53a-4041994069.png",
+              "bg_color": "#101020",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "run_command",
+                "params": {
+                  "command": "/home/don/.local/bin/firebot-command zoom"
+                }
+              }
+            },
+            "7": {
+              "label": "StoryTime",
+              "icon": "/home/don/BlackDon/logos/Firebot-app-icon-optimized-17dd9cf9-c635-4f27-8326-1ffcef47a53a-4041994069.png",
+              "bg_color": "#101020",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "run_command",
+                "params": {
+                  "command": "/home/don/.local/bin/firebot-command storytime"
+                }
+              }
+            },
+            "8": {
+              "label": "DonEffect",
+              "icon": "/home/don/BlackDon/logos/Firebot-app-icon-optimized-17dd9cf9-c635-4f27-8326-1ffcef47a53a-4041994069.png",
+              "bg_color": "#101020",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "run_command",
+                "params": {
+                  "command": "/home/don/.local/bin/firebot-command doneffect"
+                }
+              }
+            },
+            "9": {
+              "label": "Kwin",
+              "icon": "/home/don/BlackDon/logos/Firebot-app-icon-optimized-17dd9cf9-c635-4f27-8326-1ffcef47a53a-4041994069.png",
+              "bg_color": "#101020",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "run_command",
+                "params": {
+                  "command": "/home/don/.local/bin/firebot-command kwin"
+                }
+              }
+            },
+            "10": {
+              "label": "Keybinds",
+              "icon": "/home/don/BlackDon/logos/Firebot-app-icon-optimized-17dd9cf9-c635-4f27-8326-1ffcef47a53a-4041994069.png",
+              "bg_color": "#101020",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "run_command",
+                "params": {
+                  "command": "/home/don/.local/bin/firebot-command keybinds"
+                }
+              }
+            }
+          },
+          "knobs": {}
+        },
+        {
+          "name": "Page",
+          "id": "f03655cb",
+          "keys": {
+            "1": {
+              "label": "",
+              "icon": "/home/don/BlackDon/logos/tela folders/purple.png",
+              "bg_color": "#101020",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "run_command",
+                "params": {
+                  "command": "set-tela-icons purple"
+                }
+              }
+            },
+            "2": {
+              "label": "",
+              "icon": "/home/don/BlackDon/logos/tela folders/_blue.png",
+              "bg_color": "#101020",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "run_command",
+                "params": {
+                  "command": "set-tela-icons blue"
+                }
+              }
+            },
+            "3": {
+              "label": "",
+              "icon": "/home/don/BlackDon/logos/tela folders/grey.png",
+              "bg_color": "#101020",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "run_command",
+                "params": {
+                  "command": "set-tela-icons grey"
+                }
+              }
+            },
+            "4": {
+              "label": "",
+              "icon": "/home/don/BlackDon/logos/tela folders/_orange.png",
+              "bg_color": "#101020",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "run_command",
+                "params": {
+                  "command": "set-tela-icons orange"
+                }
+              }
+            },
+            "5": {
+              "label": "",
+              "icon": "/home/don/BlackDon/logos/tela folders/red.png",
+              "bg_color": "#101020",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "run_command",
+                "params": {
+                  "command": "set-tela-icons red"
+                }
+              }
+            },
+            "6": {
+              "label": "",
+              "icon": "/home/don/BlackDon/logos/tela folders/brown.png",
+              "bg_color": "#101020",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "run_command",
+                "params": {
+                  "command": "set-tela-icons brown"
+                }
+              }
+            },
+            "7": {
+              "label": "",
+              "icon": "/home/don/BlackDon/logos/tela folders/green.png",
+              "bg_color": "#101020",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "run_command",
+                "params": {
+                  "command": "set-tela-icons green"
+                }
+              }
+            },
+            "8": {
+              "label": "",
+              "icon": "/home/don/BlackDon/logos/tela folders/black.png",
+              "bg_color": "#101020",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "run_command",
+                "params": {
+                  "command": "set-tela-icons black"
+                }
+              }
+            },
+            "9": {
+              "label": "",
+              "icon": "/home/don/BlackDon/logos/tela folders/pink.png",
+              "bg_color": "#101020",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "run_command",
+                "params": {
+                  "command": "set-tela-icons pink"
+                }
+              }
+            },
+            "10": {
+              "label": "",
+              "icon": "/home/don/BlackDon/logos/tela folders/yellow.png",
+              "bg_color": "#101020",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "run_command",
+                "params": {
+                  "command": "set-tela-icons yellow"
+                }
+              }
+            },
+            "15": {
+              "label": "",
+              "icon": "lib:prev_page",
+              "bg_color": "#101020",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "goto_page",
+                "params": {
+                  "page": "1"
+                }
+              }
+            },
+            "11": {
+              "label": "",
+              "icon": "",
+              "bg_color": "#101020",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "none",
+                "params": {}
+              }
+            }
+          },
+          "knobs": {}
+        },
+        {
+          "name": "Page",
+          "id": "d34dd581",
+          "keys": {
+            "15": {
+              "label": "",
+              "icon": "lib:prev_page",
+              "bg_color": "#101020",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "goto_page",
+                "params": {
+                  "page": "1"
+                }
+              }
+            },
+            "1": {
+              "label": "",
+              "icon": "/home/don/Pictures/Screenshots/Screenshot_20260920_105327.png",
+              "bg_color": "#101020",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "run_command",
+                "params": {
+                  "command": "noctalia-kwe msg plugin theblackdon/theme-switcher:wallpaper-ipc all apply \"Mocha Pink\""
+                }
+              }
+            },
+            "2": {
+              "label": "",
+              "icon": "/home/don/Pictures/Screenshots/Screenshot_20260920_105246.png",
+              "bg_color": "#101020",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "run_command",
+                "params": {
+                  "command": "noctalia-kwe msg plugin theblackdon/theme-switcher:wallpaper-ipc all apply \"Monochrome\""
+                }
+              }
+            },
+            "3": {
+              "label": "",
+              "icon": "/home/don/Pictures/Screenshots/Screenshot_20260920_105214.png",
+              "bg_color": "#101020",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "run_command",
+                "params": {
+                  "command": "noctalia-kwe msg plugin theblackdon/theme-switcher:wallpaper-ipc all apply \"Gruvbox\""
+                }
+              }
+            },
+            "4": {
+              "label": "",
+              "icon": "/home/don/Pictures/Screenshots/Screenshot_20260920_105123.png",
+              "bg_color": "#101020",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "run_command",
+                "params": {
+                  "command": "noctalia-kwe msg plugin theblackdon/theme-switcher:wallpaper-ipc all apply \"Ruby\""
+                }
+              }
+            },
+            "5": {
+              "label": "",
+              "icon": "/home/don/Pictures/Screenshots/Screenshot_20260920_105056.png",
+              "bg_color": "#101020",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "run_command",
+                "params": {
+                  "command": "noctalia-kwe msg plugin theblackdon/theme-switcher:wallpaper-ipc all apply \"Tokyo Night\""
+                }
+              }
+            },
+            "6": {
+              "label": "",
+              "icon": "/home/don/Pictures/Screenshots/Screenshot_20260920_105016.png",
+              "bg_color": "#101020",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "run_command",
+                "params": {
+                  "command": "noctalia-kwe msg plugin theblackdon/theme-switcher:wallpaper-ipc all apply \"Deep Black\""
+                }
+              }
+            },
+            "7": {
+              "label": "",
+              "icon": "/home/don/Pictures/Screenshots/Screenshot_20260920_104942.png",
+              "bg_color": "#101020",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "run_command",
+                "params": {
+                  "command": "noctalia-kwe msg plugin theblackdon/theme-switcher:wallpaper-ipc all apply \"Gold\""
+                }
+              }
+            },
+            "8": {
+              "label": "",
+              "icon": "/home/don/Pictures/Screenshots/Screenshot_20260921_123613.png",
+              "bg_color": "#101020",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "run_command",
+                "params": {
+                  "command": "noctalia-kwe msg plugin theblackdon/theme-switcher:wallpaper-ipc all apply \"Cream Autumn\""
+                }
+              }
+            },
+            "9": {
+              "label": "",
+              "icon": "/home/don/Pictures/Screenshots/Screenshot_20260920_104732.png",
+              "bg_color": "#101020",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "run_command",
+                "params": {
+                  "command": "noctalia-kwe msg plugin theblackdon/theme-switcher:wallpaper-ipc all apply \"Mocha Lavender\""
+                }
+              }
+            },
+            "11": {
+              "label": "Random",
+              "icon": "lib:terminal",
+              "bg_color": "#101020",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "run_command",
+                "params": {
+                  "command": "noctalia-kwe msg plugin theblackdon/theme-switcher:wallpaper-ipc all next"
+                }
+              }
+            },
+            "10": {
+              "label": "",
+              "icon": "/home/don/Pictures/Screenshots/Screenshot_20260920_104608.png",
+              "bg_color": "#101020",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "run_command",
+                "params": {
+                  "command": "noctalia-kwe msg plugin theblackdon/theme-switcher:wallpaper-ipc all apply \"Nord Pink\""
+                }
+              }
+            },
+            "13": {
+              "label": "",
+              "icon": "/home/don/Pictures/Screenshots/Screenshot_20260920_170117.png",
+              "bg_color": "#101020",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "run_command",
+                "params": {
+                  "command": "noctalia-kwe msg plugin theblackdon/theme-switcher:wallpaper-ipc all apply \"Vibrant\""
+                }
+              }
+            },
+            "14": {
+              "label": "",
+              "icon": "/home/don/Pictures/Screenshots/Screenshot_20260921_124052.png",
+              "bg_color": "#101020",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "run_command",
+                "params": {
+                  "command": "noctalia-kwe msg plugin theblackdon/theme-switcher:wallpaper-ipc all apply \"Soft\""
+                }
+              }
+            },
+            "12": {
+              "label": "",
+              "icon": "/home/don/Pictures/Screenshots/Screenshot_20261013_213259.png",
+              "bg_color": "#101020",
+              "text_color": "#ffffff",
+              "action": {
+                "type": "run_command",
+                "params": {
+                  "command": "kwepaperpicker toggle"
+                }
+              }
+            }
+          },
+          "knobs": {}
+        }
+      ]
+    }
+  ]
+}

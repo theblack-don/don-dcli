@@ -1191,9 +1191,9 @@
                 "globalCooldownSeconds": 300
             },
             "isPaused": false,
-            "isInStock": false,
+            "isInStock": true,
             "shouldRedemptionsSkipRequestQueue": true,
-            "cooldownExpiresAt": "2026-10-23T20:24:25.000Z"
+            "cooldownExpiresAt": null
         },
         "manageable": true,
         "sortTags": [],

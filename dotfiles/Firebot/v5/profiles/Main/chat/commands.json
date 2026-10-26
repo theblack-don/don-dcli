@@ -458,10 +458,10 @@
             "id": "ae732a99-6b22-405b-bf22-f104935965e7",
             "createdBy": "theblack_don",
             "createdAt": "2026-06-19T14:42:50.712-04:00",
-            "count": 197,
+            "count": 201,
             "type": "custom",
             "lastEditBy": "theblack_don",
-            "lastEditAt": "2026-10-23T15:33:37.681-04:00"
+            "lastEditAt": "2026-10-26T14:52:02.134-04:00"
         },
         "e044e8ae-41b2-4467-b969-79b0378d7b28": {
             "active": true,
@@ -530,10 +530,10 @@
             "id": "e044e8ae-41b2-4467-b969-79b0378d7b28",
             "createdBy": "theblack_don",
             "createdAt": "2026-06-24T13:55:31.662-04:00",
-            "count": 64,
+            "count": 65,
             "type": "custom",
             "lastEditBy": "theblack_don",
-            "lastEditAt": "2026-10-21T14:58:37.497-04:00"
+            "lastEditAt": "2026-10-26T12:34:54.946-04:00"
         },
         "508cb3d1-4111-4422-a32b-c41bdc39b9ec": {
             "active": false,
@@ -664,10 +664,10 @@
             "id": "11e6a018-aaac-4107-8718-c7d2229c665b",
             "createdBy": "theblack_don",
             "createdAt": "2026-06-30T10:48:38.206-04:00",
-            "count": 62,
+            "count": 63,
             "type": "custom",
             "lastEditBy": "theblack_don",
-            "lastEditAt": "2026-10-21T14:58:48.108-04:00"
+            "lastEditAt": "2026-10-26T12:17:36.903-04:00"
         },
         "80756f23-2397-45ec-8da0-2000d933b3c4": {
             "active": true,
@@ -879,10 +879,10 @@
             "id": "65441a2e-1733-4b7e-9282-694eba11f4a2",
             "createdBy": "theblack_don",
             "createdAt": "2026-07-02T19:18:56.592-04:00",
-            "count": 171,
+            "count": 172,
             "type": "custom",
             "lastEditBy": "theblack_don",
-            "lastEditAt": "2026-10-23T16:32:04.381-04:00"
+            "lastEditAt": "2026-10-26T12:06:53.539-04:00"
         },
         "e119015c-011d-4f42-9f08-74f168acbdfc": {
             "active": true,
@@ -968,10 +968,10 @@
             "id": "e119015c-011d-4f42-9f08-74f168acbdfc",
             "createdBy": "theblack_don",
             "createdAt": "2026-07-02T19:23:03.772-04:00",
-            "count": 216,
+            "count": 218,
             "type": "custom",
             "lastEditBy": "theblack_don",
-            "lastEditAt": "2026-10-23T12:32:27.292-04:00"
+            "lastEditAt": "2026-10-26T12:39:50.880-04:00"
         },
         "2916d2ae-a48b-4af3-a423-0d810d84a074": {
             "active": true,
@@ -1039,10 +1039,10 @@
             "id": "2916d2ae-a48b-4af3-a423-0d810d84a074",
             "createdBy": "theblack_don",
             "createdAt": "2026-07-02T19:23:24.722-04:00",
-            "count": 52,
+            "count": 53,
             "type": "custom",
             "lastEditBy": "theblack_don",
-            "lastEditAt": "2026-10-21T14:58:40.221-04:00",
+            "lastEditAt": "2026-10-26T13:23:25.053-04:00",
             "useCustomCooldownMessage": true
         },
         "29455a09-d79e-4695-aac7-fc7bb28f0ee8": {
@@ -1255,10 +1255,10 @@
             "id": "e6c20113-012c-4571-ac65-3c2938a9bb9a",
             "createdBy": "theblack_don",
             "createdAt": "2026-07-14T11:23:09.778-04:00",
-            "count": 14,
+            "count": 15,
             "type": "custom",
             "lastEditBy": "theblack_don",
-            "lastEditAt": "2026-10-22T13:52:08.391-04:00"
+            "lastEditAt": "2026-10-26T14:07:25.989-04:00"
         },
         "a678711f-0164-4d36-98e2-61ad6b3c6f98": {
             "active": true,
@@ -1582,10 +1582,10 @@
             "id": "6bed76cf-eaba-4735-8442-f2529425cecd",
             "createdBy": "theblack_don",
             "createdAt": "2026-07-31T13:12:37.375-04:00",
-            "count": 75,
+            "count": 77,
             "type": "custom",
             "lastEditBy": "theblack_don",
-            "lastEditAt": "2026-10-22T14:48:32.899-04:00"
+            "lastEditAt": "2026-10-26T15:05:57.936-04:00"
         },
         "b0dbac13-2dd4-4596-8571-39f003db7f49": {
             "active": true,
@@ -2124,6 +2124,68 @@
             "type": "custom",
             "lastEditBy": "theblack_don",
             "lastEditAt": "2026-09-28T01:47:11.727-04:00"
+        },
+        "c597ca38-e243-4041-a8a8-d984beaaa0e1": {
+            "active": true,
+            "simple": false,
+            "sendCooldownMessage": true,
+            "cooldownMessage": "This command is still on cooldown for: {timeLeft}",
+            "cooldown": {
+                "global": 200
+            },
+            "effects": {
+                "id": "387e50f2-8752-4039-85ce-fe64b239ff2a",
+                "list": [
+                    {
+                        "id": "d1d39f74-a6c5-43df-8a75-ff0331007a0a",
+                        "type": "firebot:playsound",
+                        "active": true,
+                        "soundType": "local",
+                        "volume": 2,
+                        "audioOutputDevice": {
+                            "label": "App Default",
+                            "deviceId": ""
+                        },
+                        "filepath": "/home/don/BlackDon/OBS Assets/SteamingSounds/Linux Gaming Just Works.mp3",
+                        "waitForSound": true,
+                        "percentWeight": null
+                    }
+                ],
+                "runMode": "all"
+            },
+            "restrictionData": {
+                "restrictions": [
+                    {
+                        "id": "e4fe1304-596d-4029-b589-fa35463a220f",
+                        "type": "firebot:permissions",
+                        "mode": "roles",
+                        "roleIds": [
+                            "vip",
+                            "mod",
+                            "broadcaster",
+                            "tier3"
+                        ],
+                        "ranks": []
+                    }
+                ],
+                "mode": "all",
+                "sendFailMessage": true,
+                "failMessage": "Sorry @{user}, you cannot use this command because: {reason}",
+                "sendAsReply": false
+            },
+            "aliases": [],
+            "sortTags": [],
+            "treatQuotedTextAsSingleArg": false,
+            "allowTriggerBySharedChat": "inherit",
+            "sendCooldownMessageAsReply": true,
+            "trigger": "!itjustworks",
+            "id": "c597ca38-e243-4041-a8a8-d984beaaa0e1",
+            "createdBy": "theblack_don",
+            "createdAt": "2026-10-26T10:06:08.515-04:00",
+            "count": 4,
+            "type": "custom",
+            "lastEditBy": "theblack_don",
+            "lastEditAt": "2026-10-26T15:07:21.827-04:00"
         }
     },
     "systemCommandOverrides": {

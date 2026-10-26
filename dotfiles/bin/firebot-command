@@ -1,0 +1,147 @@
+#!/usr/bin/env python3
+"""
+firebot-command - trigger a Firebot v5 command from a keybind.
+
+Uses Firebot's built-in local REST API, so nothing extra is needed inside
+Firebot. Firebot just has to be running.
+
+Examples:
+    firebot-command startingsoon          # '!' is optional
+    firebot-command '!startingsoon'
+    firebot-command game Minecraft        # pass args to the command
+    firebot-command --list                # show custom commands
+    firebot-command --system commandlist  # run a system command
+    firebot-command --dry-run zoom        # resolve without triggering
+"""
+
+import argparse
+import json
+import shutil
+import subprocess
+import sys
+import urllib.error
+import urllib.request
+
+DEFAULT_URL = "http://127.0.0.1:7472"
+
+
+def notify(message):
+    """Best-effort desktop notification for when run from a keybind (no terminal)."""
+    if shutil.which("notify-send"):
+        try:
+            subprocess.run(
+                ["notify-send", "-a", "Firebot", "firebot-command", message],
+                check=False,
+                timeout=3,
+            )
+        except Exception:
+            pass
+
+
+def http_json(url, path, method="GET", payload=None, timeout=8):
+    data = None
+    headers = {"Accept": "application/json"}
+    if payload is not None:
+        data = json.dumps(payload).encode()
+        headers["Content-Type"] = "application/json"
+    req = urllib.request.Request(url.rstrip("/") + path, data=data,
+                                 headers=headers, method=method)
+    with urllib.request.urlopen(req, timeout=timeout) as resp:
+        body = resp.read().decode("utf-8", "replace")
+    return json.loads(body) if body else None
+
+
+def resolve(name, commands):
+    """Find a command by exact trigger, id, case-insensitive trigger, or bare name."""
+    for c in commands:
+        if name in (c.get("trigger"), c.get("id")):
+            return c
+    lowered = name.lower()
+    for c in commands:
+        if (c.get("trigger") or "").lower() == lowered:
+            return c
+    if not name.startswith("!"):
+        return resolve("!" + name, commands)
+    return None
+
+
+def main():
+    parser = argparse.ArgumentParser(
+        description="Trigger a Firebot command via its local REST API.",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+    )
+    parser.add_argument("command", nargs="?",
+                        help="Command trigger (e.g. !startingsoon) or ID")
+    parser.add_argument("args", nargs="*", help="Arguments to pass to the command")
+    parser.add_argument("--url", default=DEFAULT_URL,
+                        help=f"Firebot base URL (default: {DEFAULT_URL})")
+    parser.add_argument("--username", help="Username to run the command as")
+    parser.add_argument("--system", action="store_true",
+                        help="Trigger a system command instead of a custom command")
+    parser.add_argument("--list", action="store_true",
+                        help="List available commands and exit")
+    parser.add_argument("--dry-run", action="store_true",
+                        help="Resolve the command but do not trigger it")
+    opts = parser.parse_args()
+
+    kind = "system" if opts.system else "custom"
+
+    try:
+        commands = http_json(opts.url, f"/api/v1/commands/{kind}")
+    except urllib.error.URLError as e:
+        msg = f"Cannot reach Firebot at {opts.url} ({e.reason}). Is Firebot running?"
+        print(f"firebot-command: {msg}", file=sys.stderr)
+        notify(msg)
+        return 1
+    except Exception as e:
+        print(f"firebot-command: {e}", file=sys.stderr)
+        notify(str(e))
+        return 1
+
+    if opts.list:
+        for c in sorted(commands, key=lambda x: x.get("trigger") or ""):
+            label = c.get("trigger") or "(no trigger)"
+            extra = c.get("description") or c.get("name")
+            print(f"{label}\t{extra}" if extra else label)
+        return 0
+
+    if not opts.command:
+        parser.error("a command is required (or use --list)")
+
+    match = resolve(opts.command, commands)
+    if not match:
+        msg = f"No {kind} command matches '{opts.command}'"
+        print(f"firebot-command: {msg}", file=sys.stderr)
+        notify(msg)
+        return 2
+
+    trigger = match.get("trigger") or match["id"]
+    if opts.dry_run:
+        print(f"Would trigger {kind} command {trigger} ({match['id']})")
+        return 0
+
+    body = {"args": " ".join(opts.args)}
+    if opts.username:
+        body["username"] = opts.username
+
+    try:
+        http_json(opts.url, f"/api/v1/commands/{kind}/{match['id']}/run",
+                  method="POST", payload=body)
+    except urllib.error.HTTPError as e:
+        detail = e.read().decode("utf-8", "replace")
+        msg = f"Firebot returned HTTP {e.code}: {detail}"
+        print(f"firebot-command: {msg}", file=sys.stderr)
+        notify(msg)
+        return 1
+    except urllib.error.URLError as e:
+        msg = f"Cannot reach Firebot at {opts.url} ({e.reason})."
+        print(f"firebot-command: {msg}", file=sys.stderr)
+        notify(msg)
+        return 1
+
+    print(f"Triggered {trigger}")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

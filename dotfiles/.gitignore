@@ -14,6 +14,10 @@ Firebot/v5/profiles/Main/integrations.json
 **/__pycache__/
 **/*.pyc
 
+# Fish-generated state; these are recreated by the shell.
+fish/fish_variables
+fish/completions/
+
 # BlackDon video files are local-only; the directory layout is kept with
 # .gitkeep files instead.
 BlackDon/**/*.[mM][pP]4

@@ -2,8 +2,6 @@
 # Each entry adds one action to the Applications / Custom Commands
 # keybinds categories; chords live in keybinds.kwe and the daemon.
 [applications]
-org.telegram.desktop=Telegram
-com.discordapp.Discord=Discord
 dev.zed.Zed=Zed
 dev.kineticwe.Settings=Kinetic Settings
 com.linuxgamerlife.lgl-papercutter=LGL Papercutter
@@ -18,9 +16,9 @@ helium=Helium
 firebotv5=Firebot v5
 lgl-vm-curator=LGL VM Curator
 nemo=Files
+org.telegram.desktop=Telegram
+equibop=Equibop
 [applications:exec]
-org.telegram.desktop=/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=Telegram --file-forwarding org.telegram.desktop -- @@u  @@
-com.discordapp.Discord=/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=com.discordapp.Discord --file-forwarding com.discordapp.Discord @@u  @@
 dev.zed.Zed=/home/don/.local/zed.app/bin/zed
 dev.kineticwe.Settings=sh -c "noctalia-kwe msg kinetic-settings-open || { noctalia-kwe --daemon && noctalia-kwe msg kinetic-settings-open; }"
 com.linuxgamerlife.lgl-papercutter=lgl-papercutter
@@ -35,6 +33,8 @@ helium=helium-browser-bin --enable-features=VaapiVideoDecoder,PlatformHEVCDecode
 firebotv5=firebotv5
 lgl-vm-curator=kitty -e lgl-vm-curator
 nemo=nemo
+org.telegram.desktop=/usr/bin/telegram-desktop
+equibop=equibop
 [custom-commands]
 cmd-6=kitty --hold fastfetch
 cmd-7=ghostty --wait-after-command -e ki
@@ -42,9 +42,10 @@ cmd-8=ghostty --wait-after-command -e fastfetch
 cmd-9=noctalia-kwe msg panel-toggle theblackdon/theme-switcher:wallpapers
 cmd-10=noctalia-kwe msg plugin theblackdon/theme-switcher:wallpaper-ipc all next
 cmd-11=ghostty -e kx
-cmd-12=ghostty --working-directory="$HOME/donnetic" -e fx
+cmd-12=ds4u
 cmd-13=kwepaperpicker toggle
 cmd-14=kwepaperpicker
+cmd-15=spectacle -b -r
 [custom-commands:exec]
 cmd-6=kitty --hold fastfetch
 cmd-7=ghostty --wait-after-command -e ki
@@ -52,6 +53,7 @@ cmd-8=ghostty --wait-after-command -e fastfetch
 cmd-9=noctalia-kwe msg panel-toggle theblackdon/theme-switcher:wallpapers
 cmd-10=noctalia-kwe msg plugin theblackdon/theme-switcher:wallpaper-ipc all next
 cmd-11=ghostty -e kx
-cmd-12=ghostty --working-directory="$HOME/donnetic" -e fx
+cmd-12=ds4u
 cmd-13=kwepaperpicker toggle
 cmd-14=kwepaperpicker
+cmd-15=spectacle -b -r

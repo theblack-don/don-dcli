@@ -1,1 +1,1 @@
-{"rate_control":"CBR","keyint_sec":2,"bitrate":6000}
+{"vaapi_device":"/dev/dri/by-path/pci-0000:0b:00.0-render","keyint_sec":2,"profile":100}

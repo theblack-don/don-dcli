@@ -20,7 +20,7 @@ const path = require('path');
 
 const execFileAsync = promisify(execFile);
 
-const DEBUG_FILE = '/var/home/don/.config/Firebot/v5/logs/veadotube-state-debug.log';
+const DEBUG_FILE = path.join(__dirname, '..', '..', '..', 'logs', 'veadotube-state-debug.log');
 const VEADO_SET = path.join(os.homedir(), '.local/bin', 'veado-set');
 
 function logDebug(msg) {

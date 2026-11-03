@@ -1,8 +1,9 @@
 const { execSync } = require('child_process');
 const fs = require('fs');
+const os = require('os');
 const path = require('path');
 
-const WALLPAPER_DIR = '/var/home/don/Pictures/Wallpapers';
+const WALLPAPER_DIR = path.join(os.homedir(), 'Pictures', 'Wallpapers');
 // Noctalia's IPC socket name differs per build/install:
 //   system build (/usr/bin)              -> noctalia-<display>.sock
 //   older local dev build (~/.local/bin) -> noctalia-kwe-<display>.sock
@@ -21,7 +22,7 @@ function resolveNoctaliaPath() {
 }
 
 const NOCTALIA_PATH = resolveNoctaliaPath();
-const DEBUG_FILE = '/home/don/.config/Firebot/v5/logs/random-wallpaper-debug.log';
+const DEBUG_FILE = path.join(__dirname, '..', '..', '..', 'logs', 'random-wallpaper-debug.log');
 
 function logDebug(msg) {
     try {

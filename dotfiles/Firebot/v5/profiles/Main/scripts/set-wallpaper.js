@@ -1,8 +1,9 @@
 const { execSync } = require('child_process');
 const fs = require('fs');
+const os = require('os');
 const path = require('path');
 
-const WALLPAPER_DIR = '/var/home/don/Pictures/Wallpapers';
+const WALLPAPER_DIR = path.join(os.homedir(), 'Pictures', 'Wallpapers');
 // Noctalia's IPC socket name differs per build/install:
 //   system build (/usr/bin)              -> noctalia-<display>.sock
 //   older local dev build (~/.local/bin) -> noctalia-kwe-<display>.sock
@@ -21,7 +22,7 @@ function resolveNoctaliaPath() {
 }
 
 const NOCTALIA_PATH = resolveNoctaliaPath();
-const DEBUG_FILE = '/var/home/don/.config/Firebot/v5/logs/wallpaper-debug.log';
+const DEBUG_FILE = path.join(__dirname, '..', '..', '..', 'logs', 'wallpaper-debug.log');
 
 // Palette generation scheme applied whenever a numbered wallpaper is chosen.
 const WALLPAPER_SCHEME = 'm3-content';

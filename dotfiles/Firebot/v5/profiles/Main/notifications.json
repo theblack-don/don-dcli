@@ -1,7 +1,20 @@
 {
     "dbVersion": "2",
-    "notifications": [],
+    "notifications": [
+        {
+            "title": "TwitchCon San Diego Firebot User Meetup",
+            "message": "Hey, Firebot fans! TwitchCon San Diego is just a couple weeks away and we're considering hosting a TwitchCon Firebot User Meetup. If you're attending TwitchCon San Diego AND you'd be interested in attending a Firebot user meetup, either respond to our <a href=\"https://discord.com/channels/372817064034959370/372821213443129346/1564717552989642753\">Discord poll</a> or reply to <a href=\"https://bsky.app/profile/zunderscore.tv/post/3myux6setts2b\">zunderscore on Bluesky</a>. Hope to see you there!",
+            "type": "info",
+            "source": "external",
+            "externalId": "twitchcon-us-2026-meetup",
+            "id": "851309b0-af9f-442e-b384-13004837f713",
+            "timestamp": "2026-10-28T15:57:32.127Z",
+            "read": false,
+            "saved": true
+        }
+    ],
     "knownExternalIds": [
+        "twitchcon-us-2026-meetup",
         "5.61-featured-streamers-reminder"
     ]
 }

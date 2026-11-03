@@ -115,7 +115,8 @@
   # Checks kernel/driver sync before updating, builds missing kernel modules
   # after the update, and notifies when the compilation finishes.
   nvidia = {
-    enabled = true;
+    enabled = false;        # AMD GPU (Navi 44); NVIDIA userspace packages may
+                            # still be installed from the previous card.
     driver = "auto";        # auto | akmod | kmod | dkms | proprietary
     check_updates = true;   # report newer driver versions before updating
     notify = true;          # desktop notification when a module build finishes

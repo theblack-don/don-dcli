@@ -1,6 +1,6 @@
 [General]
-count=17
-rules=rule-35122090938392,rule-43488441602441,rule-43535486230533,rule-44915773144709,rule-220165225949,rule-6089510658847,rule-44824984741341,rule-13335426972320,rule-45694930644812,rule-21066847800278,rule-39775379266858,rule-14776181564739,rule-15571765400936,rule-16347271781611,rule-5592165680862,rule-11144135607039,rule-3722735975589
+count=18
+rules=rule-35122090938392,rule-43488441602441,rule-43535486230533,rule-44915773144709,rule-4487115459356,rule-220165225949,rule-6089510658847,rule-44824984741341,rule-13335426972320,rule-45694930644812,rule-21066847800278,rule-39775379266858,rule-14776181564739,rule-15571765400936,rule-16347271781611,rule-5592165680862,rule-11144135607039,rule-3722735975589
 
 [rule-11144135607039]
 Description=Discord Popout
@@ -127,11 +127,11 @@ opacityactive=75
 opacityactiverule=2
 opacityinactive=75
 opacityinactiverule=2
-position=459,60
+position=462,74
 positionrule=3
 screen=DP-1
 screenrule=3
-size=1165,573
+size=1145,598
 sizerule=3
 wmclass=kitty
 wmclassmatch=1
@@ -206,21 +206,47 @@ sizerule=3
 wmclass=veadotube-mini
 wmclassmatch=1
 
-[rule-44915773144709]
-Description=Steam
+[rule-4487115459356]
+Description=The Finals 
 Enabled=true
-blur=true
+blur=false
 blurrule=2
 decorationpolicy=0
 decorationpolicyrule=2
 desktops=381b5b60-d2bc-4f28-ac42-63ad0b58971c
 desktopsrule=3
-opacityinactive=95
+opacityinactive=100
 opacityinactiverule=2
+position=450,72
+positionrule=3
 screen=DP-1
 screenrule=3
+size=2540,1290
+sizerule=3
+title=THE FINALS
+titlematch=1
+wmclass=steam_app_2073850
+wmclassmatch=1
+
+[rule-44915773144709]
+Description=Steam
+Enabled=true
+blur=false
+blurrule=2
+decorationpolicy=0
+decorationpolicyrule=2
+desktops=381b5b60-d2bc-4f28-ac42-63ad0b58971c
+desktopsrule=3
+opacityinactive=100
+opacityinactiverule=2
+position=450,72
+positionrule=3
+screen=DP-1
+screenrule=3
+size=2540,1290
+sizerule=3
 wmclass=steam
-wmclassmatch=2
+wmclassmatch=1
 
 [rule-45694930644812]
 Description=Firebot
@@ -235,15 +261,21 @@ wmclassmatch=1
 [rule-5592165680862]
 Description=Moonlight
 Enabled=true
+blur=
+blurrule=2
 desktops=381b5b60-d2bc-4f28-ac42-63ad0b58971c
 desktopsrule=3
 ignoregeometry=true
 ignoregeometryrule=2
+opacityactive=
+opacityactiverule=2
+opacityinactive=
+opacityinactiverule=2
 position=450,176
 positionrule=3
 screen=DP-1
 screenrule=3
-size=2540,1289
+size=2540,1275
 sizerule=3
 wmclass=com.moonlight_stream.Moonlight
 wmclassmatch=1

@@ -1,42 +1,31 @@
 { system, pkgs }:
 
 {
-  host = "fednix-lap";
-  description = "Fedora laptop (NVIDIA)";
+  host = "piktop";
+  description = "PikaOS laptop (NVIDIA)";
 
   # native package manager
-  package_manager = "dnf";
+  package_manager = "apt";
 
   # keep sequential so module hooks run as the user (per-user nix profile)
   module_processing = "sequential";
-
-  # COPR repositories enabled before native packages
-  copr_repos = [
-    "theblackdon/dcli"   # dcli
-    "theblackdon/kwee"   # kineticwe
-    "imput/helium"       # helium-bin
-  ];
 
   # packages managed by dnf
   packages = [
     "kitty"
     "nemo"
-    "nemo-terminal"
     "nemo-fileroller"
     "gwenview"
     "mpv"
     "ark"
     "chromium"
-    "helium-bin"
+    "nwg-look"
+    "ghostty"
     "power-profiles-daemon"
-    "tailscale"
   ];
 
   # flatpak packages (installed via flatpak)
   flatpak_packages = [
-    "com.discordapp.Discord"
-    "org.telegram.desktop"
-    "com.moonlight_stream.Moonlight"
   ];
 
   # flatpak installation scope: "user" (default) or "system"
@@ -56,17 +45,15 @@
 
   # GUI nix packages (nix graphics stack)
   nix_gui_packages = [
-    "nwg-look"
   ];
 
   # GUI nix packages wrapped with host GPU libraries (nixGL-style)
   nix_wrapped_packages = [
-    "ghostty"
   ];
 
   # start empty; enable as the laptop gets set up
   enabled_modules = [
-    "dotfiles"
+    # "dotfiles"
     # "vm-stuff"
     # "bootc"
     # "lgl"
@@ -96,11 +83,11 @@
     flake_enabled = false;
   };
 
-  # NVIDIA driver protection (Fedora/dnf only)
-  nvidia = {
-    enabled = true;
-    driver = "auto";        # auto | akmod | kmod | dkms | proprietary
-    check_updates = true;   # report newer driver versions before updating
-    notify = true;          # desktop notification when a module build finishes
-  };
+  # # NVIDIA driver protection (Fedora/dnf only)
+  # nvidia = {
+  #   enabled = true;
+  #   driver = "auto";        # auto | akmod | kmod | dkms | proprietary
+  #   check_updates = true;   # report newer driver versions before updating
+  #   notify = true;          # desktop notification when a module build finishes
+  # };
 }

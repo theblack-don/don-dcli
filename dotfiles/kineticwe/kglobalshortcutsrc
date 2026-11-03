@@ -10,13 +10,13 @@ _k_friendly_name=Keyboard Layout Switcher
 
 [applications]
 _k_friendly_name=Applications
-com.discordapp.Discord=Meta+D,none,Discord
 com.linuxgamerlife.lgl-emoji-picker=Meta+Alt+E,none,LGL Emoji Picker
 com.linuxgamerlife.lgl-papercutter=Meta+Ctrl+W,none,LGL Papercutter
 com.mitchellh.ghostty=Meta+T,none,Ghostty
 com.obsproject.Studio=Meta+O,none,OBS Studio
 dev.kineticwe.Settings=Meta+Alt+S,none,Kinetic Settings
 dev.zed.Zed=Meta+Z,none,Zed
+equibop=Meta+D,none,Equibop
 fifine-control-deck=Ctrl+Alt+F,none,fifine Control Deck
 firebotv5=Meta+Shift+F,none,Firebot v5
 helium=Meta+B,none,Helium
@@ -52,9 +52,10 @@ discord-toggle-deafen=Ctrl+Shift+D,Ctrl+Shift+D,Toggle Deafen
 _k_friendly_name=Custom Commands
 cmd-10=Meta+R,none,noctalia-kwe msg plugin theblackdon/theme-switcher:wallpaper-ipc all next
 cmd-11=Meta+Alt+K,none,ghostty -e kx
-cmd-12=Meta+Alt+D,none,ghostty --working-directory="$HOME/donnetic" -e fx
+cmd-12=Meta+Alt+D,none,ds4u
 cmd-13=Alt+Shift+W,none,kwepaperpicker toggle
 cmd-14=Ctrl+Alt+Shift+W,none,kwepaperpicker
+cmd-15=Meta+Shift+S,none,spectacle -b -r
 cmd-6=Meta+Ctrl+F,none,kitty --hold fastfetch
 cmd-7=Meta+Shift+X,none,ghostty --wait-after-command -e ki
 cmd-8=Meta+Alt+F,none,ghostty --wait-after-command -e fastfetch
@@ -255,6 +256,7 @@ Window to Screen 5=none,none,Move Window to Screen 5
 Window to Screen 6=none,none,Move Window to Screen 6
 Window to Screen 7=none,none,Move Window to Screen 7
 _k_friendly_name=KineticWE
+disableInputCapture=Meta+Shift+Esc,Meta+Shift+Esc,Disable Active Input Capture
 view_actual_size=none,Meta+0,Zoom to Actual Size
 view_zoom_in=none,Meta++\tMeta+=,Zoom In
 view_zoom_out=none,Meta+-,Zoom Out
@@ -372,6 +374,6 @@ FullScreenScreenShot=none
 RecordRegion=none
 RecordScreen=none
 RecordWindow=none
-RectangularRegionScreenShot=Meta+Shift+S
+RectangularRegionScreenShot=none
 WindowUnderCursorScreenShot=none
 _launch=none

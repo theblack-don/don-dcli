@@ -2,27 +2,34 @@
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
   "logo": {
     "type": "file",
-    "source": "/home/don/BlackDon/logos/nix_fedora2.txt",
+    "source": "~/BlackDon/logos/nix_fedora2.txt",
+    "width": 40,
     "padding": {
       "top": 1,
       "right": 2
     },
     "color": {
-      "1": "#d95757",
-      "2": "#e6b450"
+      "1": "#c7c0f7",
+      "2": "#c8c3db",
+      "3": "#ffffff",
+      "4": "#c8c80a",
+      "6": "#905e29",
+      "7": "#c8bf84",
+      "8": "#c81619",
+      "9": "#0a0a0a"
     }
   },
   "display": {
     "separator": "  ",
     "color": {
-      "keys": "#d95757",
-      "title": "#e6b450"
+      "keys": "#c7c0f7",
+      "title": "#c8c3db"
     },
     "percent": {
       "color": {
-        "green": "#39bae6",
-        "yellow": "#e99696",
-        "red": "#aad94c"
+        "green": "#f2b4d8",
+        "yellow": "#c7c0f7",
+        "red": "#ffb4ab"
       }
     }
   },
@@ -49,7 +56,99 @@
     },
     {
       "type": "packages",
-      "key": "{#separator}│  {#keys}󰏓 Packages"
+      "key": "{#separator}│  {#keys}󰏓 Native  ",
+      "disabled": [
+        "nix",
+        "flatpak"
+      ]
+    },
+    {
+      "type": "packages",
+      "key": "{#separator}│  {#keys}󰏓 Flatpaks",
+      "disabled": [
+        "am",
+        "apk",
+        "appimage",
+        "brew",
+        "cards",
+        "choco",
+        "crux",
+        "dpkg",
+        "emerge",
+        "eopkg",
+        "guix",
+        "hpkg",
+        "installrelease",
+        "kiss",
+        "linglong",
+        "lpkg",
+        "lpkgbuild",
+        "macports",
+        "moss",
+        "mport",
+        "nix",
+        "opkg",
+        "pacman",
+        "pacstall",
+        "paludis",
+        "pisi",
+        "pkg",
+        "pkgsrc",
+        "pkgtool",
+        "porg",
+        "rpm",
+        "rum",
+        "scoop",
+        "snap",
+        "soar",
+        "sorcery",
+        "winget",
+        "xbps"
+      ]
+    },
+    {
+      "type": "packages",
+      "key": "{#separator}│  {#keys} Nix     ",
+      "disabled": [
+        "am",
+        "apk",
+        "appimage",
+        "brew",
+        "cards",
+        "choco",
+        "crux",
+        "dpkg",
+        "emerge",
+        "eopkg",
+        "flatpak",
+        "guix",
+        "hpkg",
+        "installrelease",
+        "kiss",
+        "linglong",
+        "lpkg",
+        "lpkgbuild",
+        "macports",
+        "moss",
+        "mport",
+        "opkg",
+        "pacman",
+        "pacstall",
+        "paludis",
+        "pisi",
+        "pkg",
+        "pkgsrc",
+        "pkgtool",
+        "porg",
+        "rpm",
+        "rum",
+        "scoop",
+        "snap",
+        "soar",
+        "sorcery",
+        "winget",
+        "xbps"
+      ]
     },
     {
       "type": "custom",

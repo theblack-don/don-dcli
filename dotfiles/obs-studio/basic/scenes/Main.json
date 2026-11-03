@@ -150,7 +150,7 @@
             "id": "pipewire-screen-capture-source",
             "versioned_id": "pipewire-screen-capture-source",
             "settings": {
-                "RestoreToken": "HPK6Z7NuDbZ68kysKT89VA"
+                "RestoreToken": "ROuzHovfAMtM5MLuhhaaOA"
             },
             "mixers": 0,
             "sync": 0,
@@ -1047,7 +1047,7 @@
             "id": "pipewire-screen-capture-source",
             "versioned_id": "pipewire-screen-capture-source",
             "settings": {
-                "RestoreToken": "K0DkPe_lmF5kl1bDZ_EgKg"
+                "RestoreToken": "mSp_r8vI9yd6lkzvfbH1vA"
             },
             "mixers": 0,
             "sync": 0,
@@ -1200,7 +1200,7 @@
             "id": "pipewire-screen-capture-source",
             "versioned_id": "pipewire-screen-capture-source",
             "settings": {
-                "RestoreToken": "39Uk141GtHbFsOJZZjQh6w"
+                "RestoreToken": "IjkMMUg1pwIgYT1dKWBc_Q"
             },
             "mixers": 0,
             "sync": 0,
@@ -1320,7 +1320,7 @@
             "id": "pipewire-screen-capture-source",
             "versioned_id": "pipewire-screen-capture-source",
             "settings": {
-                "RestoreToken": "uFuIFQ_dU3WrXD0gp_OULA"
+                "RestoreToken": "g24eWUxf3ZSZX2oow8gbrQ"
             },
             "mixers": 0,
             "sync": 0,
@@ -1373,7 +1373,7 @@
             "versioned_id": "pipewire-screen-capture-source",
             "settings": {
                 "undo_uuid": "9422d649-c499-469b-b2e9-de2259444e8b",
-                "RestoreToken": "9Hia__4kZBNvtcTJBo2HEA"
+                "RestoreToken": "GBRaFcX4XbhL1aij_Yp6sA"
             },
             "mixers": 0,
             "sync": 0,
@@ -1637,7 +1637,7 @@
             "id": "pipewire-screen-capture-source",
             "versioned_id": "pipewire-screen-capture-source",
             "settings": {
-                "RestoreToken": "bHSnBIsY6ULGpGbm_6fzfg"
+                "RestoreToken": "wI_YBPneNAfGY8EZd8V62w"
             },
             "mixers": 0,
             "sync": 0,
@@ -1663,7 +1663,7 @@
             "id": "pipewire-screen-capture-source",
             "versioned_id": "pipewire-screen-capture-source",
             "settings": {
-                "RestoreToken": "DgmOrV2sjca7bLFOW2M2iQ"
+                "RestoreToken": "hLvaZunvU1KnlwdcRvsVow"
             },
             "mixers": 0,
             "sync": 0,
@@ -1781,6 +1781,41 @@
             "push-to-talk": false,
             "push-to-talk-delay": 0,
             "hotkeys": {},
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {}
+        },
+        {
+            "prev_ver": 537001986,
+            "name": "HourlyRate",
+            "uuid": "21778a2a-b4b6-47ad-ba90-2a81ef585099",
+            "id": "browser_source",
+            "versioned_id": "browser_source",
+            "settings": {
+                "is_local_file": false,
+                "url": "https://dash.synchra.net/widget/01a18d37-5e7a-702e-96a5-1c65281f1518",
+                "width": 830,
+                "height": 240
+            },
+            "mixers": 255,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {
+                "libobs.mute": [],
+                "libobs.unmute": [],
+                "libobs.push-to-mute": [],
+                "libobs.push-to-talk": [],
+                "ObsBrowser.Refresh": []
+            },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
@@ -2037,11 +2072,11 @@
                         "id": 32,
                         "group_item_backup": true,
                         "pos": {
-                            "x": 2945.01025390625,
+                            "x": 2980.51513671875,
                             "y": 1344.392333984375
                         },
                         "pos_rel": {
-                            "x": 2.3125143051147461,
+                            "x": 2.3618266582489014,
                             "y": 0.86721146106719971
                         },
                         "scale": {
@@ -2074,7 +2109,7 @@
                     {
                         "name": "talkingdon",
                         "source_uuid": "03ccd2e0-df94-415c-89d3-c1d816884711",
-                        "visible": false,
+                        "visible": true,
                         "locked": false,
                         "rot": 0.0,
                         "scale_ref": {
@@ -2092,11 +2127,11 @@
                         "id": 38,
                         "group_item_backup": true,
                         "pos": {
-                            "x": 2507.4951171875,
+                            "x": 2543.0,
                             "y": 665.0
                         },
                         "pos_rel": {
-                            "x": 1.7048543691635132,
+                            "x": 1.7541667222976685,
                             "y": -0.076388895511627197
                         },
                         "scale": {
@@ -2351,7 +2386,7 @@
                     {
                         "name": "BigDon",
                         "source_uuid": "c07ba930-3aee-4c7b-8814-b1cd7b8aad3d",
-                        "visible": true,
+                        "visible": false,
                         "locked": false,
                         "rot": 0.0,
                         "scale_ref": {
@@ -2758,11 +2793,11 @@
                         "id": 30,
                         "group_item_backup": true,
                         "pos": {
-                            "x": -0.0008544921875,
+                            "x": -0.0009765625,
                             "y": 0.0
                         },
                         "pos_rel": {
-                            "x": -1.7777789831161499,
+                            "x": -1.7777791023254395,
                             "y": -1.0
                         },
                         "scale": {
@@ -4192,11 +4227,11 @@
                         "id": 32,
                         "group_item_backup": true,
                         "pos": {
-                            "x": 85.9931640625,
+                            "x": 128.1103515625,
                             "y": 1551.542724609375
                         },
                         "pos_rel": {
-                            "x": -1.6583428382873535,
+                            "x": -1.5998467206954956,
                             "y": 1.1549203395843506
                         },
                         "scale": {
@@ -4229,7 +4264,7 @@
                     {
                         "name": "talkingdon",
                         "source_uuid": "03ccd2e0-df94-415c-89d3-c1d816884711",
-                        "visible": false,
+                        "visible": true,
                         "locked": false,
                         "rot": 0.0,
                         "scale_ref": {
@@ -4247,11 +4282,11 @@
                         "id": 38,
                         "group_item_backup": true,
                         "pos": {
-                            "x": -433.001708984375,
+                            "x": -390.884521484375,
                             "y": 745.2562255859375
                         },
                         "pos_rel": {
-                            "x": -2.3791689872741699,
+                            "x": -2.3206729888916016,
                             "y": 0.035078048706054688
                         },
                         "scale": {
@@ -4581,11 +4616,11 @@
                         "id": 30,
                         "group_item_backup": true,
                         "pos": {
-                            "x": -0.0008544921875,
+                            "x": -0.0009765625,
                             "y": 1440.0
                         },
                         "pos_rel": {
-                            "x": -1.7777789831161499,
+                            "x": -1.7777791023254395,
                             "y": 1.0
                         },
                         "scale": {
@@ -5621,7 +5656,7 @@
             "id": "scene",
             "versioned_id": "scene",
             "settings": {
-                "id_counter": 27,
+                "id_counter": 28,
                 "custom_size": false,
                 "items": [
                     {
@@ -5755,20 +5790,20 @@
                         "id": 5,
                         "group_item_backup": false,
                         "pos": {
-                            "x": 1915.0,
-                            "y": 3.0
+                            "x": 1916.0,
+                            "y": 0.0
                         },
                         "pos_rel": {
-                            "x": 0.88194441795349121,
-                            "y": -0.99583333730697632
+                            "x": 0.88333332538604736,
+                            "y": -1.0
                         },
                         "scale": {
-                            "x": 0.16796875,
-                            "y": 0.16805554926395416
+                            "x": 0.16302083432674408,
+                            "y": 0.16296295821666718
                         },
                         "scale_rel": {
-                            "x": 0.16796875,
-                            "y": 0.16805554926395416
+                            "x": 0.16302083432674408,
+                            "y": 0.16296295821666718
                         },
                         "bounds": {
                             "x": 0.0,
@@ -5920,20 +5955,20 @@
                         "id": 17,
                         "group_item_backup": false,
                         "pos": {
-                            "x": 930.0,
-                            "y": 6.0
+                            "x": 959.0,
+                            "y": 31.0
                         },
                         "pos_rel": {
-                            "x": -0.4861111044883728,
-                            "y": -0.99166667461395264
+                            "x": -0.44583332538604736,
+                            "y": -0.95694446563720703
                         },
                         "scale": {
-                            "x": 0.27559053897857666,
-                            "y": 0.275968998670578
+                            "x": 0.25118109583854675,
+                            "y": 0.25140845775604248
                         },
                         "scale_rel": {
-                            "x": 0.27559053897857666,
-                            "y": 0.275968998670578
+                            "x": 0.25118109583854675,
+                            "y": 0.25140845775604248
                         },
                         "bounds": {
                             "x": 0.0,
@@ -6031,11 +6066,11 @@
                         "group_item_backup": false,
                         "pos": {
                             "x": 377.0,
-                            "y": 24.0
+                            "y": 16.0
                         },
                         "pos_rel": {
                             "x": -1.2541110515594482,
-                            "y": -0.96666663885116577
+                            "y": -0.97777777910232544
                         },
                         "scale": {
                             "x": 2.286250114440918,
@@ -6120,6 +6155,61 @@
                         "private_settings": {}
                     },
                     {
+                        "name": "HourlyRate",
+                        "source_uuid": "21778a2a-b4b6-47ad-ba90-2a81ef585099",
+                        "visible": true,
+                        "locked": false,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 2560.0,
+                            "y": 1440.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 28,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 1067.5,
+                            "y": 0.0
+                        },
+                        "pos_rel": {
+                            "x": -0.2951388955116272,
+                            "y": -1.0
+                        },
+                        "scale": {
+                            "x": 0.51204818487167358,
+                            "y": 0.51249998807907104
+                        },
+                        "scale_rel": {
+                            "x": 0.51204818487167358,
+                            "y": 0.51249998807907104
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 300
+                        },
+                        "hide_transition": {
+                            "duration": 300
+                        },
+                        "private_settings": {}
+                    },
+                    {
                         "name": "currentwallstarting",
                         "source_uuid": "573e3a67-1437-4971-a8dd-5fafb53d3623",
                         "visible": true,
@@ -6140,11 +6230,11 @@
                         "id": 30,
                         "group_item_backup": true,
                         "pos": {
-                            "x": -458.00048828125,
+                            "x": -461.000732421875,
                             "y": 0.0
                         },
                         "pos_rel": {
-                            "x": -2.4138896465301514,
+                            "x": -2.4180564880371094,
                             "y": -1.0
                         },
                         "scale": {
@@ -6195,11 +6285,11 @@
                         "id": 6,
                         "group_item_backup": true,
                         "pos": {
-                            "x": -897.999755859375,
+                            "x": -900.999755859375,
                             "y": 76.99993896484375
                         },
                         "pos_rel": {
-                            "x": -3.0249996185302734,
+                            "x": -3.0291662216186523,
                             "y": -0.89305561780929565
                         },
                         "scale": {
@@ -6250,11 +6340,11 @@
                         "id": 45,
                         "group_item_backup": true,
                         "pos": {
-                            "x": 1491.0,
+                            "x": 1488.0,
                             "y": 326.00015258789062
                         },
                         "pos_rel": {
-                            "x": 0.29305556416511536,
+                            "x": 0.28888890147209167,
                             "y": -0.54722201824188232
                         },
                         "scale": {
@@ -6305,11 +6395,11 @@
                         "id": 47,
                         "group_item_backup": true,
                         "pos": {
-                            "x": 1163.999755859375,
+                            "x": 1160.999755859375,
                             "y": 654.99993896484375
                         },
                         "pos_rel": {
-                            "x": -0.16111144423484802,
+                            "x": -0.1652781218290329,
                             "y": -0.09027785062789917
                         },
                         "scale": {
@@ -6360,11 +6450,11 @@
                         "id": 16,
                         "group_item_backup": true,
                         "pos": {
-                            "x": 25.000244140625,
+                            "x": 22.000244140625,
                             "y": 568.0
                         },
                         "pos_rel": {
-                            "x": -1.7430552244186401,
+                            "x": -1.747221827507019,
                             "y": -0.21111112833023071
                         },
                         "scale": {
@@ -6415,11 +6505,11 @@
                         "id": 14,
                         "group_item_backup": false,
                         "pos": {
-                            "x": -897.999755859375,
+                            "x": -900.999755859375,
                             "y": 0.0
                         },
                         "pos_rel": {
-                            "x": -3.0249996185302734,
+                            "x": -3.0291662216186523,
                             "y": -1.0
                         },
                         "scale": {
@@ -6582,12 +6672,12 @@
                         "id": 20,
                         "group_item_backup": false,
                         "pos": {
-                            "x": 2255.0,
-                            "y": 375.0
+                            "x": 2384.0,
+                            "y": 1306.0
                         },
                         "pos_rel": {
-                            "x": 1.3541666269302368,
-                            "y": -0.47916668653488159
+                            "x": 1.5333333015441895,
+                            "y": 0.81388890743255615
                         },
                         "scale": {
                             "x": 0.58666664361953735,
@@ -6784,7 +6874,7 @@
                     {
                         "name": "Support Goal",
                         "source_uuid": "0233d316-4ca4-4c5e-a5eb-4970bee0f6c9",
-                        "visible": true,
+                        "visible": false,
                         "locked": false,
                         "rot": 0.0,
                         "scale_ref": {
@@ -6803,11 +6893,11 @@
                         "group_item_backup": false,
                         "pos": {
                             "x": 880.0,
-                            "y": 11.0
+                            "y": 16.0
                         },
                         "pos_rel": {
                             "x": -0.55555558204650879,
-                            "y": -0.98472219705581665
+                            "y": -0.97777777910232544
                         },
                         "scale": {
                             "x": 1.0,
@@ -6979,6 +7069,8 @@
                 "libobs.hide_scene_item.7": [],
                 "libobs.show_scene_item.13": [],
                 "libobs.hide_scene_item.13": [],
+                "libobs.show_scene_item.28": [],
+                "libobs.hide_scene_item.28": [],
                 "libobs.show_scene_item.14": [],
                 "libobs.hide_scene_item.14": [],
                 "libobs.show_scene_item.4": [],
@@ -8189,11 +8281,11 @@
                         "id": 30,
                         "group_item_backup": false,
                         "pos": {
-                            "x": 439.9991455078125,
+                            "x": 439.9990234375,
                             "y": 0.0
                         },
                         "pos_rel": {
-                            "x": -1.1666678190231323,
+                            "x": -1.1666680574417114,
                             "y": -1.0
                         },
                         "scale": {
@@ -8630,7 +8722,7 @@
             "settings": {
                 "id_counter": 0,
                 "custom_size": true,
-                "cx": 586,
+                "cx": 705,
                 "cy": 910,
                 "items": [
                     {
@@ -8654,11 +8746,11 @@
                         "id": 32,
                         "group_item_backup": false,
                         "pos": {
-                            "x": 585.4324951171875,
+                            "x": 632.941162109375,
                             "y": 909.1866455078125
                         },
                         "pos_rel": {
-                            "x": -0.96467709541320801,
+                            "x": -0.89869284629821777,
                             "y": 0.26275920867919922
                         },
                         "scale": {
@@ -8691,7 +8783,7 @@
                     {
                         "name": "talkingdon",
                         "source_uuid": "03ccd2e0-df94-415c-89d3-c1d816884711",
-                        "visible": false,
+                        "visible": true,
                         "locked": false,
                         "rot": 0.0,
                         "scale_ref": {
@@ -8709,11 +8801,11 @@
                         "id": 38,
                         "group_item_backup": false,
                         "pos": {
-                            "x": 0.0,
+                            "x": 47.5086669921875,
                             "y": 0.0
                         },
                         "pos_rel": {
-                            "x": -1.7777777910232544,
+                            "x": -1.7117935419082642,
                             "y": -1.0
                         },
                         "scale": {
@@ -9443,6 +9535,9 @@
     "scaling_level": -10,
     "scaling_off_x": 0.0,
     "scaling_off_y": 0.0,
+    "virtual-camera": {
+        "type2": 3
+    },
     "modules": {
         "scripts-tool": [],
         "output-timer": {

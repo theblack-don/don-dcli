@@ -1,5 +1,6 @@
 const { execSync } = require('child_process');
 const fs = require('fs');
+const path = require('path');
 
 // Noctalia's IPC socket name differs per build/install:
 //   system build (/usr/bin)              -> noctalia-<display>.sock
@@ -19,7 +20,7 @@ function resolveNoctaliaPath() {
 }
 
 const NOCTALIA_PATH = resolveNoctaliaPath();
-const DEBUG_FILE = '/var/home/don/.config/Firebot/v5/logs/toggle-bar-debug.log';
+const DEBUG_FILE = path.join(__dirname, '..', '..', '..', 'logs', 'toggle-bar-debug.log');
 
 function logDebug(msg) {
     try {

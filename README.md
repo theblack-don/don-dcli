@@ -6,7 +6,9 @@ machines. Nix profile mode, no Home Manager.
 | Hostname | Machine | Config |
 |---|---|---|
 | `fednix` | desktop | `hosts/fednix.nix` |
+| `fednixgaming` | gaming desktop (NVIDIA) | `hosts/fednixgaming.nix` |
 | `fednix-lap` | laptop | `hosts/fednix-lap.nix` |
+| `piknix` | PikaOS (apt) on second NVMe partition | `hosts/piknix.nix` |
 
 `config.nix` picks `hosts/<hostname>.nix` automatically, so the machine's
 hostname must match the file name.

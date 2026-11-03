@@ -1,9 +1,12 @@
 const { execSync } = require('child_process');
 const fs = require('fs');
+const path = require('path');
 
-const DEBUG_FILE = '/var/home/don/.config/Firebot/v5/logs/switch-to-lgl-debug.log';
-const KWIN_SCRIPT = '/var/home/don/.config/Firebot/v5/profiles/Main/scripts/kwin-switch-lgl.js';
-const QDBUS_PATH = '/usr/bin/qdbus-qt6';
+const DEBUG_FILE = path.join(__dirname, '..', '..', '..', 'logs', 'switch-to-lgl-debug.log');
+const KWIN_SCRIPT = path.join(__dirname, 'kwin-switch-lgl.js');
+const QDBUS_PATH =
+    ['/usr/bin/qdbus-qt6', '/usr/bin/qdbus6', '/usr/bin/qdbus'].find((p) => fs.existsSync(p)) ||
+    'qdbus6';
 
 function logDebug(msg) {
     try {

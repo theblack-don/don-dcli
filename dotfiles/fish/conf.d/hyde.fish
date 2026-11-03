@@ -78,8 +78,8 @@ end
 # set -gx HYPRLAND_CONFIG "$XDG_DATA_HOME/hypr/hyprland.conf"
 # end
 
-set -gx PATH $HOME/.local/bin:$PATH
-
+# ~/.local/bin is added by config.fish (fish_add_path); adding it here too
+# duplicates the PATH entry on every shell startup.
 
 if type -q starship
 starship init fish | source

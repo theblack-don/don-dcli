@@ -1,8 +1,11 @@
 const { execSync } = require('child_process');
 const fs = require('fs');
+const path = require('path');
 
-const QDBUS_PATH = '/usr/bin/qdbus-qt6';
-const DEBUG_FILE = '/var/home/don/.config/Firebot/v5/logs/kwin-zoom-debug.log';
+const QDBUS_PATH =
+    ['/usr/bin/qdbus-qt6', '/usr/bin/qdbus6', '/usr/bin/qdbus'].find((p) => fs.existsSync(p)) ||
+    'qdbus6';
+const DEBUG_FILE = path.join(__dirname, '..', '..', '..', 'logs', 'kwin-zoom-debug.log');
 
 function logDebug(msg) {
     try {

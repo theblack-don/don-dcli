@@ -9,7 +9,9 @@ const DELAY_MS = 3000;
 // (e.g. /var/home -> /home) instead of hardcoding an absolute path.
 const DEBUG_FILE = path.join(__dirname, '..', '..', '..', 'logs', 'set-window-opacity-debug.log');
 const KWIN_SCRIPT = path.join(__dirname, 'kwin-set-opacity.js');
-const QDBUS_PATH = '/usr/bin/qdbus-qt6';
+const QDBUS_PATH =
+    ['/usr/bin/qdbus-qt6', '/usr/bin/qdbus6', '/usr/bin/qdbus'].find((p) => fs.existsSync(p)) ||
+    'qdbus6';
 
 function logDebug(msg) {
     try {

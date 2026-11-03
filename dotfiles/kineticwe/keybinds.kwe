@@ -30,7 +30,7 @@ NoctaliaToggleClipboard=Meta+Shift+C
 NoctaliaDockToggle=Meta+Shift+D
 NoctaliaToggleWallpaperPicker=Meta+Shift+W
 [applications][Global Shortcuts]
-com.discordapp.Discord=Meta+D
+equibop=Meta+D
 fifine-control-deck=Ctrl+Alt+F
 nemo=Meta+F
 firebotv5=Meta+Shift+F
@@ -47,14 +47,13 @@ org.telegram.desktop=Meta+G
 veadotube-mini=Meta+V
 dev.zed.Zed=Meta+Z
 [custom-commands][Global Shortcuts]
+cmd-12=Meta+Alt+D
 cmd-8=Meta+Alt+F
 cmd-7=Meta+Shift+X
-cmd-12=Meta+Alt+D
 cmd-11=Meta+Alt+K
 cmd-6=Meta+Ctrl+F
 cmd-14=Ctrl+Alt+Shift+W
 cmd-13=Alt+Shift+W
 cmd-9=Meta+Alt+W
 cmd-10=Meta+R
-[org.kde.spectacle.desktop][Global Shortcuts]
-RectangularRegionScreenShot=Meta+Shift+S
+cmd-15=Meta+Shift+S

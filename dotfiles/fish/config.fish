@@ -110,3 +110,15 @@ fish_add_path /home/don/.kilo/bin
 function fastfetch --wraps='fastfetch' --description 'fastfetch with custom config'
     command fastfetch $argv
 end
+
+# Drop duplicate PATH entries. Login/systemd environments can accumulate many
+# copies of ~/.local/bin, and nested shells inherit the whole list. Keep the
+# first occurrence so ~/.local/bin (dcli wrappers) still wins over
+# ~/.nix-profile/bin for same-named binaries such as ghostty.
+set -l clean_path
+for path_entry in $PATH
+    if not contains -- $path_entry $clean_path
+        set -a clean_path $path_entry
+    end
+end
+set -gx PATH $clean_path

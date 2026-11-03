@@ -359,7 +359,7 @@ warning_threshold = 0               # low-battery warning percent; 0 disables (v
 [hooks]
 # started           = "notify-send 'Noctalia' 'Shell started'"
 wallpaper_changed = "/home/don/bin/noctalia-wallpaper-to-obs.sh"
-colors_changed    = ["noctalia msg templates-apply", "/home/don/bin/noctalia-konsole-reload.sh"]
+colors_changed    = ["/home/don/bin/noctalia-konsole-reload.sh"]
 # theme_mode_changed = "notify-send 'Noctalia' \"Theme mode: $NOCTALIA_THEME_MODE\""
 # session_locked    = []
 # session_unlocked  = []

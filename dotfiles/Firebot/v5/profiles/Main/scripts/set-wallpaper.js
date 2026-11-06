@@ -1,41 +1,13 @@
-const { execSync } = require('child_process');
 const fs = require('fs');
 const os = require('os');
 const path = require('path');
+const { runNoctalia } = require('./desktop-integration');
 
 const WALLPAPER_DIR = path.join(os.homedir(), 'Pictures', 'Wallpapers');
-// Noctalia's IPC socket name differs per build/install:
-//   system build (/usr/bin)              -> noctalia-<display>.sock
-//   older local dev build (~/.local/bin) -> noctalia-kwe-<display>.sock
-// Pick the binary whose socket is actually live so this keeps working
-// regardless of which install is currently running.
-function resolveNoctaliaPath() {
-    const runtimeDir = process.env.XDG_RUNTIME_DIR || `/run/user/${process.getuid()}`;
-    const display = process.env.WAYLAND_DISPLAY || 'wayland-0';
-    const candidates = [
-        { bin: '/usr/bin/noctalia-kwe', sock: `${runtimeDir}/noctalia-${display}.sock` },
-        { bin: '/home/don/.local/bin/noctalia-kwe', sock: `${runtimeDir}/noctalia-kwe-${display}.sock` },
-    ];
-    const live = candidates.find((c) => fs.existsSync(c.sock) && fs.existsSync(c.bin));
-    const anyBin = candidates.find((c) => fs.existsSync(c.bin));
-    return (live || anyBin || candidates[0]).bin;
-}
-
-const NOCTALIA_PATH = resolveNoctaliaPath();
 const DEBUG_FILE = path.join(__dirname, '..', '..', '..', 'logs', 'wallpaper-debug.log');
 
 // Palette generation scheme applied whenever a numbered wallpaper is chosen.
 const WALLPAPER_SCHEME = 'm3-content';
-
-function noctalia(...args) {
-    const quoted = args.map((a) => `"${a}"`).join(' ');
-    execSync(`"${NOCTALIA_PATH}" msg ${quoted}`, {
-        env: {
-            ...process.env,
-            PATH: '/usr/bin:' + (process.env.PATH || '')
-        }
-    });
-}
 
 function logDebug(msg) {
     try {
@@ -170,13 +142,13 @@ exports.run = function (runRequest) {
         try {
             // Force the M3 Content scheme first so the new wallpaper is derived with it.
             try {
-                noctalia('color-scheme-set', 'wallpaper', WALLPAPER_SCHEME);
+                runNoctalia('color-scheme-set', 'wallpaper', WALLPAPER_SCHEME);
                 logDebug(`Palette scheme set to ${WALLPAPER_SCHEME}`);
             } catch (schemeError) {
                 logDebug(`Failed to set scheme ${WALLPAPER_SCHEME}: ${schemeError.message}`);
             }
 
-            noctalia('wallpaper-set', wallpaperPath);
+            runNoctalia('wallpaper-set', wallpaperPath);
 
             logDebug('Success!');
             resolve({

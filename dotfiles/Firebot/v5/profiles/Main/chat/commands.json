@@ -458,10 +458,10 @@
             "id": "ae732a99-6b22-405b-bf22-f104935965e7",
             "createdBy": "theblack_don",
             "createdAt": "2026-06-19T14:42:50.712-04:00",
-            "count": 205,
+            "count": 210,
             "type": "custom",
             "lastEditBy": "theblack_don",
-            "lastEditAt": "2026-10-30T13:00:06.759-04:00"
+            "lastEditAt": "2026-11-05T12:01:18.346-05:00"
         },
         "e044e8ae-41b2-4467-b969-79b0378d7b28": {
             "active": true,
@@ -530,10 +530,10 @@
             "id": "e044e8ae-41b2-4467-b969-79b0378d7b28",
             "createdBy": "theblack_don",
             "createdAt": "2026-06-24T13:55:31.662-04:00",
-            "count": 69,
+            "count": 71,
             "type": "custom",
             "lastEditBy": "theblack_don",
-            "lastEditAt": "2026-11-02T17:45:48.943-05:00"
+            "lastEditAt": "2026-11-05T14:53:24.856-05:00"
         },
         "508cb3d1-4111-4422-a32b-c41bdc39b9ec": {
             "active": false,
@@ -664,10 +664,10 @@
             "id": "11e6a018-aaac-4107-8718-c7d2229c665b",
             "createdBy": "theblack_don",
             "createdAt": "2026-06-30T10:48:38.206-04:00",
-            "count": 68,
+            "count": 69,
             "type": "custom",
             "lastEditBy": "theblack_don",
-            "lastEditAt": "2026-10-30T15:37:02.917-04:00"
+            "lastEditAt": "2026-11-06T12:33:28.163-05:00"
         },
         "80756f23-2397-45ec-8da0-2000d933b3c4": {
             "active": true,
@@ -728,10 +728,10 @@
             "id": "80756f23-2397-45ec-8da0-2000d933b3c4",
             "createdBy": "theblack_don",
             "createdAt": "2026-06-30T10:58:57.362-04:00",
-            "count": 107,
+            "count": 110,
             "type": "custom",
             "lastEditBy": "theblack_don",
-            "lastEditAt": "2026-10-30T13:03:26.350-04:00"
+            "lastEditAt": "2026-11-05T14:32:35.465-05:00"
         },
         "f1328958-9958-486b-be97-c1d548ee5ca8": {
             "active": false,
@@ -879,10 +879,10 @@
             "id": "65441a2e-1733-4b7e-9282-694eba11f4a2",
             "createdBy": "theblack_don",
             "createdAt": "2026-07-02T19:18:56.592-04:00",
-            "count": 187,
+            "count": 197,
             "type": "custom",
             "lastEditBy": "theblack_don",
-            "lastEditAt": "2026-11-02T17:51:49.088-05:00"
+            "lastEditAt": "2026-11-05T13:03:50.022-05:00"
         },
         "e119015c-011d-4f42-9f08-74f168acbdfc": {
             "active": true,
@@ -968,10 +968,10 @@
             "id": "e119015c-011d-4f42-9f08-74f168acbdfc",
             "createdBy": "theblack_don",
             "createdAt": "2026-07-02T19:23:03.772-04:00",
-            "count": 227,
+            "count": 232,
             "type": "custom",
             "lastEditBy": "theblack_don",
-            "lastEditAt": "2026-11-02T17:51:43.890-05:00"
+            "lastEditAt": "2026-11-05T12:11:51.058-05:00"
         },
         "2916d2ae-a48b-4af3-a423-0d810d84a074": {
             "active": true,
@@ -1039,10 +1039,10 @@
             "id": "2916d2ae-a48b-4af3-a423-0d810d84a074",
             "createdBy": "theblack_don",
             "createdAt": "2026-07-02T19:23:24.722-04:00",
-            "count": 54,
+            "count": 55,
             "type": "custom",
             "lastEditBy": "theblack_don",
-            "lastEditAt": "2026-10-29T15:21:40.776-04:00",
+            "lastEditAt": "2026-11-03T11:33:41.742-05:00",
             "useCustomCooldownMessage": true
         },
         "29455a09-d79e-4695-aac7-fc7bb28f0ee8": {
@@ -1314,10 +1314,10 @@
             "id": "a678711f-0164-4d36-98e2-61ad6b3c6f98",
             "createdBy": "theblack_don",
             "createdAt": "2026-07-14T13:25:00.342-04:00",
-            "count": 40,
+            "count": 42,
             "type": "custom",
             "lastEditBy": "theblack_don",
-            "lastEditAt": "2026-10-30T13:30:20.015-04:00"
+            "lastEditAt": "2026-11-06T12:04:42.344-05:00"
         },
         "df1131ef-349c-4199-8abd-dbfb6fe7d5b3": {
             "active": true,
@@ -1467,10 +1467,10 @@
             "id": "49169ab9-b34b-452b-b4f3-de63e470362d",
             "createdBy": "theblack_don",
             "createdAt": "2026-07-23T23:14:59.113-04:00",
-            "count": 49,
+            "count": 53,
             "type": "custom",
             "lastEditBy": "theblack_don",
-            "lastEditAt": "2026-11-02T13:58:39.337-05:00"
+            "lastEditAt": "2026-11-03T13:07:37.694-05:00"
         },
         "d369b5ab-5c43-44e9-8e49-2ae69ba25c6d": {
             "active": false,
@@ -1582,10 +1582,10 @@
             "id": "6bed76cf-eaba-4735-8442-f2529425cecd",
             "createdBy": "theblack_don",
             "createdAt": "2026-07-31T13:12:37.375-04:00",
-            "count": 78,
+            "count": 80,
             "type": "custom",
             "lastEditBy": "theblack_don",
-            "lastEditAt": "2026-10-29T15:20:11.117-04:00"
+            "lastEditAt": "2026-11-03T15:56:27.321-05:00"
         },
         "b0dbac13-2dd4-4596-8571-39f003db7f49": {
             "active": true,
@@ -1905,10 +1905,10 @@
             "id": "13101bcc-75e1-4183-bf9f-46a0eee24dad",
             "createdBy": "theblack_don",
             "createdAt": "2026-09-11T10:17:42.738-04:00",
-            "count": 9,
+            "count": 10,
             "type": "custom",
             "lastEditBy": "theblack_don",
-            "lastEditAt": "2026-10-07T14:03:48.499-04:00"
+            "lastEditAt": "2026-11-04T14:39:02.741-05:00"
         },
         "54372609-e7ae-4546-9d6e-7a006fcc9705": {
             "active": true,
@@ -2182,10 +2182,74 @@
             "id": "c597ca38-e243-4041-a8a8-d984beaaa0e1",
             "createdBy": "theblack_don",
             "createdAt": "2026-10-26T10:06:08.515-04:00",
-            "count": 25,
+            "count": 30,
             "type": "custom",
             "lastEditBy": "theblack_don",
-            "lastEditAt": "2026-11-02T17:16:42.062-05:00"
+            "lastEditAt": "2026-11-05T14:53:09.980-05:00"
+        },
+        "0889083d-1cc5-474a-93cf-e69d8b5e1119": {
+            "active": true,
+            "simple": false,
+            "sendCooldownMessage": true,
+            "cooldownMessage": "This command is still on cooldown for: {timeLeft}",
+            "cooldown": {},
+            "effects": {
+                "id": "3214d866-48a1-4374-8556-b9ab834f0af3",
+                "list": [
+                    {
+                        "id": "e077fdfc-72e9-48de-bc5f-325b3eae0d5f",
+                        "type": "ebiggz:obs-toggle-source-visibility",
+                        "active": true,
+                        "selectedSources": [
+                            {
+                                "sceneName": "Streaming 16:9",
+                                "sourceId": 28,
+                                "sourceName": "HourlyRate",
+                                "action": "toggle"
+                            }
+                        ],
+                        "percentWeight": null
+                    },
+                    {
+                        "id": "8a33165a-4161-42f0-97c0-a1e9543c0209",
+                        "type": "firebot:delay",
+                        "active": true,
+                        "delay": "30",
+                        "percentWeight": null
+                    },
+                    {
+                        "id": "ad924849-6146-4a43-914e-e6adefae9b15",
+                        "type": "ebiggz:obs-toggle-source-visibility",
+                        "active": true,
+                        "selectedSources": [
+                            {
+                                "sceneName": "Streaming 16:9",
+                                "sourceId": 28,
+                                "sourceName": "HourlyRate",
+                                "action": "toggle"
+                            }
+                        ],
+                        "percentWeight": null
+                    }
+                ],
+                "runMode": "all"
+            },
+            "restrictionData": {
+                "restrictions": [],
+                "mode": "all",
+                "sendFailMessage": true
+            },
+            "aliases": [],
+            "sortTags": [],
+            "treatQuotedTextAsSingleArg": false,
+            "allowTriggerBySharedChat": "inherit",
+            "sendCooldownMessageAsReply": true,
+            "trigger": "!wage",
+            "id": "0889083d-1cc5-474a-93cf-e69d8b5e1119",
+            "createdBy": "theblack_don",
+            "createdAt": "2026-11-05T08:46:59.369-05:00",
+            "count": 0,
+            "type": "custom"
         }
     },
     "systemCommandOverrides": {

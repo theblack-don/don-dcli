@@ -1,26 +1,10 @@
 const { execSync, exec } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+const { restartNoctalia } = require('./desktop-integration');
 
 const ICONS_DIR = '/home/don/.local/share/icons';
 const DEBUG_FILE = '/home/don/.config/Firebot/v5/logs/tela-debug.log';
-
-// Noctalia's IPC socket name differs per build/install:
-//   system build (/usr/bin)              -> noctalia-<display>.sock
-//   older local dev build (~/.local/bin) -> noctalia-kwe-<display>.sock
-// Pick the binary whose socket is actually live so this keeps working
-// regardless of which install is currently running.
-function resolveNoctaliaPath() {
-    const runtimeDir = process.env.XDG_RUNTIME_DIR || `/run/user/${process.getuid()}`;
-    const display = process.env.WAYLAND_DISPLAY || 'wayland-0';
-    const candidates = [
-        { bin: '/usr/bin/noctalia-kwe', sock: `${runtimeDir}/noctalia-${display}.sock` },
-        { bin: '/home/don/.local/bin/noctalia-kwe', sock: `${runtimeDir}/noctalia-kwe-${display}.sock` },
-    ];
-    const live = candidates.find((c) => fs.existsSync(c.sock) && fs.existsSync(c.bin));
-    const anyBin = candidates.find((c) => fs.existsSync(c.bin));
-    return (live || anyBin || candidates[0]).bin;
-}
 
 const CONFIG_FILES = {
     qt5ct: '/home/don/.config/qt5ct/qt5ct.conf',
@@ -233,21 +217,13 @@ exports.run = function (runRequest) {
             logDebug('Failed to restart xsettingsd: ' + e.message);
         }
 
-        // Reload noctalia only (kill + restart) so it picks up the new icon theme.
+        // Reload whichever Noctalia shell is running (noctalia on Umbriel,
+        // noctalia-kwe on KineticWE) so it picks up the new icon theme.
         // Crystal dock is no longer used, so it is intentionally not reloaded.
-        // NOTE: `pkill -x noctalia-kwe` matches the process name exactly, so it will
-        // NOT kill the unrelated OBS inotifywait watcher (whose cmdline contains
-        // the path ".../noctalia/settings.toml"), unlike `pkill -f noctalia-kwe`.
         try {
-            const noctaliaBin = resolveNoctaliaPath();
-            const reloadCmd = `pkill -x noctalia-kwe; sleep 2; setsid "${noctaliaBin}" >/dev/null 2>&1 </dev/null &`;
-            exec(reloadCmd, { shell: '/bin/bash', stdio: 'ignore' }, (err) => {
-                if (err) {
-                    logDebug('noctalia reload error: ' + err.message);
-                } else {
-                    logDebug('noctalia reloaded successfully');
-                }
-            });
+            restartNoctalia()
+                .then(() => logDebug('noctalia reloaded successfully'))
+                .catch((err) => logDebug('noctalia reload error: ' + err.message));
         } catch (e) {
             logDebug('Failed to reload noctalia: ' + e.message);
             // Don't fail the whole command if reload fails

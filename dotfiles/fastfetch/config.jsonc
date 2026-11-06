@@ -9,8 +9,8 @@
       "right": 2
     },
     "color": {
-      "1": "#c7c0f7",
-      "2": "#c8c3db",
+      "1": "#c5c4db",
+      "2": "#c7c5cf",
       "3": "#ffffff",
       "4": "#c8c80a",
       "6": "#905e29",
@@ -22,13 +22,13 @@
   "display": {
     "separator": "  ",
     "color": {
-      "keys": "#c7c0f7",
-      "title": "#c8c3db"
+      "keys": "#c5c4db",
+      "title": "#c7c5cf"
     },
     "percent": {
       "color": {
-        "green": "#f2b4d8",
-        "yellow": "#c7c0f7",
+        "green": "#ddbecf",
+        "yellow": "#c5c4db",
         "red": "#ffb4ab"
       }
     }
@@ -55,16 +55,13 @@
       "key": "{#separator}│  {#keys}󰅐 Uptime"
     },
     {
-      "type": "packages",
-      "key": "{#separator}│  {#keys}󰏓 Native  ",
-      "disabled": [
-        "nix",
-        "flatpak"
-      ]
+      "type": "command",
+      "key": "{#separator}│  {#keys}󰏓 Native      ",
+      "text": "n=$(env -u LD_LIBRARY_PATH python3 -c 'import sqlite3,sys; print(sqlite3.connect(\"file:\"+sys.argv[1]+\"?mode=ro\", uri=True).execute(\"SELECT count(*) FROM Sigmd5\").fetchone()[0])' \"$(env -u LD_LIBRARY_PATH rpm --eval \"%{_dbpath}\")/rpmdb.sqlite\" 2>/dev/null) || n=$(env -u LD_LIBRARY_PATH rpm -qa 2>/dev/null | grep -vc '^gpg-pubkey-'); a=$(find \"$HOME/AppImages\" \"$HOME/Applications\" -maxdepth 1 -iname '*.appimage' 2>/dev/null | wc -l); printf '%s (rpm), %s (appimage)' \"$n\" \"$a\""
     },
     {
       "type": "packages",
-      "key": "{#separator}│  {#keys}󰏓 Flatpaks",
+      "key": "{#separator}│  {#keys}󰏓 Flatpaks    ",
       "disabled": [
         "am",
         "apk",
@@ -107,48 +104,10 @@
       ]
     },
     {
-      "type": "packages",
-      "key": "{#separator}│  {#keys} Nix     ",
-      "disabled": [
-        "am",
-        "apk",
-        "appimage",
-        "brew",
-        "cards",
-        "choco",
-        "crux",
-        "dpkg",
-        "emerge",
-        "eopkg",
-        "flatpak",
-        "guix",
-        "hpkg",
-        "installrelease",
-        "kiss",
-        "linglong",
-        "lpkg",
-        "lpkgbuild",
-        "macports",
-        "moss",
-        "mport",
-        "opkg",
-        "pacman",
-        "pacstall",
-        "paludis",
-        "pisi",
-        "pkg",
-        "pkgsrc",
-        "pkgtool",
-        "porg",
-        "rpm",
-        "rum",
-        "scoop",
-        "snap",
-        "soar",
-        "sorcery",
-        "winget",
-        "xbps"
-      ]
+      "type": "command",
+      "key": "{#separator}│  {#keys} Nix Packages",
+      "text": "p=\"$HOME/.nix-profile\"; [ -d \"$p\" ] || exit 1; out=$(env -u LD_LIBRARY_PATH nix-store -q --requisites \"$p\" 2>/dev/null) || exit 1; printf '%s\\n' \"$out\" | awk -F/ '{n=$NF; if (n ~ /[0-9]\\.[0-9]/ && n !~ /-(doc|man|info|dev|bin)$/) c++} END {print c+0}'",
+      "format": "{} (nix-user)"
     },
     {
       "type": "custom",

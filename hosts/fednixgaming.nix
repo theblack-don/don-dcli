@@ -10,7 +10,7 @@
   # process modules in declared order. Sequential mode honors
   # run_hooks_as_user, which the kineticwe-dev hook needs: parallel mode runs
   # module hooks through sudo (root), breaking per-user nix profile installs.
-  module_processing = "sequential";
+  module_processing = "parallel";
 
   # COPR repositories enabled before native packages
   copr_repos = [

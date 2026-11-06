@@ -1,6 +1,7 @@
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+const { isUmbriel, runUmbriel } = require('./desktop-integration');
 
 const QDBUS_PATH =
     ['/usr/bin/qdbus-qt6', '/usr/bin/qdbus6', '/usr/bin/qdbus'].find((p) => fs.existsSync(p)) ||
@@ -64,7 +65,12 @@ exports.run = function (runRequest) {
         const username = getUsername(runRequest);
 
         try {
-            invokeShortcut('Window Fullscreen');
+            if (isUmbriel()) {
+                runUmbriel('window-toggle-fullscreen');
+                logDebug('Umbriel window-toggle-fullscreen');
+            } else {
+                invokeShortcut('Window Fullscreen');
+            }
 
             logDebug('Success!');
             resolve({

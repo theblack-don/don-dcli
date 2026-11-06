@@ -1,24 +1,6 @@
-const { execSync } = require('child_process');
 const fs = require('fs');
+const { runNoctalia } = require('./desktop-integration');
 
-// Noctalia's IPC socket name differs per build/install:
-//   system build (/usr/bin)              -> noctalia-<display>.sock
-//   older local dev build (~/.local/bin) -> noctalia-kwe-<display>.sock
-// Pick the binary whose socket is actually live so this keeps working
-// regardless of which install is currently running.
-function resolveNoctaliaPath() {
-    const runtimeDir = process.env.XDG_RUNTIME_DIR || `/run/user/${process.getuid()}`;
-    const display = process.env.WAYLAND_DISPLAY || 'wayland-0';
-    const candidates = [
-        { bin: '/usr/bin/noctalia-kwe', sock: `${runtimeDir}/noctalia-${display}.sock` },
-        { bin: '/home/don/.local/bin/noctalia-kwe', sock: `${runtimeDir}/noctalia-kwe-${display}.sock` },
-    ];
-    const live = candidates.find((c) => fs.existsSync(c.sock) && fs.existsSync(c.bin));
-    const anyBin = candidates.find((c) => fs.existsSync(c.bin));
-    return (live || anyBin || candidates[0]).bin;
-}
-
-const NOCTALIA_PATH = resolveNoctaliaPath();
 const DEBUG_FILE = '/home/don/.config/Firebot/v5/logs/random-wallpaper-theme-debug.log';
 
 function logDebug(msg) {
@@ -52,12 +34,7 @@ exports.run = function (runRequest) {
         // reachable over IPC while it is open, which is why this used to fail with
         // "matched plugin entry is not ready").
         try {
-            execSync(`"${NOCTALIA_PATH}" msg plugin theblackdon/theme-switcher:wallpaper-ipc all random`, {
-                env: {
-                    ...process.env,
-                    PATH: '/usr/bin:' + (process.env.PATH || '')
-                }
-            });
+            runNoctalia('plugin', 'theblackdon/theme-switcher:wallpaper-ipc', 'all', 'random');
 
             logDebug('Success!');
             resolve({

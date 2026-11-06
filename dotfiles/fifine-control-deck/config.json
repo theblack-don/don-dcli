@@ -777,7 +777,7 @@
               "action": {
                 "type": "run_command",
                 "params": {
-                  "command": "noctalia-kwe msg plugin theblackdon/theme-switcher:wallpaper-ipc all apply \"Mocha Pink\""
+                  "command": "noctalia-msg plugin theblackdon/theme-switcher:wallpaper-ipc all apply \"Mocha Pink\""
                 }
               }
             },
@@ -789,7 +789,7 @@
               "action": {
                 "type": "run_command",
                 "params": {
-                  "command": "noctalia-kwe msg plugin theblackdon/theme-switcher:wallpaper-ipc all apply \"Monochrome\""
+                  "command": "noctalia-msg plugin theblackdon/theme-switcher:wallpaper-ipc all apply \"Monochrome\""
                 }
               }
             },
@@ -801,7 +801,7 @@
               "action": {
                 "type": "run_command",
                 "params": {
-                  "command": "noctalia-kwe msg plugin theblackdon/theme-switcher:wallpaper-ipc all apply \"Gruvbox\""
+                  "command": "noctalia-msg plugin theblackdon/theme-switcher:wallpaper-ipc all apply \"Gruvbox\""
                 }
               }
             },
@@ -813,7 +813,7 @@
               "action": {
                 "type": "run_command",
                 "params": {
-                  "command": "noctalia-kwe msg plugin theblackdon/theme-switcher:wallpaper-ipc all apply \"Ruby\""
+                  "command": "noctalia-msg plugin theblackdon/theme-switcher:wallpaper-ipc all apply \"Ruby\""
                 }
               }
             },
@@ -825,7 +825,7 @@
               "action": {
                 "type": "run_command",
                 "params": {
-                  "command": "noctalia-kwe msg plugin theblackdon/theme-switcher:wallpaper-ipc all apply \"Tokyo Night\""
+                  "command": "noctalia-msg plugin theblackdon/theme-switcher:wallpaper-ipc all apply \"Tokyo Night\""
                 }
               }
             },
@@ -837,7 +837,7 @@
               "action": {
                 "type": "run_command",
                 "params": {
-                  "command": "noctalia-kwe msg plugin theblackdon/theme-switcher:wallpaper-ipc all apply \"Deep Black\""
+                  "command": "noctalia-msg plugin theblackdon/theme-switcher:wallpaper-ipc all apply \"Deep Black\""
                 }
               }
             },
@@ -849,7 +849,7 @@
               "action": {
                 "type": "run_command",
                 "params": {
-                  "command": "noctalia-kwe msg plugin theblackdon/theme-switcher:wallpaper-ipc all apply \"Gold\""
+                  "command": "noctalia-msg plugin theblackdon/theme-switcher:wallpaper-ipc all apply \"Gold\""
                 }
               }
             },
@@ -861,7 +861,7 @@
               "action": {
                 "type": "run_command",
                 "params": {
-                  "command": "noctalia-kwe msg plugin theblackdon/theme-switcher:wallpaper-ipc all apply \"Cream Autumn\""
+                  "command": "noctalia-msg plugin theblackdon/theme-switcher:wallpaper-ipc all apply \"Cream Autumn\""
                 }
               }
             },
@@ -873,7 +873,7 @@
               "action": {
                 "type": "run_command",
                 "params": {
-                  "command": "noctalia-kwe msg plugin theblackdon/theme-switcher:wallpaper-ipc all apply \"Mocha Lavender\""
+                  "command": "noctalia-msg plugin theblackdon/theme-switcher:wallpaper-ipc all apply \"Mocha Lavender\""
                 }
               }
             },
@@ -885,7 +885,7 @@
               "action": {
                 "type": "run_command",
                 "params": {
-                  "command": "noctalia-kwe msg plugin theblackdon/theme-switcher:wallpaper-ipc all next"
+                  "command": "noctalia-msg plugin theblackdon/theme-switcher:wallpaper-ipc all next"
                 }
               }
             },
@@ -897,7 +897,7 @@
               "action": {
                 "type": "run_command",
                 "params": {
-                  "command": "noctalia-kwe msg plugin theblackdon/theme-switcher:wallpaper-ipc all apply \"Nord Pink\""
+                  "command": "noctalia-msg plugin theblackdon/theme-switcher:wallpaper-ipc all apply \"Nord Pink\""
                 }
               }
             },
@@ -909,7 +909,7 @@
               "action": {
                 "type": "run_command",
                 "params": {
-                  "command": "noctalia-kwe msg plugin theblackdon/theme-switcher:wallpaper-ipc all apply \"Vibrant\""
+                  "command": "noctalia-msg plugin theblackdon/theme-switcher:wallpaper-ipc all apply \"Vibrant\""
                 }
               }
             },
@@ -921,7 +921,7 @@
               "action": {
                 "type": "run_command",
                 "params": {
-                  "command": "noctalia-kwe msg plugin theblackdon/theme-switcher:wallpaper-ipc all apply \"Soft\""
+                  "command": "noctalia-msg plugin theblackdon/theme-switcher:wallpaper-ipc all apply \"Soft\""
                 }
               }
             },

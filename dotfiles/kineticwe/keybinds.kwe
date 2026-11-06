@@ -25,12 +25,10 @@ Window One Desktop Down=Meta+Ctrl+Alt+Down
 Window One Desktop Up=Meta+Ctrl+Alt+Up
 Window to Desktop 1=Meta+!
 [noctalia][Global Shortcuts]
-NoctaliaToggleBar=Meta+Shift+B
 NoctaliaToggleClipboard=Meta+Shift+C
-NoctaliaDockToggle=Meta+Shift+D
 NoctaliaToggleWallpaperPicker=Meta+Shift+W
 [applications][Global Shortcuts]
-equibop=Meta+D
+com.discordapp.Discord=Meta+D
 fifine-control-deck=Ctrl+Alt+F
 nemo=Meta+F
 firebotv5=Meta+Shift+F
@@ -43,9 +41,8 @@ com.linuxgamerlife.lgl-papercutter=Meta+Ctrl+W
 lgl-vm-curator=Meta+Alt+V
 com.obsproject.Studio=Meta+O
 steam=Meta+S
-org.telegram.desktop=Meta+G
+TuiOS=Meta+Z
 veadotube-mini=Meta+V
-dev.zed.Zed=Meta+Z
 [custom-commands][Global Shortcuts]
 cmd-12=Meta+Alt+D
 cmd-8=Meta+Alt+F
@@ -54,6 +51,9 @@ cmd-11=Meta+Alt+K
 cmd-6=Meta+Ctrl+F
 cmd-14=Ctrl+Alt+Shift+W
 cmd-13=Alt+Shift+W
+cmd-17=Meta+Shift+B
+cmd-18=Meta+Shift+D
 cmd-9=Meta+Alt+W
 cmd-10=Meta+R
 cmd-15=Meta+Shift+S
+cmd-16=Meta+G

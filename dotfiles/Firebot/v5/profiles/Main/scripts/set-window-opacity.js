@@ -1,6 +1,7 @@
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+const { isUmbriel } = require('./desktop-integration');
 
 const OPACITY = 0.65;
 // Time to alt-tab / click another window after hitting Test Effects
@@ -149,6 +150,14 @@ exports.run = async function (runRequest) {
     logDebug(`username: ${username}, opacity: ${OPACITY}, delayMs: ${DELAY_MS}`);
 
     try {
+        if (isUmbriel()) {
+            logDebug('Umbriel session detected; window opacity requires KineticWE/KWin');
+            return {
+                success: false,
+                errorMessage: 'You are not in KineticWE, so window opacity will not work.'
+            };
+        }
+
         if (DELAY_MS > 0) {
             logDebug(`Waiting ${DELAY_MS}ms — focus the target window now`);
             await sleep(DELAY_MS);

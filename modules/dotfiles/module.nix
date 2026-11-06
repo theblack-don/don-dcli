@@ -19,6 +19,7 @@
 
     # User scripts (fifine deck buttons + KineticWE keybinds)
     { source = "../../dotfiles/bin/firebot-command"; target = "~/.local/bin/firebot-command"; }
+    { source = "../../dotfiles/bin/noctalia-msg"; target = "~/.local/bin/noctalia-msg"; }
     { source = "../../dotfiles/bin/veado-set"; target = "~/.local/bin/veado-set"; }
 
     # fifine Control Deck button/profile config

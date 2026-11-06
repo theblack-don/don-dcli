@@ -1,6 +1,7 @@
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+const { isUmbriel } = require('./desktop-integration');
 
 const QDBUS_PATH =
     ['/usr/bin/qdbus-qt6', '/usr/bin/qdbus6', '/usr/bin/qdbus'].find((p) => fs.existsSync(p)) ||
@@ -96,6 +97,14 @@ exports.run = async function (runRequest) {
     const username = getUsername(runRequest);
     const delayMs = Math.min(5000, Math.max(50, Number(runRequest?.parameters?.zoomDelay) || 400));
     logDebug(`username: ${username}, delayMs: ${delayMs}`);
+
+    if (isUmbriel()) {
+        logDebug('Umbriel session detected; zoom requires KineticWE/KWin');
+        return {
+            success: false,
+            errorMessage: 'You are not in KineticWE, so zoom will not work.'
+        };
+    }
 
     try {
         for (let i = 0; i < 5; i++) {

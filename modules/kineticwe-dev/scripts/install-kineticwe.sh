@@ -13,7 +13,7 @@
 #           wayland-sessions entry (printed at the end).
 #
 # Environment:
-#   KWE_REPO          checkout to build        (default /mnt/portablehome/Projects/kineticwe)
+#   KWE_REPO          checkout to build        (default $HOME/Projects/kineticwe)
 #   KWE_REF           build a clean git ref instead of the checkout (optional)
 #   KWE_INSTALL_MODE  local | profile          (default local)
 #   KWE_BIN_DIR       shim directory           (default $HOME/.local/bin)
@@ -31,7 +31,7 @@ HOME="$(getent passwd "$(id -un)" | cut -d: -f6)"
 export HOME
 export XDG_STATE_HOME="${XDG_STATE_HOME:-$HOME/.local/state}"
 
-REPO="${KWE_REPO:-/mnt/portablehome/Projects/kineticwe}"
+REPO="${KWE_REPO:-$HOME/Projects/kineticwe}"
 REF="${KWE_REF:-}"
 MODE="${KWE_INSTALL_MODE:-local}"
 BIN_DIR="${KWE_BIN_DIR:-$HOME/.local/bin}"

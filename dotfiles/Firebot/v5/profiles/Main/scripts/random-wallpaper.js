@@ -1,27 +1,9 @@
-const { execSync } = require('child_process');
 const fs = require('fs');
 const os = require('os');
 const path = require('path');
+const { runNoctalia } = require('./desktop-integration');
 
 const WALLPAPER_DIR = path.join(os.homedir(), 'Pictures', 'Wallpapers');
-// Noctalia's IPC socket name differs per build/install:
-//   system build (/usr/bin)              -> noctalia-<display>.sock
-//   older local dev build (~/.local/bin) -> noctalia-kwe-<display>.sock
-// Pick the binary whose socket is actually live so this keeps working
-// regardless of which install is currently running.
-function resolveNoctaliaPath() {
-    const runtimeDir = process.env.XDG_RUNTIME_DIR || `/run/user/${process.getuid()}`;
-    const display = process.env.WAYLAND_DISPLAY || 'wayland-0';
-    const candidates = [
-        { bin: '/usr/bin/noctalia-kwe', sock: `${runtimeDir}/noctalia-${display}.sock` },
-        { bin: '/home/don/.local/bin/noctalia-kwe', sock: `${runtimeDir}/noctalia-kwe-${display}.sock` },
-    ];
-    const live = candidates.find((c) => fs.existsSync(c.sock) && fs.existsSync(c.bin));
-    const anyBin = candidates.find((c) => fs.existsSync(c.bin));
-    return (live || anyBin || candidates[0]).bin;
-}
-
-const NOCTALIA_PATH = resolveNoctaliaPath();
 const DEBUG_FILE = path.join(__dirname, '..', '..', '..', 'logs', 'random-wallpaper-debug.log');
 
 function logDebug(msg) {
@@ -88,12 +70,7 @@ exports.run = function (runRequest) {
         const wallpaperPath = path.join(WALLPAPER_DIR, wallpaper);
 
         try {
-            execSync(`"${NOCTALIA_PATH}" msg wallpaper-set "${wallpaperPath}"`, {
-                env: {
-                    ...process.env,
-                    PATH: '/usr/bin:' + (process.env.PATH || '')
-                }
-            });
+            runNoctalia('wallpaper-set', wallpaperPath);
 
             logDebug('Success!');
             resolve({

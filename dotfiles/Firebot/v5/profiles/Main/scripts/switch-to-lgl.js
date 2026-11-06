@@ -1,6 +1,7 @@
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+const { isUmbriel, runUmbriel } = require('./desktop-integration');
 
 const DEBUG_FILE = path.join(__dirname, '..', '..', '..', 'logs', 'switch-to-lgl-debug.log');
 const KWIN_SCRIPT = path.join(__dirname, 'kwin-switch-lgl.js');
@@ -110,44 +111,51 @@ exports.run = async function (runRequest) {
     logDebug(`username: ${username}, output: ${output}, desktop: ${desktop}`);
 
     try {
-        writeKwinScript(output, desktop);
+        if (isUmbriel()) {
+            // Umbriel keeps workspaces per output; its workspace numbers match
+            // the virtual desktops this script originally targeted.
+            runUmbriel('workspace-switch', String(desktop), '--output', output);
+            logDebug(`Umbriel workspace-switch ${desktop} on ${output}`);
+        } else {
+            writeKwinScript(output, desktop);
 
-        // Unique name each run so KWin always loads fresh script contents
-        const pluginName = `firebot-switch-lgl-${Date.now()}`;
+            // Unique name each run so KWin always loads fresh script contents
+            const pluginName = `firebot-switch-lgl-${Date.now()}`;
 
-        const id = String(
+            const id = String(
+                qdbus(
+                    `org.kde.KWin /Scripting org.kde.kwin.Scripting.loadScript "${KWIN_SCRIPT}" "${pluginName}"`
+                )
+            ).trim();
+            logDebug(`loadScript id=${id} name=${pluginName}`);
+
+            if (!id || Number.isNaN(Number(id))) {
+                throw new Error(`KWin loadScript failed, got: ${id}`);
+            }
+
+            try {
+                qdbus(`org.kde.KWin /Scripting org.kde.kwin.Scripting.start`, { ignore: true });
+            } catch (e) {
+                logDebug(`start: ${e.message}`);
+            }
+
             qdbus(
-                `org.kde.KWin /Scripting org.kde.kwin.Scripting.loadScript "${KWIN_SCRIPT}" "${pluginName}"`
-            )
-        ).trim();
-        logDebug(`loadScript id=${id} name=${pluginName}`);
-
-        if (!id || Number.isNaN(Number(id))) {
-            throw new Error(`KWin loadScript failed, got: ${id}`);
-        }
-
-        try {
-            qdbus(`org.kde.KWin /Scripting org.kde.kwin.Scripting.start`, { ignore: true });
-        } catch (e) {
-            logDebug(`start: ${e.message}`);
-        }
-
-        qdbus(
-            `org.kde.KWin /Scripting/Script${id} org.kde.kwin.Script.run`,
-            { ignore: true }
-        );
-        logDebug('Script.run called');
-
-        // Give KWin a moment to apply before unloading
-        execSync('sleep 0.3', { env: dbusEnv() });
-
-        try {
-            qdbus(
-                `org.kde.KWin /Scripting org.kde.kwin.Scripting.unloadScript "${pluginName}"`,
+                `org.kde.KWin /Scripting/Script${id} org.kde.kwin.Script.run`,
                 { ignore: true }
             );
-        } catch (e) {
-            logDebug(`cleanup unload: ${e.message}`);
+            logDebug('Script.run called');
+
+            // Give KWin a moment to apply before unloading
+            execSync('sleep 0.3', { env: dbusEnv() });
+
+            try {
+                qdbus(
+                    `org.kde.KWin /Scripting org.kde.kwin.Scripting.unloadScript "${pluginName}"`,
+                    { ignore: true }
+                );
+            } catch (e) {
+                logDebug(`cleanup unload: ${e.message}`);
+            }
         }
 
         logDebug('Success!');

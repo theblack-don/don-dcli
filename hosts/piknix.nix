@@ -30,7 +30,6 @@
   # flatpak packages (installed via flatpak)
   flatpak_packages = [
     "com.obsproject.Studio"
-    "com.moonlight_stream.Moonlight"
   ];
 
   # flatpak installation scope: "user" (default) or "system"
@@ -50,6 +49,7 @@
     "nixd"
     "zoxide"
     "nix-output-monitor"
+    "tuios"
   ];
 
   # GUI nix packages (nix graphics stack)

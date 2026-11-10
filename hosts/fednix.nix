@@ -74,7 +74,6 @@
   ];
 
   enabled_modules = [
-    "dotfiles"
     "vm-stuff"
     "bootc"
     "lgl"

@@ -1,18 +1,16 @@
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-const { isUmbriel } = require('./desktop-integration');
+const { childPath, isUmbriel, logPath, qdbusPath, runtimeDir } = require('./desktop-integration');
 
 const OPACITY = 0.65;
 // Time to alt-tab / click another window after hitting Test Effects
 const DELAY_MS = 3000;
 // Derive paths from this script's location so they survive home/config moves
 // (e.g. /var/home -> /home) instead of hardcoding an absolute path.
-const DEBUG_FILE = path.join(__dirname, '..', '..', '..', 'logs', 'set-window-opacity-debug.log');
+const DEBUG_FILE = logPath('set-window-opacity-debug.log');
 const KWIN_SCRIPT = path.join(__dirname, 'kwin-set-opacity.js');
-const QDBUS_PATH =
-    ['/usr/bin/qdbus-qt6', '/usr/bin/qdbus6', '/usr/bin/qdbus'].find((p) => fs.existsSync(p)) ||
-    'qdbus6';
+const QDBUS_PATH = qdbusPath();
 
 function logDebug(msg) {
     try {
@@ -35,10 +33,10 @@ function getUsername(runRequest) {
 function dbusEnv() {
     return {
         ...process.env,
-        PATH: '/usr/bin:/bin:' + (process.env.PATH || ''),
+        PATH: childPath(),
         DBUS_SESSION_BUS_ADDRESS:
-            process.env.DBUS_SESSION_BUS_ADDRESS || 'unix:path=/run/user/1000/bus',
-        XDG_RUNTIME_DIR: process.env.XDG_RUNTIME_DIR || '/run/user/1000',
+            process.env.DBUS_SESSION_BUS_ADDRESS || `unix:path=${runtimeDir()}/bus`,
+        XDG_RUNTIME_DIR: runtimeDir(),
         DISPLAY: process.env.DISPLAY || ':0',
         WAYLAND_DISPLAY: process.env.WAYLAND_DISPLAY || 'wayland-0'
     };

@@ -1,7 +1,7 @@
 const fs = require('fs');
-const { runNoctalia } = require('./desktop-integration');
+const { logPath, runNoctalia } = require('./desktop-integration');
 
-const DEBUG_FILE = '/home/don/.config/Firebot/v5/logs/random-wallpaper-theme-debug.log';
+const DEBUG_FILE = logPath('random-wallpaper-theme-debug.log');
 
 function logDebug(msg) {
     try {

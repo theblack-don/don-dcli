@@ -1,10 +1,10 @@
 const fs = require('fs');
 const os = require('os');
 const path = require('path');
-const { runNoctalia } = require('./desktop-integration');
+const { logPath, runNoctalia } = require('./desktop-integration');
 
 const WALLPAPER_DIR = path.join(os.homedir(), 'Pictures', 'Wallpapers');
-const DEBUG_FILE = path.join(__dirname, '..', '..', '..', 'logs', 'random-wallpaper-debug.log');
+const DEBUG_FILE = logPath('random-wallpaper-debug.log');
 
 function logDebug(msg) {
     try {

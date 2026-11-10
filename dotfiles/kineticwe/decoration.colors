@@ -1,11 +1,11 @@
 [Dark]
-Frame=#131314
-TitleBar=#201f21
-Foreground=#e5e1e3
-Outline=#47464c
+Frame=#17130b
+TitleBar=#241f17
+Foreground=#ece1d4
+Outline=#4e4539
 
 [Light]
-Frame=#fcf8fa
-TitleBar=#f1edee
-Foreground=#1c1b1d
-Outline=#c8c5cd
+Frame=#fff8f3
+TitleBar=#f8ecdf
+Foreground=#201b13
+Outline=#d2c5b4

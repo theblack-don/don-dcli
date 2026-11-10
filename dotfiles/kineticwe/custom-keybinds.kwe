@@ -20,13 +20,13 @@ com.discordapp.Discord=Discord
 TuiOS=TuiOS
 [applications:exec]
 dev.zed.Zed=/home/don/.local/zed.app/bin/zed
-dev.kineticwe.Settings=sh -c "noctalia-kwe msg kinetic-settings-open || { noctalia-kwe --daemon && noctalia-kwe msg kinetic-settings-open; }"
+dev.kineticwe.Settings=sh -c "/home/don/.local/kineticwe/bin/noctalia-kwe msg kinetic-settings-open || { /home/don/.local/kineticwe/bin/noctalia-kwe --daemon && /home/don/.local/kineticwe/bin/noctalia-kwe msg kinetic-settings-open; }"
 com.linuxgamerlife.lgl-papercutter=lgl-papercutter
 com.mitchellh.ghostty=/usr/bin/ghostty --gtk-single-instance=true
 com.obsproject.Studio=/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=obs com.obsproject.Studio
 kitty=kitty
 steam=/usr/bin/steam
-veadotube-mini=/home/don/Documents/veadotube-mini
+veadotube-mini=/home/don/.local/bin/veadotube-mini
 fifine-control-deck=/home/don/Documents/fifine-control-deck-0.12.8-x86_64.AppImage
 com.linuxgamerlife.lgl-emoji-picker=lgl-emoji-picker
 helium=helium-browser-bin --enable-features=VaapiVideoDecoder,PlatformHEVCDecoderSupport
@@ -39,27 +39,27 @@ TuiOS=/home/don/.local/bin/ghostty --title=TuiOS --class=com.tuios.TuiOS -e /hom
 cmd-6=kitty --hold fastfetch
 cmd-7=ghostty --wait-after-command -e ki
 cmd-8=ghostty --wait-after-command -e fastfetch
-cmd-9=noctalia-kwe msg panel-toggle theblackdon/theme-switcher:wallpapers
-cmd-10=noctalia-kwe msg plugin theblackdon/theme-switcher:wallpaper-ipc all next
+cmd-9=noctalia-msg msg panel-toggle theblackdon/theme-switcher:wallpapers
+cmd-10=noctalia-msg msg plugin theblackdon/theme-switcher:wallpaper-ipc all next
 cmd-11=ghostty -e kx
 cmd-12=ds4u
 cmd-13=kwepaperpicker toggle
 cmd-14=kwepaperpicker
 cmd-15=spectacle -b -r
 cmd-16=Telegram
-cmd-17=noctalia-kwe msg bar-toggle
-cmd-18=noctalia-kwe msg dock-toggle
+cmd-17=noctalia-msg msg bar-toggle
+cmd-18=noctalia-msg msg dock-toggle
 [custom-commands:exec]
 cmd-6=kitty --hold fastfetch
 cmd-7=ghostty --wait-after-command -e ki
 cmd-8=ghostty --wait-after-command -e fastfetch
-cmd-9=noctalia-kwe msg panel-toggle theblackdon/theme-switcher:wallpapers
-cmd-10=noctalia-kwe msg plugin theblackdon/theme-switcher:wallpaper-ipc all next
+cmd-9=noctalia-msg msg panel-toggle theblackdon/theme-switcher:wallpapers
+cmd-10=noctalia-msg msg plugin theblackdon/theme-switcher:wallpaper-ipc all next
 cmd-11=ghostty -e kx
 cmd-12=ds4u
 cmd-13=kwepaperpicker toggle
 cmd-14=kwepaperpicker
 cmd-15=spectacle -b -r
 cmd-16=Telegram
-cmd-17=noctalia-kwe msg bar-toggle
-cmd-18=noctalia-kwe msg dock-toggle
+cmd-17=noctalia-msg msg bar-toggle
+cmd-18=noctalia-msg msg dock-toggle

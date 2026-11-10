@@ -1,6 +1,6 @@
 [General]
-count=18
-rules=rule-35122090938392,rule-43488441602441,rule-43535486230533,rule-44915773144709,rule-4487115459356,rule-220165225949,rule-6089510658847,rule-44824984741341,rule-13335426972320,rule-45694930644812,rule-21066847800278,rule-39775379266858,rule-14776181564739,rule-15571765400936,rule-16347271781611,rule-5592165680862,rule-11144135607039,rule-3722735975589
+count=19
+rules=rule-35122090938392,rule-43488441602441,rule-43535486230533,rule-44915773144709,rule-4487115459356,rule-220165225949,rule-6089510658847,rule-44824984741341,rule-13335426972320,rule-45694930644812,rule-21066847800278,rule-39775379266858,rule-14776181564739,rule-15571765400936,rule-16347271781611,rule-5592165680862,rule-11144135607039,rule-3722735975589,rule-68395168246017
 
 [rule-11144135607039]
 Description=Discord Popout
@@ -143,8 +143,6 @@ floating=true
 floatingrule=2
 ignoregeometry=true
 ignoregeometryrule=2
-position=1497,60
-positionrule=4
 size=498,327
 sizerule=3
 wmclass=com.linuxgamerlife.lgl-emoji-picker
@@ -263,7 +261,7 @@ Description=Moonlight
 Enabled=true
 blur=
 blurrule=2
-desktops=cb1c3e08-4020-4e10-b025-13fc7891ab55
+desktops=381b5b60-d2bc-4f28-ac42-63ad0b58971c
 desktopsrule=3
 ignoregeometry=true
 ignoregeometryrule=2
@@ -288,5 +286,13 @@ desktopsrule=3
 screen=DP-1
 screenrule=3
 wmclass=dev.zed.Zed
+wmclassmatch=1
+
+[rule-68395168246017]
+Description=GTK file Picker
+Enabled=true
+size=800,600
+sizerule=3
+wmclass=xdg-desktop-portal-gtk
 wmclassmatch=1
 

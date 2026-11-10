@@ -2,6 +2,7 @@ const { spawn, execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 const os = require('os');
+const { logPath } = require('./desktop-integration');
 
 const HOME = os.homedir();
 const USER = os.userInfo().username;
@@ -35,7 +36,7 @@ const EXTRA_PATH = [
     `/etc/profiles/per-user/${USER}/bin`
 ];
 
-const DEBUG_FILE = path.join(__dirname, '..', '..', '..', 'logs', 'spawn-fastfetch-debug.log');
+const DEBUG_FILE = logPath('spawn-fastfetch-debug.log');
 
 function logDebug(msg) {
     try {

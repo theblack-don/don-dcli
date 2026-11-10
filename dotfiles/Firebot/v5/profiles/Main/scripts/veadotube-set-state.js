@@ -17,10 +17,11 @@ const { promisify } = require('util');
 const fs = require('fs');
 const os = require('os');
 const path = require('path');
+const { logPath } = require('./desktop-integration');
 
 const execFileAsync = promisify(execFile);
 
-const DEBUG_FILE = path.join(__dirname, '..', '..', '..', 'logs', 'veadotube-state-debug.log');
+const DEBUG_FILE = logPath('veadotube-state-debug.log');
 const VEADO_SET = path.join(os.homedir(), '.local/bin', 'veado-set');
 
 function logDebug(msg) {

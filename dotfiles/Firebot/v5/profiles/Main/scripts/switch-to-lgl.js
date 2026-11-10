@@ -1,13 +1,11 @@
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-const { isUmbriel, runUmbriel } = require('./desktop-integration');
+const { childPath, isUmbriel, logPath, qdbusPath, runUmbriel, runtimeDir } = require('./desktop-integration');
 
-const DEBUG_FILE = path.join(__dirname, '..', '..', '..', 'logs', 'switch-to-lgl-debug.log');
+const DEBUG_FILE = logPath('switch-to-lgl-debug.log');
 const KWIN_SCRIPT = path.join(__dirname, 'kwin-switch-lgl.js');
-const QDBUS_PATH =
-    ['/usr/bin/qdbus-qt6', '/usr/bin/qdbus6', '/usr/bin/qdbus'].find((p) => fs.existsSync(p)) ||
-    'qdbus6';
+const QDBUS_PATH = qdbusPath();
 
 function logDebug(msg) {
     try {
@@ -30,10 +28,10 @@ function getUsername(runRequest) {
 function dbusEnv() {
     return {
         ...process.env,
-        PATH: '/usr/bin:/bin:' + (process.env.PATH || ''),
+        PATH: childPath(),
         DBUS_SESSION_BUS_ADDRESS:
-            process.env.DBUS_SESSION_BUS_ADDRESS || 'unix:path=/run/user/1000/bus',
-        XDG_RUNTIME_DIR: process.env.XDG_RUNTIME_DIR || '/run/user/1000',
+            process.env.DBUS_SESSION_BUS_ADDRESS || `unix:path=${runtimeDir()}/bus`,
+        XDG_RUNTIME_DIR: runtimeDir(),
         DISPLAY: process.env.DISPLAY || ':0',
         WAYLAND_DISPLAY: process.env.WAYLAND_DISPLAY || 'wayland-0'
     };

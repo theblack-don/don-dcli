@@ -11,10 +11,21 @@
             "timestamp": "2026-10-28T15:57:32.127Z",
             "read": false,
             "saved": true
+        },
+        {
+            "title": "UPDATE: TwitchCon San Diego Meetup Details",
+            "message": "Hey, Firebot fans. We weren't able to get a separate venue, so we're taking over the official Chat Moderators & Software Dev Community MeetUp at TwitchCon! For more details (and to see the <strong>exclusive Firebot sticker</strong> zunder will be giving out), check out either the <a href=\"https://discord.com/channels/372817064034959370/372821213443129346/1569165190958813355\">Discord announcement</a> or <a href=\"https://bsky.app/profile/zunderscore.tv/post/3mztrnhfgrs2p\">zunder's post on Bluesky</a>. See you in San Diego!",
+            "type": "info",
+            "source": "external",
+            "externalId": "twitchcon-us-2026-meetup-2",
+            "id": "dac749bb-23d8-4903-9010-b810a341474c",
+            "timestamp": "2026-11-09T13:49:46.676Z",
+            "read": false,
+            "saved": true
         }
     ],
     "knownExternalIds": [
-        "twitchcon-us-2026-meetup",
+        "twitchcon-us-2026-meetup-2",
         "5.61-featured-streamers-reminder"
     ]
 }

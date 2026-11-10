@@ -1,10 +1,10 @@
 const fs = require('fs');
 const os = require('os');
 const path = require('path');
-const { runNoctalia } = require('./desktop-integration');
+const { logPath, runNoctalia } = require('./desktop-integration');
 
 const WALLPAPER_DIR = path.join(os.homedir(), 'Pictures', 'Wallpapers');
-const DEBUG_FILE = path.join(__dirname, '..', '..', '..', 'logs', 'wallpaper-debug.log');
+const DEBUG_FILE = logPath('wallpaper-debug.log');
 
 // Palette generation scheme applied whenever a numbered wallpaper is chosen.
 const WALLPAPER_SCHEME = 'm3-content';

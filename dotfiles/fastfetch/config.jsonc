@@ -2,17 +2,18 @@
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
   "logo": {
     "type": "file",
-    "source": "~/BlackDon/logos/nix_fedora2.txt",
+    "source": "/home/don/BlackDon/logos/nix_fedoraNew.txt",
     "width": 40,
     "padding": {
       "top": 1,
       "right": 2
     },
     "color": {
-      "1": "#c5c4db",
-      "2": "#c7c5cf",
+      "1": "#f5c2e7",
+      "2": "#fab387",
       "3": "#ffffff",
       "4": "#c8c80a",
+      "5": "#c8bf84",
       "6": "#905e29",
       "7": "#c8bf84",
       "8": "#c81619",
@@ -22,14 +23,14 @@
   "display": {
     "separator": "  ",
     "color": {
-      "keys": "#c5c4db",
-      "title": "#c7c5cf"
+      "keys": "#f5c2e7",
+      "title": "#fab387"
     },
     "percent": {
       "color": {
-        "green": "#ddbecf",
-        "yellow": "#c5c4db",
-        "red": "#ffb4ab"
+        "green": "#94e2d5",
+        "yellow": "#ed91d4",
+        "red": "#f38ba8"
       }
     }
   },
@@ -57,7 +58,7 @@
     {
       "type": "command",
       "key": "{#separator}│  {#keys}󰏓 Native      ",
-      "text": "n=$(env -u LD_LIBRARY_PATH python3 -c 'import sqlite3,sys; print(sqlite3.connect(\"file:\"+sys.argv[1]+\"?mode=ro\", uri=True).execute(\"SELECT count(*) FROM Sigmd5\").fetchone()[0])' \"$(env -u LD_LIBRARY_PATH rpm --eval \"%{_dbpath}\")/rpmdb.sqlite\" 2>/dev/null) || n=$(env -u LD_LIBRARY_PATH rpm -qa 2>/dev/null | grep -vc '^gpg-pubkey-'); a=$(find \"$HOME/AppImages\" \"$HOME/Applications\" -maxdepth 1 -iname '*.appimage' 2>/dev/null | wc -l); printf '%s (rpm), %s (appimage)' \"$n\" \"$a\""
+      "text": "a=$(find \"$HOME/AppImages\" \"$HOME/Applications\" -maxdepth 1 -iname '*.appimage' 2>/dev/null | wc -l); if [ -r /var/lib/dpkg/status ] && command -v dpkg-query >/dev/null 2>&1; then n=$(dpkg-query -W -f='${Status}\\n' 2>/dev/null | grep -c '^install ok installed$'); l=dpkg; elif command -v rpm >/dev/null 2>&1; then n=$(env -u LD_LIBRARY_PATH python3 -c 'import sqlite3,sys; print(sqlite3.connect(\"file:\"+sys.argv[1]+\"?mode=ro\", uri=True).execute(\"SELECT count(*) FROM Sigmd5\").fetchone()[0])' \"$(env -u LD_LIBRARY_PATH rpm --eval \"%{_dbpath}\")/rpmdb.sqlite\" 2>/dev/null) || n=$(env -u LD_LIBRARY_PATH rpm -qa 2>/dev/null | grep -vc '^gpg-pubkey-'); l=rpm; else n=0; l=none; fi; printf '%s (%s), %s (appimage)' \"$n\" \"$l\" \"$a\""
     },
     {
       "type": "packages",

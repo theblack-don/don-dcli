@@ -1,17 +1,19 @@
 const { execSync, exec } = require('child_process');
 const fs = require('fs');
+const os = require('os');
 const path = require('path');
-const { restartNoctalia } = require('./desktop-integration');
+const { logPath, restartNoctalia } = require('./desktop-integration');
 
-const ICONS_DIR = '/home/don/.local/share/icons';
-const DEBUG_FILE = '/home/don/.config/Firebot/v5/logs/tela-debug.log';
+const HOME = os.homedir();
+const ICONS_DIR = path.join(HOME, '.local', 'share', 'icons');
+const DEBUG_FILE = logPath('tela-debug.log');
 
 const CONFIG_FILES = {
-    qt5ct: '/home/don/.config/qt5ct/qt5ct.conf',
-    qt6ct: '/home/don/.config/qt6ct/qt6ct.conf',
-    gtk3: '/home/don/.config/gtk-3.0/settings.ini',
-    gtk4: '/home/don/.config/gtk-4.0/settings.ini',
-    xsettingsd: '/home/don/.config/xsettingsd/xsettingsd.conf'
+    qt5ct: path.join(HOME, '.config', 'qt5ct', 'qt5ct.conf'),
+    qt6ct: path.join(HOME, '.config', 'qt6ct', 'qt6ct.conf'),
+    gtk3: path.join(HOME, '.config', 'gtk-3.0', 'settings.ini'),
+    gtk4: path.join(HOME, '.config', 'gtk-4.0', 'settings.ini'),
+    xsettingsd: path.join(HOME, '.config', 'xsettingsd', 'xsettingsd.conf')
 };
 
 function logDebug(msg) {
@@ -204,15 +206,27 @@ exports.run = function (runRequest) {
 
         // Restart xsettingsd so GTK apps pick up the new icon theme
         try {
-            execSync('pkill -x xsettingsd || true', { shell: '/bin/bash', stdio: 'ignore' });
-            execSync('sleep 0.5', { shell: '/bin/bash', stdio: 'ignore' });
-            exec('xsettingsd', { shell: '/bin/bash', stdio: 'ignore' }, (err) => {
-                if (err) {
-                    logDebug('xsettingsd restart error: ' + err.message);
-                } else {
-                    logDebug('xsettingsd restarted successfully');
-                }
-            });
+            let hasXsettingsd = false;
+            try {
+                execSync('command -v xsettingsd', { stdio: 'ignore' });
+                hasXsettingsd = true;
+            } catch (e) {
+                // Not installed (common on NixOS unless explicitly added).
+            }
+
+            if (!hasXsettingsd) {
+                logDebug('xsettingsd not installed; skipping restart');
+            } else {
+                execSync('pkill -x xsettingsd || true', { stdio: 'ignore' });
+                execSync('sleep 0.5', { stdio: 'ignore' });
+                exec('xsettingsd', { stdio: 'ignore' }, (err) => {
+                    if (err) {
+                        logDebug('xsettingsd restart error: ' + err.message);
+                    } else {
+                        logDebug('xsettingsd restarted successfully');
+                    }
+                });
+            }
         } catch (e) {
             logDebug('Failed to restart xsettingsd: ' + e.message);
         }

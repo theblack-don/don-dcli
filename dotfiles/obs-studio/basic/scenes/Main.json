@@ -1,7 +1,7 @@
 {
     "name": "Main",
     "DesktopAudioDevice1": {
-        "prev_ver": 537001986,
+        "prev_ver": 553648129,
         "name": "Desktop Audio",
         "uuid": "4c89b166-c0c7-405f-a9e7-b63c5e09f4d2",
         "id": "pulse_output_capture",
@@ -23,16 +23,19 @@
         "hotkeys": {
             "libobs.mute": [],
             "libobs.unmute": [],
+            "libobs.monitor-on": [],
+            "libobs.monitor-off": [],
             "libobs.push-to-mute": [],
             "libobs.push-to-talk": []
         },
         "deinterlace_mode": 0,
         "deinterlace_field_order": 0,
         "monitoring_type": 0,
+        "monitoring_enabled": false,
         "private_settings": {},
         "filters": [
             {
-                "prev_ver": 537001986,
+                "prev_ver": 553648129,
                 "name": "Limiter",
                 "uuid": "c8b45bca-d03e-47f6-9923-38c05102ea9f",
                 "id": "limiter_filter",
@@ -55,12 +58,13 @@
                 "deinterlace_mode": 0,
                 "deinterlace_field_order": 0,
                 "monitoring_type": 0,
+                "monitoring_enabled": false,
                 "private_settings": {}
             }
         ]
     },
     "AuxAudioDevice1": {
-        "prev_ver": 537001986,
+        "prev_ver": 553648129,
         "name": "Mic/Aux",
         "uuid": "76b9352e-f4e9-4a7c-80af-92c2e09c81fc",
         "id": "pulse_input_capture",
@@ -82,16 +86,19 @@
         "hotkeys": {
             "libobs.mute": [],
             "libobs.unmute": [],
+            "libobs.monitor-on": [],
+            "libobs.monitor-off": [],
             "libobs.push-to-mute": [],
             "libobs.push-to-talk": []
         },
         "deinterlace_mode": 0,
         "deinterlace_field_order": 0,
         "monitoring_type": 0,
+        "monitoring_enabled": false,
         "private_settings": {},
         "filters": [
             {
-                "prev_ver": 537001986,
+                "prev_ver": 553648129,
                 "name": "Limiter",
                 "uuid": "5e2f3092-e2ab-4d3c-9b2c-ee9c0f3b1b5c",
                 "id": "limiter_filter",
@@ -114,10 +121,11 @@
                 "deinterlace_mode": 0,
                 "deinterlace_field_order": 0,
                 "monitoring_type": 0,
+                "monitoring_enabled": false,
                 "private_settings": {}
             },
             {
-                "prev_ver": 537001986,
+                "prev_ver": 553648129,
                 "name": "Noise Suppression",
                 "uuid": "07f861c4-eb2a-4a16-839c-05825b82cedb",
                 "id": "noise_suppress_filter",
@@ -138,19 +146,20 @@
                 "deinterlace_mode": 0,
                 "deinterlace_field_order": 0,
                 "monitoring_type": 0,
+                "monitoring_enabled": false,
                 "private_settings": {}
             }
         ]
     },
     "sources": [
         {
-            "prev_ver": 537001986,
+            "prev_ver": 553648129,
             "name": "main",
             "uuid": "f63c4203-074b-488c-ade1-cb66930eabf6",
             "id": "pipewire-screen-capture-source",
             "versioned_id": "pipewire-screen-capture-source",
             "settings": {
-                "RestoreToken": "3NxnfZilAFkqeJunxiBEtQ"
+                "RestoreToken": "7d7619d1-653c-411a-9dbe-b22dea4d0019"
             },
             "mixers": 0,
             "sync": 0,
@@ -167,10 +176,11 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "monitoring_enabled": false,
             "private_settings": {}
         },
         {
-            "prev_ver": 537001986,
+            "prev_ver": 553648129,
             "name": "CatCam",
             "uuid": "14ab247d-78db-4f83-b6ee-e9b650b4f514",
             "id": "v4l2_input",
@@ -199,10 +209,11 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "monitoring_enabled": false,
             "private_settings": {},
             "filters": [
                 {
-                    "prev_ver": 537001986,
+                    "prev_ver": 553648129,
                     "name": "Advanced Mask",
                     "uuid": "0f2c4a30-ae37-4e0d-8758-334d486b95c4",
                     "id": "advanced_masks_filter",
@@ -237,12 +248,13 @@
                     "deinterlace_mode": 0,
                     "deinterlace_field_order": 0,
                     "monitoring_type": 0,
+                    "monitoring_enabled": false,
                     "private_settings": {}
                 }
             ]
         },
         {
-            "prev_ver": 537001986,
+            "prev_ver": 553648129,
             "name": "ShoulderCam",
             "uuid": "e4faffef-f76d-4ec0-8e32-7f71d272abdd",
             "id": "v4l2_input",
@@ -274,10 +286,11 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "monitoring_enabled": false,
             "private_settings": {},
             "filters": [
                 {
-                    "prev_ver": 537001986,
+                    "prev_ver": 553648129,
                     "name": "Advanced Mask",
                     "uuid": "2445f629-3dfd-4154-8ebb-9cee378acbb2",
                     "id": "advanced_masks_filter",
@@ -313,12 +326,13 @@
                     "deinterlace_mode": 0,
                     "deinterlace_field_order": 0,
                     "monitoring_type": 0,
+                    "monitoring_enabled": false,
                     "private_settings": {}
                 }
             ]
         },
         {
-            "prev_ver": 537001986,
+            "prev_ver": 553648129,
             "name": "kofi-support",
             "uuid": "19d8c2e4-48ae-425c-9589-65a26fe098d6",
             "id": "browser_source",
@@ -342,6 +356,8 @@
             "hotkeys": {
                 "libobs.mute": [],
                 "libobs.unmute": [],
+                "libobs.monitor-on": [],
+                "libobs.monitor-off": [],
                 "libobs.push-to-mute": [],
                 "libobs.push-to-talk": [],
                 "ObsBrowser.Refresh": []
@@ -349,10 +365,11 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "monitoring_enabled": false,
             "private_settings": {}
         },
         {
-            "prev_ver": 537001986,
+            "prev_ver": 553648129,
             "name": "starting",
             "uuid": "a563d5ca-0ea2-4385-af2e-d5e7f927670a",
             "id": "image_source",
@@ -375,10 +392,11 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "monitoring_enabled": false,
             "private_settings": {}
         },
         {
-            "prev_ver": 537001986,
+            "prev_ver": 553648129,
             "name": "currentwall1",
             "uuid": "a3648d50-405d-4829-8def-88d131fe5e4d",
             "id": "image_source",
@@ -401,10 +419,11 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "monitoring_enabled": false,
             "private_settings": {}
         },
         {
-            "prev_ver": 537001986,
+            "prev_ver": 553648129,
             "name": "brboverlay",
             "uuid": "8a400295-f443-4396-b4da-e8cfc1baadca",
             "id": "image_source",
@@ -427,10 +446,11 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "monitoring_enabled": false,
             "private_settings": {}
         },
         {
-            "prev_ver": 537001986,
+            "prev_ver": 553648129,
             "name": "wallpaperchangeoverlay",
             "uuid": "f22355d1-68f0-4923-8236-ac3a18d18407",
             "id": "image_source",
@@ -453,10 +473,11 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "monitoring_enabled": false,
             "private_settings": {}
         },
         {
-            "prev_ver": 537001986,
+            "prev_ver": 553648129,
             "name": "twitch alerts",
             "uuid": "b6f048eb-4401-45f3-b2cb-905dd3a4c271",
             "id": "browser_source",
@@ -478,6 +499,8 @@
             "hotkeys": {
                 "libobs.mute": [],
                 "libobs.unmute": [],
+                "libobs.monitor-on": [],
+                "libobs.monitor-off": [],
                 "libobs.push-to-mute": [],
                 "libobs.push-to-talk": [],
                 "ObsBrowser.Refresh": []
@@ -485,10 +508,11 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "monitoring_enabled": false,
             "private_settings": {}
         },
         {
-            "prev_ver": 537001986,
+            "prev_ver": 553648129,
             "name": "chatoverlay",
             "uuid": "1882f891-6434-4c82-a3be-13b42d7fdc92",
             "id": "browser_source",
@@ -512,6 +536,8 @@
             "hotkeys": {
                 "libobs.mute": [],
                 "libobs.unmute": [],
+                "libobs.monitor-on": [],
+                "libobs.monitor-off": [],
                 "libobs.push-to-mute": [],
                 "libobs.push-to-talk": [],
                 "ObsBrowser.Refresh": []
@@ -519,16 +545,17 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "monitoring_enabled": false,
             "private_settings": {}
         },
         {
-            "prev_ver": 537001986,
+            "prev_ver": 553648129,
             "name": "firebotoverlay",
             "uuid": "6afd07c4-9a68-4357-9781-09559fb0b886",
             "id": "browser_source",
             "versioned_id": "browser_source",
             "settings": {
-                "url": "file:///var/home/don/.config/Firebot/v5/overlay.html"
+                "url": "file:///home/don/.config/Firebot/v5/overlay.html"
             },
             "mixers": 255,
             "sync": 0,
@@ -544,6 +571,8 @@
             "hotkeys": {
                 "libobs.mute": [],
                 "libobs.unmute": [],
+                "libobs.monitor-on": [],
+                "libobs.monitor-off": [],
                 "libobs.push-to-mute": [],
                 "libobs.push-to-talk": [],
                 "ObsBrowser.Refresh": []
@@ -551,10 +580,11 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "monitoring_enabled": false,
             "private_settings": {}
         },
         {
-            "prev_ver": 537001986,
+            "prev_ver": 553648129,
             "name": "ytalerts",
             "uuid": "a2239ba1-2095-444a-82e5-7163286dee19",
             "id": "browser_source",
@@ -576,6 +606,8 @@
             "hotkeys": {
                 "libobs.mute": [],
                 "libobs.unmute": [],
+                "libobs.monitor-on": [],
+                "libobs.monitor-off": [],
                 "libobs.push-to-mute": [],
                 "libobs.push-to-talk": [],
                 "ObsBrowser.Refresh": []
@@ -583,10 +615,11 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "monitoring_enabled": false,
             "private_settings": {}
         },
         {
-            "prev_ver": 537001986,
+            "prev_ver": 553648129,
             "name": "Alerts",
             "uuid": "451ec88a-d495-459e-a7f4-636139a1688e",
             "id": "browser_source",
@@ -608,6 +641,8 @@
             "hotkeys": {
                 "libobs.mute": [],
                 "libobs.unmute": [],
+                "libobs.monitor-on": [],
+                "libobs.monitor-off": [],
                 "libobs.push-to-mute": [],
                 "libobs.push-to-talk": [],
                 "ObsBrowser.Refresh": []
@@ -615,10 +650,11 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "monitoring_enabled": false,
             "private_settings": {}
         },
         {
-            "prev_ver": 537001986,
+            "prev_ver": 553648129,
             "name": "yt views",
             "uuid": "a5045d87-208f-4f2f-8a0d-956b585276e1",
             "id": "browser_source",
@@ -642,6 +678,8 @@
             "hotkeys": {
                 "libobs.mute": [],
                 "libobs.unmute": [],
+                "libobs.monitor-on": [],
+                "libobs.monitor-off": [],
                 "libobs.push-to-mute": [],
                 "libobs.push-to-talk": [],
                 "ObsBrowser.Refresh": []
@@ -649,10 +687,11 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "monitoring_enabled": false,
             "private_settings": {}
         },
         {
-            "prev_ver": 537001986,
+            "prev_ver": 553648129,
             "name": "twitch views",
             "uuid": "26fd5267-5a9b-4af6-b33b-523e8f8c311f",
             "id": "browser_source",
@@ -676,6 +715,8 @@
             "hotkeys": {
                 "libobs.mute": [],
                 "libobs.unmute": [],
+                "libobs.monitor-on": [],
+                "libobs.monitor-off": [],
                 "libobs.push-to-mute": [],
                 "libobs.push-to-talk": [],
                 "ObsBrowser.Refresh": []
@@ -683,10 +724,11 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "monitoring_enabled": false,
             "private_settings": {}
         },
         {
-            "prev_ver": 537001986,
+            "prev_ver": 553648129,
             "name": "Image",
             "uuid": "23d1e9f7-1bd9-4a1b-8ca0-167cb4ccf913",
             "id": "image_source",
@@ -709,10 +751,11 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "monitoring_enabled": false,
             "private_settings": {}
         },
         {
-            "prev_ver": 537001986,
+            "prev_ver": 553648129,
             "name": "Image 2",
             "uuid": "149bcf47-c1e3-4b30-91f6-d0e20c58fdcc",
             "id": "image_source",
@@ -735,10 +778,11 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "monitoring_enabled": false,
             "private_settings": {}
         },
         {
-            "prev_ver": 537001986,
+            "prev_ver": 553648129,
             "name": "thronegift",
             "uuid": "39d8497c-ac1e-4590-a32b-37f18182bf84",
             "id": "browser_source",
@@ -761,6 +805,8 @@
             "hotkeys": {
                 "libobs.mute": [],
                 "libobs.unmute": [],
+                "libobs.monitor-on": [],
+                "libobs.monitor-off": [],
                 "libobs.push-to-mute": [],
                 "libobs.push-to-talk": [],
                 "ObsBrowser.Refresh": []
@@ -768,10 +814,11 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "monitoring_enabled": false,
             "private_settings": {}
         },
         {
-            "prev_ver": 537001986,
+            "prev_ver": 553648129,
             "name": "currentwallstarting",
             "uuid": "573e3a67-1437-4971-a8dd-5fafb53d3623",
             "id": "image_source",
@@ -794,10 +841,11 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "monitoring_enabled": false,
             "private_settings": {}
         },
         {
-            "prev_ver": 537001986,
+            "prev_ver": 553648129,
             "name": "currentwallbrb",
             "uuid": "21455dbd-8a1b-4928-8f89-fe2421a1e23a",
             "id": "image_source",
@@ -820,10 +868,11 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "monitoring_enabled": false,
             "private_settings": {}
         },
         {
-            "prev_ver": 537001986,
+            "prev_ver": 553648129,
             "name": "Leaderboard",
             "uuid": "828e4ea9-bfe7-47c0-bf00-f5f73411e975",
             "id": "browser_source",
@@ -847,6 +896,8 @@
             "hotkeys": {
                 "libobs.mute": [],
                 "libobs.unmute": [],
+                "libobs.monitor-on": [],
+                "libobs.monitor-off": [],
                 "libobs.push-to-mute": [],
                 "libobs.push-to-talk": [],
                 "ObsBrowser.Refresh": []
@@ -854,10 +905,11 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "monitoring_enabled": false,
             "private_settings": {}
         },
         {
-            "prev_ver": 537001986,
+            "prev_ver": 553648129,
             "name": "Stream Goal",
             "uuid": "315de8eb-0d91-4c24-8e7d-c0b60b36f8cb",
             "id": "browser_source",
@@ -881,6 +933,8 @@
             "hotkeys": {
                 "libobs.mute": [],
                 "libobs.unmute": [],
+                "libobs.monitor-on": [],
+                "libobs.monitor-off": [],
                 "libobs.push-to-mute": [],
                 "libobs.push-to-talk": [],
                 "ObsBrowser.Refresh": []
@@ -888,10 +942,11 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "monitoring_enabled": false,
             "private_settings": {}
         },
         {
-            "prev_ver": 537001986,
+            "prev_ver": 553648129,
             "name": "HandCam",
             "uuid": "3926b49d-bfed-414b-a008-44ae16f6a7ae",
             "id": "droidcam_obs",
@@ -921,16 +976,19 @@
             "hotkeys": {
                 "libobs.mute": [],
                 "libobs.unmute": [],
+                "libobs.monitor-on": [],
+                "libobs.monitor-off": [],
                 "libobs.push-to-mute": [],
                 "libobs.push-to-talk": []
             },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "monitoring_enabled": false,
             "private_settings": {},
             "filters": [
                 {
-                    "prev_ver": 537001986,
+                    "prev_ver": 553648129,
                     "name": "Advanced Mask",
                     "uuid": "18a1881e-a35d-4846-9de1-0f7f06c741dd",
                     "id": "advanced_masks_filter",
@@ -965,18 +1023,19 @@
                     "deinterlace_mode": 0,
                     "deinterlace_field_order": 0,
                     "monitoring_type": 0,
+                    "monitoring_enabled": false,
                     "private_settings": {}
                 }
             ]
         },
         {
-            "prev_ver": 537001986,
+            "prev_ver": 553648129,
             "name": "discordcam",
             "uuid": "8e8d733a-4c19-4334-beec-a72b33787eb9",
             "id": "pipewire-screen-capture-source",
             "versioned_id": "pipewire-screen-capture-source",
             "settings": {
-                "RestoreToken": "IuX0y91mKOYf0PMhsz8CDw"
+                "RestoreToken": "8282e925-70e5-4a91-9896-b3f896a8d84f"
             },
             "mixers": 0,
             "sync": 0,
@@ -993,10 +1052,11 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "monitoring_enabled": false,
             "private_settings": {},
             "filters": [
                 {
-                    "prev_ver": 537001986,
+                    "prev_ver": 553648129,
                     "name": "Advanced Mask",
                     "uuid": "0dedb0de-433b-4fff-8386-5c627b24161a",
                     "id": "advanced_masks_filter",
@@ -1030,12 +1090,13 @@
                     "deinterlace_mode": 0,
                     "deinterlace_field_order": 0,
                     "monitoring_type": 0,
+                    "monitoring_enabled": false,
                     "private_settings": {}
                 }
             ]
         },
         {
-            "prev_ver": 537001986,
+            "prev_ver": 553648129,
             "name": "CatCamBig",
             "uuid": "e7c6ece0-1197-4e51-9dbd-34e1d92dc0fd",
             "id": "v4l2_input",
@@ -1056,10 +1117,11 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "monitoring_enabled": false,
             "private_settings": {}
         },
         {
-            "prev_ver": 537001986,
+            "prev_ver": 553648129,
             "name": "TheBlackDon",
             "uuid": "646ad871-8dc0-45d2-989d-6dd78a3c655a",
             "id": "browser_source",
@@ -1081,6 +1143,8 @@
             "hotkeys": {
                 "libobs.mute": [],
                 "libobs.unmute": [],
+                "libobs.monitor-on": [],
+                "libobs.monitor-off": [],
                 "libobs.push-to-mute": [],
                 "libobs.push-to-talk": [],
                 "ObsBrowser.Refresh": []
@@ -1088,10 +1152,11 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "monitoring_enabled": false,
             "private_settings": {}
         },
         {
-            "prev_ver": 537001986,
+            "prev_ver": 553648129,
             "name": "LGL",
             "uuid": "0fd85fa6-2d9c-497c-a78e-156cb52f9893",
             "id": "browser_source",
@@ -1113,6 +1178,8 @@
             "hotkeys": {
                 "libobs.mute": [],
                 "libobs.unmute": [],
+                "libobs.monitor-on": [],
+                "libobs.monitor-off": [],
                 "libobs.push-to-mute": [],
                 "libobs.push-to-talk": [],
                 "ObsBrowser.Refresh": []
@@ -1120,16 +1187,17 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "monitoring_enabled": false,
             "private_settings": {}
         },
         {
-            "prev_ver": 537001986,
+            "prev_ver": 553648129,
             "name": "talkingdon",
             "uuid": "03ccd2e0-df94-415c-89d3-c1d816884711",
             "id": "pipewire-screen-capture-source",
             "versioned_id": "pipewire-screen-capture-source",
             "settings": {
-                "RestoreToken": "Uu6Gk3YSN5uYYTAt4lj_eA"
+                "RestoreToken": "6494b107-c894-4a55-a7d2-7e059edc09df"
             },
             "mixers": 0,
             "sync": 0,
@@ -1146,10 +1214,11 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "monitoring_enabled": false,
             "private_settings": {},
             "filters": [
                 {
-                    "prev_ver": 537001986,
+                    "prev_ver": 553648129,
                     "name": "Chroma Key",
                     "uuid": "348b4179-100a-43b5-b598-6b815319d49f",
                     "id": "chroma_key_filter",
@@ -1170,12 +1239,13 @@
                     "deinterlace_mode": 0,
                     "deinterlace_field_order": 0,
                     "monitoring_type": 0,
+                    "monitoring_enabled": false,
                     "private_settings": {}
                 }
             ]
         },
         {
-            "prev_ver": 537001986,
+            "prev_ver": 553648129,
             "name": "views",
             "uuid": "bd520131-d028-43fe-b2de-910fc706a6b5",
             "id": "browser_source",
@@ -1199,6 +1269,8 @@
             "hotkeys": {
                 "libobs.mute": [],
                 "libobs.unmute": [],
+                "libobs.monitor-on": [],
+                "libobs.monitor-off": [],
                 "libobs.push-to-mute": [],
                 "libobs.push-to-talk": [],
                 "ObsBrowser.Refresh": []
@@ -1206,10 +1278,11 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "monitoring_enabled": false,
             "private_settings": {}
         },
         {
-            "prev_ver": 537001986,
+            "prev_ver": 553648129,
             "name": "MonthlySubs",
             "uuid": "2abb5997-fc2b-48ad-ab15-30d4a233a5d4",
             "id": "browser_source",
@@ -1233,6 +1306,8 @@
             "hotkeys": {
                 "libobs.mute": [],
                 "libobs.unmute": [],
+                "libobs.monitor-on": [],
+                "libobs.monitor-off": [],
                 "libobs.push-to-mute": [],
                 "libobs.push-to-talk": [],
                 "ObsBrowser.Refresh": []
@@ -1240,16 +1315,17 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "monitoring_enabled": false,
             "private_settings": {}
         },
         {
-            "prev_ver": 537001986,
+            "prev_ver": 553648129,
             "name": "BigDon",
             "uuid": "c07ba930-3aee-4c7b-8814-b1cd7b8aad3d",
             "id": "pipewire-screen-capture-source",
             "versioned_id": "pipewire-screen-capture-source",
             "settings": {
-                "RestoreToken": "l4YjvmFO5L2hW68Vm_2OxQ"
+                "RestoreToken": "609ea158-cc09-48bc-bc0f-2f33c7578818"
             },
             "mixers": 0,
             "sync": 0,
@@ -1266,10 +1342,11 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "monitoring_enabled": false,
             "private_settings": {},
             "filters": [
                 {
-                    "prev_ver": 537001986,
+                    "prev_ver": 553648129,
                     "name": "Chroma Key",
                     "uuid": "cae5d52c-f0ca-4eff-923a-828390a15435",
                     "id": "chroma_key_filter",
@@ -1290,19 +1367,20 @@
                     "deinterlace_mode": 0,
                     "deinterlace_field_order": 0,
                     "monitoring_type": 0,
+                    "monitoring_enabled": false,
                     "private_settings": {}
                 }
             ]
         },
         {
-            "prev_ver": 537001986,
+            "prev_ver": 553648129,
             "name": "StartingDon",
             "uuid": "9422d649-c499-469b-b2e9-de2259444e8b",
             "id": "pipewire-screen-capture-source",
             "versioned_id": "pipewire-screen-capture-source",
             "settings": {
                 "undo_uuid": "9422d649-c499-469b-b2e9-de2259444e8b",
-                "RestoreToken": "0FDU5R1R2LqYWw7q0YhBrw"
+                "RestoreToken": "b4574707-55f7-49b4-9d0a-1b998592a8cc"
             },
             "mixers": 0,
             "sync": 0,
@@ -1319,10 +1397,11 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "monitoring_enabled": false,
             "private_settings": {},
             "filters": [
                 {
-                    "prev_ver": 537001986,
+                    "prev_ver": 553648129,
                     "name": "Chroma Key",
                     "uuid": "74e0486d-b07a-40d6-826e-fe20acea5f5b",
                     "id": "chroma_key_filter",
@@ -1343,10 +1422,11 @@
                     "deinterlace_mode": 0,
                     "deinterlace_field_order": 0,
                     "monitoring_type": 0,
+                    "monitoring_enabled": false,
                     "private_settings": {}
                 },
                 {
-                    "prev_ver": 537001986,
+                    "prev_ver": 553648129,
                     "name": "Advanced Mask",
                     "uuid": "929f2db9-25b0-4a1a-8fd8-b466fc9ba9cd",
                     "id": "advanced_masks_filter",
@@ -1385,12 +1465,13 @@
                     "deinterlace_mode": 0,
                     "deinterlace_field_order": 0,
                     "monitoring_type": 0,
+                    "monitoring_enabled": false,
                     "private_settings": {}
                 }
             ]
         },
         {
-            "prev_ver": 537001986,
+            "prev_ver": 553648129,
             "name": "BlackDonText",
             "uuid": "897640a1-2175-493e-a700-4e377c2634ad",
             "id": "image_source",
@@ -1413,10 +1494,11 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "monitoring_enabled": false,
             "private_settings": {}
         },
         {
-            "prev_ver": 537001986,
+            "prev_ver": 553648129,
             "name": "Vertical",
             "uuid": "80fe55b7-dc2a-412b-9ca5-3ce481c02926",
             "id": "pipewire-screen-capture-source",
@@ -1439,10 +1521,11 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "monitoring_enabled": false,
             "private_settings": {}
         },
         {
-            "prev_ver": 537001986,
+            "prev_ver": 553648129,
             "name": "16:9",
             "uuid": "01f94946-edbd-49b4-b3c7-a547724c1f38",
             "id": "pipewire-screen-capture-source",
@@ -1465,10 +1548,11 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "monitoring_enabled": false,
             "private_settings": {}
         },
         {
-            "prev_ver": 537001986,
+            "prev_ver": 553648129,
             "name": "Support Goal",
             "uuid": "0233d316-4ca4-4c5e-a5eb-4970bee0f6c9",
             "id": "browser_source",
@@ -1491,6 +1575,8 @@
             "hotkeys": {
                 "libobs.mute": [],
                 "libobs.unmute": [],
+                "libobs.monitor-on": [],
+                "libobs.monitor-off": [],
                 "libobs.push-to-mute": [],
                 "libobs.push-to-talk": [],
                 "ObsBrowser.Refresh": []
@@ -1498,10 +1584,11 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "monitoring_enabled": false,
             "private_settings": {}
         },
         {
-            "prev_ver": 537001986,
+            "prev_ver": 553648129,
             "name": "chat",
             "uuid": "9476ba58-f997-44a5-a627-d12eecf5b2e6",
             "id": "browser_source",
@@ -1524,6 +1611,8 @@
             "hotkeys": {
                 "libobs.mute": [],
                 "libobs.unmute": [],
+                "libobs.monitor-on": [],
+                "libobs.monitor-off": [],
                 "libobs.push-to-mute": [],
                 "libobs.push-to-talk": [],
                 "ObsBrowser.Refresh": []
@@ -1531,10 +1620,11 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "monitoring_enabled": false,
             "private_settings": {}
         },
         {
-            "prev_ver": 537001986,
+            "prev_ver": 553648129,
             "name": "Background",
             "uuid": "9bef77e5-54e9-430a-95d2-9cede0a9bfc8",
             "id": "image_source",
@@ -1557,16 +1647,17 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "monitoring_enabled": false,
             "private_settings": {}
         },
         {
-            "prev_ver": 537001986,
+            "prev_ver": 553648129,
             "name": "Kitty",
             "uuid": "c5fa123b-a086-4f61-a6b1-206649582e3f",
             "id": "pipewire-screen-capture-source",
             "versioned_id": "pipewire-screen-capture-source",
             "settings": {
-                "RestoreToken": "f_54DuCoCC6_Vd_fEwMBkw"
+                "RestoreToken": "0de2ef50-f0da-4ff2-80a7-f625f8b2fe88"
             },
             "mixers": 0,
             "sync": 0,
@@ -1583,16 +1674,17 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "monitoring_enabled": false,
             "private_settings": {}
         },
         {
-            "prev_ver": 537001986,
+            "prev_ver": 553648129,
             "name": "Bigdiscord",
             "uuid": "99804139-3b78-4b74-a3f1-2bf285657cb2",
             "id": "pipewire-screen-capture-source",
             "versioned_id": "pipewire-screen-capture-source",
             "settings": {
-                "RestoreToken": "lbraw3IkDAD1M0PpvxNHcA"
+                "RestoreToken": "n9iA2rdXpTA2JtUh9JjDug"
             },
             "mixers": 0,
             "sync": 0,
@@ -1609,10 +1701,11 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "monitoring_enabled": false,
             "private_settings": {},
             "filters": [
                 {
-                    "prev_ver": 537001986,
+                    "prev_ver": 553648129,
                     "name": "Chroma Key",
                     "uuid": "44c3017b-c7a1-42de-80b5-e2853a6a85e4",
                     "id": "chroma_key_filter",
@@ -1633,12 +1726,13 @@
                     "deinterlace_mode": 0,
                     "deinterlace_field_order": 0,
                     "monitoring_type": 0,
+                    "monitoring_enabled": false,
                     "private_settings": {}
                 }
             ]
         },
         {
-            "prev_ver": 537001986,
+            "prev_ver": 553648129,
             "name": "Text (FreeType 2)",
             "uuid": "f2dc357b-5be8-48a6-a3d7-9b8ae3efc196",
             "id": "text_ft2_source",
@@ -1661,10 +1755,11 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "monitoring_enabled": false,
             "private_settings": {}
         },
         {
-            "prev_ver": 537001986,
+            "prev_ver": 553648129,
             "name": "Text (FreeType 2) 2",
             "uuid": "d9881e4f-8ce9-48d3-98c3-f2553479b9d0",
             "id": "text_ft2_source",
@@ -1687,10 +1782,11 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "monitoring_enabled": false,
             "private_settings": {}
         },
         {
-            "prev_ver": 537001986,
+            "prev_ver": 553648129,
             "name": "Text (FreeType 2) 3",
             "uuid": "4767057c-7a11-4c09-aa35-b2938f3e9d59",
             "id": "text_ft2_source",
@@ -1713,10 +1809,11 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "monitoring_enabled": false,
             "private_settings": {}
         },
         {
-            "prev_ver": 537001986,
+            "prev_ver": 553648129,
             "name": "HourlyRate",
             "uuid": "21778a2a-b4b6-47ad-ba90-2a81ef585099",
             "id": "browser_source",
@@ -1741,6 +1838,8 @@
             "hotkeys": {
                 "libobs.mute": [],
                 "libobs.unmute": [],
+                "libobs.monitor-on": [],
+                "libobs.monitor-off": [],
                 "libobs.push-to-mute": [],
                 "libobs.push-to-talk": [],
                 "ObsBrowser.Refresh": []
@@ -1748,10 +1847,11 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "monitoring_enabled": false,
             "private_settings": {}
         },
         {
-            "prev_ver": 537001986,
+            "prev_ver": 553648129,
             "name": "Browser",
             "uuid": "e5bfbda0-3367-482e-a28a-5ec13dd767ad",
             "id": "browser_source",
@@ -1775,6 +1875,8 @@
             "hotkeys": {
                 "libobs.mute": [],
                 "libobs.unmute": [],
+                "libobs.monitor-on": [],
+                "libobs.monitor-off": [],
                 "libobs.push-to-mute": [],
                 "libobs.push-to-talk": [],
                 "ObsBrowser.Refresh": []
@@ -1782,10 +1884,11 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "monitoring_enabled": false,
             "private_settings": {}
         },
         {
-            "prev_ver": 537001986,
+            "prev_ver": 553648129,
             "name": "Streaming",
             "uuid": "3293e091-67b7-4f4d-9a7d-876ac800816a",
             "id": "scene",
@@ -1852,7 +1955,7 @@
                     {
                         "name": "discordcam",
                         "source_uuid": "8e8d733a-4c19-4334-beec-a72b33787eb9",
-                        "visible": true,
+                        "visible": false,
                         "locked": false,
                         "rot": 0.0,
                         "scale_ref": {
@@ -3013,7 +3116,7 @@
                     {
                         "name": "startingsoon",
                         "source_uuid": "652af797-02af-4f5e-999f-8f875feb7416",
-                        "visible": false,
+                        "visible": true,
                         "locked": false,
                         "rot": 0.0,
                         "scale_ref": {
@@ -3564,11 +3667,12 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "monitoring_enabled": false,
             "canvas_uuid": "6c69626f-6273-4c00-9d88-c5136d61696e",
             "private_settings": {}
         },
         {
-            "prev_ver": 537001986,
+            "prev_ver": 553648129,
             "name": "plain",
             "uuid": "669c0b7d-75b0-4377-843a-79fc2aea90ec",
             "id": "scene",
@@ -3824,11 +3928,12 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "monitoring_enabled": false,
             "canvas_uuid": "6c69626f-6273-4c00-9d88-c5136d61696e",
             "private_settings": {}
         },
         {
-            "prev_ver": 537001986,
+            "prev_ver": 553648129,
             "name": "Streaming 16:9",
             "uuid": "3d1f9a00-217a-4586-ae91-cafeac8f0a15",
             "id": "scene",
@@ -4170,7 +4275,7 @@
                     {
                         "name": "Bigdiscord",
                         "source_uuid": "99804139-3b78-4b74-a3f1-2bf285657cb2",
-                        "visible": false,
+                        "visible": true,
                         "locked": false,
                         "rot": 0.0,
                         "scale_ref": {
@@ -4408,12 +4513,12 @@
                         "id": 30,
                         "group_item_backup": false,
                         "pos": {
-                            "x": 0.0,
-                            "y": 759.0
+                            "x": 4.0,
+                            "y": 769.0
                         },
                         "pos_rel": {
-                            "x": -1.7777777910232544,
-                            "y": 0.054166674613952637
+                            "x": -1.7722222805023193,
+                            "y": 0.068055510520935059
                         },
                         "scale": {
                             "x": 1.0766667127609253,
@@ -4720,7 +4825,7 @@
                     {
                         "name": "startingsoon",
                         "source_uuid": "652af797-02af-4f5e-999f-8f875feb7416",
-                        "visible": true,
+                        "visible": false,
                         "locked": false,
                         "rot": 0.0,
                         "scale_ref": {
@@ -5290,12 +5395,12 @@
                         "id": 29,
                         "group_item_backup": false,
                         "pos": {
-                            "x": 2.0,
-                            "y": 763.0
+                            "x": 0.0,
+                            "y": 757.0
                         },
                         "pos_rel": {
-                            "x": -1.7749999761581421,
-                            "y": 0.059722185134887695
+                            "x": -1.7777777910232544,
+                            "y": 0.051388859748840332
                         },
                         "scale": {
                             "x": 1.2000000476837158,
@@ -5387,11 +5492,12 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "monitoring_enabled": false,
             "canvas_uuid": "6c69626f-6273-4c00-9d88-c5136d61696e",
             "private_settings": {}
         },
         {
-            "prev_ver": 537001986,
+            "prev_ver": 553648129,
             "name": "Recording 16:9",
             "uuid": "1d5bdeee-7def-4cf2-872b-bec6f5dae2f3",
             "id": "scene",
@@ -5533,11 +5639,12 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "monitoring_enabled": false,
             "canvas_uuid": "6c69626f-6273-4c00-9d88-c5136d61696e",
             "private_settings": {}
         },
         {
-            "prev_ver": 537001986,
+            "prev_ver": 553648129,
             "name": "Vertical Scene",
             "uuid": "4b3c0825-448c-4e89-aea3-c9d21e1646dc",
             "id": "scene",
@@ -6535,13 +6642,14 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "monitoring_enabled": false,
             "canvas_uuid": "9b530c07-a6c3-4c40-b541-62badcaeb0aa",
             "private_settings": {}
         }
     ],
     "groups": [
         {
-            "prev_ver": 537001986,
+            "prev_ver": 553648129,
             "name": "startingsoon",
             "uuid": "652af797-02af-4f5e-999f-8f875feb7416",
             "id": "group",
@@ -6855,11 +6963,12 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "monitoring_enabled": false,
             "canvas_uuid": "6c69626f-6273-4c00-9d88-c5136d61696e",
             "private_settings": {}
         },
         {
-            "prev_ver": 537001986,
+            "prev_ver": 553648129,
             "name": "brb",
             "uuid": "34c5341c-be5f-4849-b11d-bccce3f18eed",
             "id": "group",
@@ -7002,11 +7111,12 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "monitoring_enabled": false,
             "canvas_uuid": "6c69626f-6273-4c00-9d88-c5136d61696e",
             "private_settings": {}
         },
         {
-            "prev_ver": 537001986,
+            "prev_ver": 553648129,
             "name": "Overlaystuff",
             "uuid": "bf83bef7-5584-4df2-885c-15aa37cf3fc9",
             "id": "group",
@@ -7149,11 +7259,12 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "monitoring_enabled": false,
             "canvas_uuid": "6c69626f-6273-4c00-9d88-c5136d61696e",
             "private_settings": {}
         },
         {
-            "prev_ver": 537001986,
+            "prev_ver": 553648129,
             "name": "Discord",
             "uuid": "b0f67fdf-0bbb-492a-95af-d05a2dd9de9f",
             "id": "group",
@@ -7296,11 +7407,12 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "monitoring_enabled": false,
             "canvas_uuid": "6c69626f-6273-4c00-9d88-c5136d61696e",
             "private_settings": {},
             "filters": [
                 {
-                    "prev_ver": 537001986,
+                    "prev_ver": 553648129,
                     "name": "Advanced Mask",
                     "uuid": "872d1d4f-017e-4139-b365-fc3165f5547d",
                     "id": "advanced_masks_filter",
@@ -7334,12 +7446,13 @@
                     "deinterlace_mode": 0,
                     "deinterlace_field_order": 0,
                     "monitoring_type": 0,
+                    "monitoring_enabled": false,
                     "private_settings": {}
                 }
             ]
         },
         {
-            "prev_ver": 537001986,
+            "prev_ver": 553648129,
             "name": "Alert Overlay",
             "uuid": "a4d210d0-5ab2-46b2-9ccd-a02ad45d0e1d",
             "id": "group",
@@ -7482,6 +7595,7 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "monitoring_enabled": false,
             "canvas_uuid": "6c69626f-6273-4c00-9d88-c5136d61696e",
             "private_settings": {}
         }
@@ -7540,8 +7654,8 @@
     ],
     "saved_projectors": [],
     "preview_locked": false,
-    "scaling_enabled": false,
-    "scaling_level": -11,
+    "scaling_enabled": true,
+    "scaling_level": -12,
     "scaling_off_x": 0.0,
     "scaling_off_y": 0.0,
     "modules": {

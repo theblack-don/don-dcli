@@ -50,19 +50,19 @@ discord-toggle-deafen=Ctrl+Shift+D,Ctrl+Shift+D,Toggle Deafen
 
 [custom-commands]
 _k_friendly_name=Custom Commands
-cmd-10=Meta+R,none,noctalia-kwe msg plugin theblackdon/theme-switcher:wallpaper-ipc all next
+cmd-10=Meta+R,none,noctalia-msg msg plugin theblackdon/theme-switcher:wallpaper-ipc all next
 cmd-11=Meta+Alt+K,none,ghostty -e kx
 cmd-12=Meta+Alt+D,none,ds4u
 cmd-13=Alt+Shift+W,none,kwepaperpicker toggle
 cmd-14=Ctrl+Alt+Shift+W,none,kwepaperpicker
 cmd-15=Meta+Shift+S,none,spectacle -b -r
 cmd-16=Meta+G,none,Telegram
-cmd-17=Meta+Shift+B,none,noctalia-kwe msg bar-toggle
-cmd-18=Meta+Shift+D,none,noctalia-kwe msg dock-toggle
+cmd-17=Meta+Shift+B,none,noctalia-msg msg bar-toggle
+cmd-18=Meta+Shift+D,none,noctalia-msg msg dock-toggle
 cmd-6=Meta+Ctrl+F,none,kitty --hold fastfetch
 cmd-7=Meta+Shift+X,none,ghostty --wait-after-command -e ki
 cmd-8=Meta+Alt+F,none,ghostty --wait-after-command -e fastfetch
-cmd-9=Meta+Alt+W,none,noctalia-kwe msg panel-toggle theblackdon/theme-switcher:wallpapers
+cmd-9=Meta+Alt+W,none,noctalia-msg msg panel-toggle theblackdon/theme-switcher:wallpapers
 
 [kineticwe]
 Activate Window Demanding Attention=none,none,Activate Window Demanding Attention

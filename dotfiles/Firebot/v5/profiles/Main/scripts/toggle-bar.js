@@ -1,8 +1,7 @@
 const fs = require('fs');
-const path = require('path');
-const { runNoctalia } = require('./desktop-integration');
+const { logPath, runNoctalia } = require('./desktop-integration');
 
-const DEBUG_FILE = path.join(__dirname, '..', '..', '..', 'logs', 'toggle-bar-debug.log');
+const DEBUG_FILE = logPath('toggle-bar-debug.log');
 
 function logDebug(msg) {
     try {

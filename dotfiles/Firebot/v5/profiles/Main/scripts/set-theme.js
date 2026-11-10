@@ -1,8 +1,7 @@
 const fs = require('fs');
-const path = require('path');
-const { runNoctalia } = require('./desktop-integration');
+const { logPath, runNoctalia } = require('./desktop-integration');
 
-const DEBUG_FILE = path.join(__dirname, '..', '..', '..', 'logs', 'theme-debug.log');
+const DEBUG_FILE = logPath('theme-debug.log');
 
 // Theme key -> Noctalia theme name. Used by the arg-driven entry point (set-theme.js).
 const THEMES = {

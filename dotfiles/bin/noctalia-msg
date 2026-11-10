@@ -7,8 +7,10 @@
 #   noctalia-msg status
 #
 # Works with upstream Noctalia (Umbriel) and the KineticWE fork:
-#   Umbriel   -> /usr/bin/noctalia      + noctalia-<display>.sock
-#   KineticWE -> noctalia-kwe           + noctalia-kwe-<display>.sock
+#   Umbriel   -> noctalia      + noctalia-<display>.sock
+#   KineticWE -> noctalia-kwe  + noctalia-kwe-<display>.sock
+# NixOS: binaries come from ~/.nix-profile, /run/current-system/sw or
+# /etc/profiles/per-user/<user>; FHS paths are kept only as a fallback.
 set -euo pipefail
 
 # Allow both "noctalia-msg <command>" and "noctalia-msg msg <command>".
@@ -21,10 +23,13 @@ display="${WAYLAND_DISPLAY:-wayland-0}"
 desktop="${XDG_CURRENT_DESKTOP:-${XDG_SESSION_DESKTOP:-${DESKTOP_SESSION:-}}}"
 desktop="${desktop,,}"
 
-first_executable() {
+first_working() {
     local candidate
     for candidate in "$@"; do
-        if [[ -x $candidate ]]; then
+        [[ -n $candidate && -x $candidate ]] || continue
+        # Skip binaries the kernel cannot run (e.g. a stale PikaOS/Fedora
+        # build left in ~/.local/kineticwe after moving to NixOS).
+        if "$candidate" --version >/dev/null 2>&1; then
             printf '%s\n' "$candidate"
             return 0
         fi
@@ -32,19 +37,31 @@ first_executable() {
     return 1
 }
 
+from_path() {
+    command -v "$1" 2>/dev/null || true
+}
+
 stable_bin() {
-    first_executable \
-        /usr/bin/noctalia \
+    first_working \
+        "$HOME/.nix-profile/bin/noctalia" \
+        /run/current-system/sw/bin/noctalia \
+        "/etc/profiles/per-user/$(id -un)/bin/noctalia" \
+        "$(from_path noctalia)" \
         /usr/local/bin/noctalia \
-        "$HOME/.local/bin/noctalia" \
-        "$HOME/.nix-profile/bin/noctalia"
+        /usr/bin/noctalia \
+        "$HOME/.local/bin/noctalia"
 }
 
 kwe_bin() {
-    first_executable \
-        "$HOME/.local/bin/noctalia-kwe" \
-        /usr/bin/noctalia-kwe \
+    first_working \
         "$HOME/.nix-profile/bin/noctalia-kwe" \
+        /run/current-system/sw/bin/noctalia-kwe \
+        "/etc/profiles/per-user/$(id -un)/bin/noctalia-kwe" \
+        "$(from_path noctalia-kwe)" \
+        "$HOME/.local/bin/noctalia-kwe" \
+        /usr/local/bin/noctalia-kwe \
+        /usr/bin/noctalia-kwe \
+        "$HOME/.local/kineticwe/bin/noctalia-kwe" \
         "$HOME/.local/state/kineticwe/nix/noctalia/bin/noctalia-kwe"
 }
 

@@ -4,23 +4,21 @@
   host = "fednixgaming";
   description = "Fedora gaming desktop (NVIDIA)";
 
-  # native package manager (preserved from the old config.yaml pointer)
+  # Native package manager (dnf).
   package_manager = "dnf";
 
-  # process modules in declared order. Sequential mode honors
-  # run_hooks_as_user, which the kineticwe-dev hook needs: parallel mode runs
-  # module hooks through sudo (root), breaking per-user nix profile installs.
+  # Parallel hooks run via sudo; sequential honors run_hooks_as_user.
   module_processing = "parallel";
 
-  # COPR repositories enabled before native packages
+  # COPR repositories (enabled before native packages).
   copr_repos = [
     "theblackdon/dcli"                    # dcli
-    "theblackdon/kwee"                    # kineticwe (kineticwe-dev module)
-    "bieszczaders/kernel-cachyos-addons"  # scx-scheds/scx-tools (lgl deps)
+    "theblackdon/kwee"                    # kineticwe
+    "bieszczaders/kernel-cachyos-addons"  # scx-scheds/scx-tools
     "imput/helium"                        # helium-bin
   ];
 
-  # packages managed by native package manager (dnf)
+  # Packages managed by dnf.
   packages = [
     "kitty"
     "helium-bin"
@@ -36,15 +34,14 @@
     "sunshine"
   ];
 
-  # flatpak packages (installed via flatpak)
+  # Flatpak packages.
   flatpak_packages = [
   ];
 
-  # flatpak installation scope: "user" (default) or "system"
-  # (flathub remote on this machine is configured system-wide)
+  # Flatpak scope: "user" (default) or "system"; flathub is system-wide here.
   flatpak_scope = "system";
 
-  # nix packages (installed via nix profile — standalone, no home-manager)
+  # Nix profile packages (no home-manager).
   nix_packages = [
     "helix"
     "mpvpaper"
@@ -58,34 +55,31 @@
     "nix-output-monitor"
   ];
 
-  # GUI nix packages (nix graphics stack)
+  # GUI nix packages (nix graphics stack).
   nix_gui_packages = [
     "goverlay"
     "nwg-look"
   ];
 
-  # GUI nix packages wrapped with host GPU libraries (nixGL-style)
+  # GUI packages wrapped with host GPU libs (nixGL-style).
   nix_wrapped_packages = [
     "ghostty"
     "protonplus"
   ];
 
   enabled_modules = [
-    # "kineticwe-dev"  # disabled: nix runtime + NVIDIA proprietary EGL does not
-    #                   # work on Fedora (undefined symbols in libnvidia-eglcore);
-    #                   # use ./build-rpm-dev.sh --kwin-only for the live session.
+    # "kineticwe-dev"  # disabled on Fedora (NVIDIA EGL breaks); use build-rpm-dev.sh --kwin-only.
   ];
 
-  # Conditional packages based on system facts
   # packages = if system.hardware.has_nvidia then [ "nvidia-driver" ] else [];
 
-  # Backup configuration
+  # Backup configuration.
   config_backups = {
     enabled = false;
     max_backups = 5;
   };
 
-  # System backup configuration (timeshift/snapper)
+  # System backup configuration (timeshift/snapper).
   system_backups = {
     enabled = false;
     backup_on_sync = false;
@@ -95,7 +89,7 @@
     max_backups = 5;
   };
 
-  # Nix configuration
+  # Nix configuration.
   nix = {
     enabled = true;
     nix_profile_enabled = true;
@@ -103,9 +97,7 @@
     flake_enabled = false;
   };
 
-  # NVIDIA driver protection (Fedora/dnf only)
-  # Checks kernel/driver sync before updating, builds missing kernel modules
-  # after the update, and notifies when the compilation finishes.
+  # NVIDIA driver protection (Fedora/dnf only): checks sync and rebuilds modules.
   nvidia = {
     enabled = true;
     driver = "auto";        # auto | akmod | kmod | dkms | proprietary

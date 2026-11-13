@@ -4,14 +4,13 @@
   host = "piknix";
   description = "PikaOS (Debian/apt) on the second NVMe partition";
 
-  # native package manager
+  # Native package manager (apt).
   package_manager = "apt";
 
-  # module hooks through sudo (root), breaking per-user nix profile installs.
+  # Sequential processing keeps hooks out of sudo (per-user nix profiles).
   module_processing = "sequential";
 
-  # packages managed by native package manager (apt)
-  # re-add them via flatpak/nix if wanted. quickshell may need the PikaOS repo.
+  # Packages managed by apt; re-add helium/fluxer via flatpak/nix if wanted.
   packages = [
     "kitty"
     "nemo"
@@ -23,20 +22,17 @@
     "mangohud"
     "power-profiles-daemon"
     "tailscale"
-    # "helium-bin"
-    # "fluxer-canary"
   ];
 
-  # flatpak packages (installed via flatpak)
+  # Flatpak packages.
   flatpak_packages = [
     "com.obsproject.Studio"
   ];
 
-  # flatpak installation scope: "user" (default) or "system"
-  # (flathub remote on this machine is configured system-wide)
+  # Flatpak scope: "user" (default) or "system"; flathub is system-wide here.
   flatpak_scope = "system";
 
-  # nix packages (installed via nix profile — standalone, no home-manager)
+  # Nix profile packages (no home-manager).
   nix_packages = [
     "helix"
     "mpvpaper"
@@ -52,11 +48,11 @@
     "tuios"
   ];
 
-  # GUI nix packages (nix graphics stack)
+  # GUI nix packages (nix graphics stack).
   nix_gui_packages = [
   ];
 
-  # GUI nix packages wrapped with host GPU libraries (nixGL-style)
+  # GUI packages wrapped with host GPU libs (nixGL-style).
   nix_wrapped_packages = [
   ];
 
@@ -64,16 +60,15 @@
     # "dotfiles"
   ];
 
-  # Conditional packages based on system facts
   # packages = if system.hardware.has_nvidia then [ "nvidia-driver" ] else [];
 
-  # Backup configuration
+  # Backup configuration.
   config_backups = {
     enabled = false;
     max_backups = 5;
   };
 
-  # System backup configuration (timeshift/snapper)
+  # System backup configuration (timeshift/snapper).
   system_backups = {
     enabled = false;
     backup_on_sync = false;
@@ -83,7 +78,7 @@
     max_backups = 5;
   };
 
-  # Nix configuration
+  # Nix configuration.
   nix = {
     enabled = true;
     nix_profile_enabled = true;
@@ -92,10 +87,4 @@
   };
 
   # NVIDIA driver protection is Fedora/dnf only; dcli is a no-op on apt.
-  # nvidia = {
-  #   enabled = true;
-  #   driver = "auto";        # auto | akmod | kmod | dkms | proprietary
-  #   check_updates = true;   # report newer driver versions before updating
-  #   notify = true;          # desktop notification when a module build finishes
-  # };
 }

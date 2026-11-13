@@ -12,19 +12,12 @@
   ];
 
   nix_packages = [
-    # "ripgrep"
-    # "fd"
-    # "bat"
+    # e.g. "ripgrep", "fd", "bat"
   ];
 
-  # Conditional packages based on system facts
   # packages = if system.hardware.is_laptop then [ "tlp" ] else [];
 
   conflicts = [];
 
-  # services = {
-  #   enabled = [ "example.service" ];
-  #   disabled = [];
-  #   scope = "system";
-  # };
+  # services = { enabled = [ "example.service" ]; disabled = []; scope = "system"; };
 }

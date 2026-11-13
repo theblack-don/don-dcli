@@ -15,7 +15,7 @@ packages = [
   "lgl-papercutter"
   "vm-curator"
   "lgl-scheduler-manager"
-  #deps
+  # Dependencies
   "scx-tools"
   "scx-scheds"
  ];

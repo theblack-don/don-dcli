@@ -1,6 +1,0 @@
-Publish : YouTube
-Source : Sequence #1
-Format : YouTube (AV1 8-bit VBR: 12.0-15.0-18.0 mbit), QHD 2k, 60 fps
-Authenticating..
-Rendering..
-The output folder does not exist ()

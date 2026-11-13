@@ -1,7 +1,6 @@
 { system, pkgs }:
 
 {
-  # Resolve the host file from the machine's hostname: hosts/<hostname>.nix.
-  # Keep the hostname and the host file name in sync (fednix, fednix-lap, ...).
+  # Host file is hosts/<system.hostname>.nix; keep the filename in sync.
   host = system.hostname;
 }

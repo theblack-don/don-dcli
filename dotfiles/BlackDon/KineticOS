@@ -1,6 +1,0 @@
-Add Instructions to make sure user builds on correct base Stable or Nvidia-Stable (If using Nvidia on base stable noctalia crashes when opening kinetic settings)
-Add qt6ct to default base image - Causes theming issues in dolphin without
-enable nonfree fedora repo for apps like discord
-Leave dolphin spectacle preinstalled
-add kwrite to give users a easy app to edit modules
-dcli-bootc overlay import isnt showing packages. Installing via sudo kinpkg/ki install app works but the overlay isn't picking it up

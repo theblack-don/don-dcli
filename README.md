@@ -1,95 +1,119 @@
 # don-dcli
 
-My personal [dcli](https://github.com/theblackdon/dcli) config for Fedora
-machines. Nix profile mode, no Home Manager.
+My personal [dcli](https://github.com/theblackdon/dcli) config. The primary
+machine is `nixnix`, a NixOS workstation using dcli's NixOS integration (Nix
+profile apps, no Home Manager). The older Fedora and PikaOS hosts are kept here
+for the other machines.
 
 | Hostname | Machine | Config |
 |---|---|---|
-| `fednix` | desktop | `hosts/fednix.nix` |
-| `fednixgaming` | gaming desktop (NVIDIA) | `hosts/fednixgaming.nix` |
-| `fednix-lap` | laptop | `hosts/fednix-lap.nix` |
-| `piknix` | PikaOS (apt) on second NVMe partition | `hosts/piknix.nix` |
+| `nixnix` | NixOS workstation, primary | `hosts/nixnix.nix` |
+| `fednix` | Fedora desktop (AMD) | `hosts/fednix.nix` |
+| `fednixgaming` | Fedora gaming desktop (NVIDIA) | `hosts/fednixgaming.nix` |
+| `piknix` | PikaOS (Debian/apt) on second NVMe | `hosts/piknix.nix` |
 
 `config.nix` picks `hosts/<hostname>.nix` automatically, so the machine's
 hostname must match the file name.
 
-## New machine
+## nixnix (NixOS)
 
-Assumes a fresh Fedora install and that your GitLab SSH key is already set up.
+`hosts/nixnix.nix` is the main config. `nixos_enabled = true`, so `dcli sync`
+converges the user profile and then finishes with `nixos-rebuild switch`. Home
+Manager and dcli's flake mode are off.
 
-### 1. dcli and basics
+- `module_processing = "sequential"` so the `kineticwe-dev` hook runs as the
+  user, not via sudo.
+- Enabled modules: `kineticwe-dev`, `flatpak`, `nixnix-dots`.
+- User apps come from `nix_packages` and are installed with `nix profile`.
+- dcli generates `nixos/dcli-system.nix` and `nixos/dcli-inputs.nix`. They are
+  imported from `/etc/nixos/configuration.nix`:
 
-```bash
-sudo dnf install git flatpak fzf xdg-utils
-sudo dnf copr enable theblackdon/dcli
-sudo dnf install dcli
-```
+  ```nix
+  imports = [ /home/don/.config/dcli/nixos/dcli-system.nix ];
+  ```
 
-### 2. Nix
+  Do not hand-edit the generated files. Host-level NixOS settings belong in the
+  `nixos.config` block in `hosts/nixnix.nix`.
 
-```bash
-sudo dnf install nix nix-daemon libgit2
-sudo systemctl enable --now nix-daemon
-echo 'experimental-features = nix-command flakes' | sudo tee -a /etc/nix/nix.conf
-sudo systemctl restart nix-daemon
-nix-channel --add https://nixos.org/channels/nixpkgs-unstable nixpkgs
-nix-channel --update
-```
+### Dotfiles
 
-Log out and back in if `nix` is not on `PATH`.
+`modules/nixnix-dots/module.nix` uses explicit `dotfiles` mappings, not
+`dotfiles_sync`. It symlinks static config into `~/.config` only; runtime state,
+logs, databases, tokens and stream keys stay in the live directories and out of
+git.
 
-### 3. Clone this config
+Managed: fastfetch, fish, ghostty, kitty, Nemo bookmarks, Firebot static config,
+OBS profiles/themes, noctalia, noctalia-kwe, kineticwe static files, zed, tuios,
+veadotube, and fifine-control-deck.
 
-```bash
-git clone git@gitlab.com:theblackdon/don-dcli.git ~/.config/dcli
-```
+If an app replaces a managed file symlink, restore it with
+`dcli sync --force-dotfiles`. Nemo preferences live in dconf and are not managed.
 
-If `dcli init` already created that directory, move it aside first
-(`mv ~/.config/dcli ~/.config/dcli.bak`).
+`dcli sync --dry-run` skips dotfile sync, so it is not a useful preview for
+dotfile changes.
 
-### 4. Set the hostname
+## New NixOS machine
 
-```bash
-hostnamectl set-hostname fednix-lap
-```
+Short version of `~/Projects/dcli/docs/NIXOS-MIGRATION.md`; read the runbook for
+the full install.
 
-The hostname must match a file in `hosts/`. Otherwise add a new
-`hosts/<hostname>.nix` and sync from there.
+1. Install NixOS. Keep the existing `/home` mounted but do not format it.
+2. Enable flakes in `/etc/nixos/configuration.nix`:
 
-### 5. Check and apply
+   ```nix
+   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+   ```
 
-```bash
-cd ~/.config/dcli
-dcli validate
-dcli sync --dry-run
-dcli sync
-```
+3. Set the hostname and clone this repo:
 
-Flatpaks are installed system-wide (`flatpak_scope = "system"`), so Flathub
-must exist as a system remote.
+   ```bash
+   sudo hostnamectl set-hostname nixnix
+   git clone git@gitlab.com:theblackdon/don-dcli.git ~/.config/dcli
+   ```
+
+4. Install `dcli`. If `~/Projects/dcli` is not present, clone
+   `https://gitlab.com/theblackdon/dcli` there first, then build it as shown in
+   the runbook and run `dcli init --nixos`.
+5. Add the generated import to `/etc/nixos/configuration.nix`:
+
+   ```nix
+   imports = [ /home/don/.config/dcli/nixos/dcli-system.nix ];
+   ```
+
+6. Validate and sync, then reboot once for greeter/session changes:
+
+   ```bash
+   cd ~/.config/dcli
+   dcli validate
+   dcli sync
+   ```
 
 ## Daily use
 
 ```bash
-$EDITOR hosts/$(hostname).nix    # or modules/*.nix
+$EDITOR hosts/$(hostname).nix    # or modules/*/module.nix
 
 dcli validate
-dcli sync --dry-run
-dcli sync
+dcli sync --no-system            # apply profile/dotfiles, skip nixos-rebuild
+dcli sync                        # full sync, ends with nixos-rebuild switch
 
 git add -A && git commit -m "..." && git push
 ```
 
 On another machine: `git pull && dcli sync`.
 
+## Other hosts
+
+`fednix` and `fednixgaming` are Fedora desktops (dnf/COPR), and `piknix` is
+PikaOS with apt on a second NVMe. They are kept for the older machines and are
+not the primary setup.
+
 ## Notes
 
-- Never hand-edit `state/`; it is machine-local and gitignored.
+- Never hand-edit `state/`, `nixos/dcli-system.nix`, or `nixos/dcli-inputs.nix`.
 - dcli owns `~/.local/bin/*` wrappers and
-  `~/.local/share/applications/*.desktop` overrides. They are regenerated on
-  every sync, so change the Nix files instead.
-- Both hosts enable NVIDIA driver protection. After a kernel update, `dcli
-  sync` checks driver/kernel sync and rebuilds the module; wait for the
-  notification before rebooting.
-- `kineticwe-dev` is disabled on the desktop: the nix runtime plus NVIDIA
-  proprietary EGL breaks on Fedora. Not enabled on the laptop either.
+  `~/.local/share/applications/*.desktop` overrides. Change the Nix files
+  instead; the generated files are replaced on every sync.
+- `nixnix` is AMD. NVIDIA driver protection is only enabled on `fednixgaming`.
+- `config_backups` is disabled on `nixnix` so ignored dotfile state and secrets
+  are not pulled into a config archive.

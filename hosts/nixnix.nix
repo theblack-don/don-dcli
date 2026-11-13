@@ -14,6 +14,7 @@ in
   enabled_modules = [
     "kineticwe-dev"
     "flatpak"
+    "nixnix-dots"
   ];
 
   # User apps via nix profile; dcli sync converges the profile to this list.
@@ -221,7 +222,7 @@ in
   };
 
   config_backups = {
-    enabled = true;
+    enabled = false;
     max_backups = 5;
   };
 

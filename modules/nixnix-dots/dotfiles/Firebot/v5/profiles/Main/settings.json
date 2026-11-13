@@ -1,0 +1,65 @@
+{
+    "settings": {
+        "eventSetSettings": {},
+        "quickActions": {
+            "firebot:give-currency": {
+                "enabled": true,
+                "position": 0
+            },
+            "firebot:open-reward-request-queue": {
+                "enabled": true,
+                "position": 1
+            },
+            "firebot:stream-info": {
+                "enabled": true,
+                "position": 2
+            },
+            "firebot:stream-preview": {
+                "enabled": true,
+                "position": 3
+            }
+        },
+        "legacySortTagsImported": true,
+        "firstTimeUse": false,
+        "defaultTtsVoiceId": {},
+        "seenAdvancedCommandModePopup": true,
+        "defaultToAdvancedCommandMode": true,
+        "runCustomScripts": true,
+        "sidebarExpanded": false,
+        "minimizeToTray": true,
+        "theme": "PurpleSky",
+        "audioOutputDevice": {
+            "label": "Zone Vibe 100",
+            "deviceId": "1d43a68f70eb37453bcaf985886553d7e9b7b5175062364265751a370f9276b9",
+            "$$hashKey": "object:3400"
+        },
+        "webOnlineCheckin": true,
+        "activeChatUsers": {
+            "inactiveTimer": 10
+        },
+        "defaultRewardTab": "rewards",
+        "chatCustomFontSize": 17,
+        "showActivityFeedEventsInChat": true,
+        "chat": {
+            "tagged": {
+                "sound": {
+                    "name": "Piano"
+                },
+                "volume": 4
+            }
+        },
+        "chatHideDeletedMessages": true,
+        "dashboard": {
+            "layout": {
+                "dashboardViewerList": "16.647531572904708%",
+                "dashboardChatWindow": "53.36318536585366%",
+                "dashboardActivityFeed": "22.804878048780488%"
+            }
+        },
+        "chatGetAllEmotes": true,
+        "chatCompactMode": true,
+        "chatReverseOrder": true,
+        "useOverlayInstances": false,
+        "overlayInstances": []
+    }
+}

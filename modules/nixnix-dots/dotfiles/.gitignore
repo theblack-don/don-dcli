@@ -1,0 +1,73 @@
+# Runtime state and generated files. The explicit mappings in module.nix
+# should keep these out of the tree, but this is the safety net.
+
+*.log
+*.tmp
+*.lock
+*.bak
+*.bak-*
+*.backup
+*.backup.*
+*~
+
+# Firebot
+Firebot/v5/profiles/*/auth-twitch.json
+Firebot/v5/profiles/*/integrations.json
+Firebot/v5/profiles/*/db/
+Firebot/v5/profiles/*/*.db
+Firebot/v5/profiles/*/custom-variable-cache.json
+Firebot/v5/logs/
+Firebot/v5/backups/
+Firebot/v5/clips/
+Firebot/v5/overlay.html
+Firebot/v5/overlay-resources/
+
+# OBS
+obs-studio/basic/profiles/*/service.json
+obs-studio/basic/profiles/*/service.json.bak
+obs-studio/basic/scenes/*.json
+obs-studio/basic/scenes/*.json.bak
+obs-studio/plugin_config/
+obs-studio/plugin_backups/
+obs-studio/logs/
+obs-studio/profiler_data/
+obs-studio/updates/
+obs-studio/basic.backup.*/
+
+# Kineticwe runtime state
+kineticwe/kineticwe.kwe
+kineticwe/kglobalaccelrc
+kineticwe/kglobalshortcutsrc
+kineticwe/kactivitymanagerdrc
+kineticwe/session/
+kineticwe/kineticweoutputconfig.json
+kineticwe/kdeglobals
+
+# fish and kitty generated files
+fish/fish_variables
+fish/fish_history
+fish/conf.d/hyde.fish
+fish/conf.d/fish_frozen_*
+kitty/current-theme.conf
+kitty/cosmic-theme.conf
+
+# Noctalia and fifine backups
+noctalia/config.toml.bak-*
+noctalia-kwe/config.toml.bak-*
+fifine-control-deck/config.json.bak-*
+fifine-control-deck/config.json.backup.*
+fifine-control-deck/config.json.tmp
+fifine-control-deck/*.lock
+
+# Nix store symlink
+veadotube/result
+
+# Credentials
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+id_ed25519*

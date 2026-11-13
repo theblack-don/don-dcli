@@ -1,0 +1,31 @@
+{
+    "dbVersion": "2",
+    "notifications": [
+        {
+            "title": "TwitchCon San Diego Firebot User Meetup",
+            "message": "Hey, Firebot fans! TwitchCon San Diego is just a couple weeks away and we're considering hosting a TwitchCon Firebot User Meetup. If you're attending TwitchCon San Diego AND you'd be interested in attending a Firebot user meetup, either respond to our <a href=\"https://discord.com/channels/372817064034959370/372821213443129346/1564717552989642753\">Discord poll</a> or reply to <a href=\"https://bsky.app/profile/zunderscore.tv/post/3myux6setts2b\">zunderscore on Bluesky</a>. Hope to see you there!",
+            "type": "info",
+            "source": "external",
+            "externalId": "twitchcon-us-2026-meetup",
+            "id": "851309b0-af9f-442e-b384-13004837f713",
+            "timestamp": "2026-10-28T15:57:32.127Z",
+            "read": false,
+            "saved": true
+        },
+        {
+            "title": "UPDATE: TwitchCon San Diego Meetup Details",
+            "message": "Hey, Firebot fans. We weren't able to get a separate venue, so we're taking over the official Chat Moderators & Software Dev Community MeetUp at TwitchCon! For more details (and to see the <strong>exclusive Firebot sticker</strong> zunder will be giving out), check out either the <a href=\"https://discord.com/channels/372817064034959370/372821213443129346/1569165190958813355\">Discord announcement</a> or <a href=\"https://bsky.app/profile/zunderscore.tv/post/3mztrnhfgrs2p\">zunder's post on Bluesky</a>. See you in San Diego!",
+            "type": "info",
+            "source": "external",
+            "externalId": "twitchcon-us-2026-meetup-2",
+            "id": "dac749bb-23d8-4903-9010-b810a341474c",
+            "timestamp": "2026-11-09T13:49:46.676Z",
+            "read": false,
+            "saved": true
+        }
+    ],
+    "knownExternalIds": [
+        "twitchcon-us-2026-meetup-2",
+        "5.61-featured-streamers-reminder"
+    ]
+}

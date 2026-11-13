@@ -1,0 +1,32 @@
+{
+  "id": "noctalia",
+  "display_name": "Noctalia",
+  "fg": "#e8e1dd",
+  "bg": "#151310",
+  "cursor": "#e8e1dd",
+  "black": "#998f84",
+  "red": "#ffb4ab",
+  "green": "#dec29d",
+  "yellow": "#d3c4b2",
+  "blue": "#c4caa6",
+  "purple": "#dec29d",
+  "cyan": "#d3c4b2",
+  "white": "#e8e1dd",
+  "bright_black": "#998f84",
+  "bright_red": "#ffb4ab",
+  "bright_green": "#dec29d",
+  "bright_yellow": "#d3c4b2",
+  "bright_blue": "#c4caa6",
+  "bright_purple": "#dec29d",
+  "bright_cyan": "#d3c4b2",
+  "bright_white": "#e8e1dd",
+  "chrome": {
+    "accent": "#dec29d",
+    "accent_bright": "#d3c4b2",
+    "success": "#dec29d",
+    "warning": "#d3c4b2",
+    "error": "#ffb4ab",
+    "info": "#c4caa6",
+    "surface": "#221f1c"
+  }
+}

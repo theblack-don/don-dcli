@@ -1,0 +1,321 @@
+{
+    "3bebba70-5f79-4a30-98d0-cc04b98ccd53": {
+        "id": "3bebba70-5f79-4a30-98d0-cc04b98ccd53",
+        "twitchData": {
+            "broadcasterId": "893193472",
+            "broadcasterLogin": "theblack_don",
+            "broadcasterName": "theblack_don",
+            "id": "3bebba70-5f79-4a30-98d0-cc04b98ccd53",
+            "title": "Don's Kwin is Showing! ",
+            "prompt": "",
+            "bits": 105,
+            "image": {
+                "url1x": "https://static-cdn.jtvnw.net/twilight-static-assets/Default-Power-up-Line-Lightshade-28x28.png",
+                "url2x": "https://static-cdn.jtvnw.net/twilight-static-assets/Default-Power-up-Line-Lightshade-56x56.png",
+                "url4x": "https://static-cdn.jtvnw.net/twilight-static-assets/Default-Power-up-Line-Lightshade-112x112.png"
+            },
+            "defaultImage": {
+                "url1x": "https://static-cdn.jtvnw.net/twilight-static-assets/Default-Power-up-Line-Lightshade-28x28.png",
+                "url2x": "https://static-cdn.jtvnw.net/twilight-static-assets/Default-Power-up-Line-Lightshade-56x56.png",
+                "url4x": "https://static-cdn.jtvnw.net/twilight-static-assets/Default-Power-up-Line-Lightshade-112x112.png"
+            },
+            "backgroundColor": "#5C16C5",
+            "isEnabled": true,
+            "isUserInputRequired": false,
+            "maxPerStreamSetting": {
+                "isEnabled": false,
+                "maxPerStream": 0
+            },
+            "maxPerUserPerStreamSetting": {
+                "isEnabled": true,
+                "maxPerUserPerStream": 2
+            },
+            "globalCooldownSetting": {
+                "isEnabled": true,
+                "globalCooldownSeconds": 600
+            },
+            "isPaused": false,
+            "isInStock": true,
+            "cooldownExpiresAt": null
+        },
+        "sortTags": [],
+        "effects": {
+            "id": "37528692-ef70-43fc-b1f8-d39f1c08f1f4",
+            "list": [
+                {
+                    "id": "0447500f-09d4-4bea-90da-a5ad66ea2949",
+                    "type": "firebot:playsound",
+                    "active": true,
+                    "soundType": "local",
+                    "volume": 3,
+                    "audioOutputDevice": {
+                        "label": "App Default",
+                        "deviceId": ""
+                    },
+                    "filepath": "/home/don/BlackDon/OBS Assets/SteamingSounds/kwin.mp3",
+                    "percentWeight": null
+                }
+            ],
+            "runMode": "all"
+        }
+    },
+    "5c8b177d-853b-44b9-954f-b69927aee5c1": {
+        "id": "5c8b177d-853b-44b9-954f-b69927aee5c1",
+        "twitchData": {
+            "broadcasterId": "893193472",
+            "broadcasterLogin": "theblack_don",
+            "broadcasterName": "theblack_don",
+            "id": "5c8b177d-853b-44b9-954f-b69927aee5c1",
+            "title": "Wheres My Mouse??",
+            "prompt": "",
+            "bits": 105,
+            "image": {
+                "url1x": "https://static-cdn.jtvnw.net/twilight-static-assets/Default-Power-up-Line-Lightshade-28x28.png",
+                "url2x": "https://static-cdn.jtvnw.net/twilight-static-assets/Default-Power-up-Line-Lightshade-56x56.png",
+                "url4x": "https://static-cdn.jtvnw.net/twilight-static-assets/Default-Power-up-Line-Lightshade-112x112.png"
+            },
+            "defaultImage": {
+                "url1x": "https://static-cdn.jtvnw.net/twilight-static-assets/Default-Power-up-Line-Lightshade-28x28.png",
+                "url2x": "https://static-cdn.jtvnw.net/twilight-static-assets/Default-Power-up-Line-Lightshade-56x56.png",
+                "url4x": "https://static-cdn.jtvnw.net/twilight-static-assets/Default-Power-up-Line-Lightshade-112x112.png"
+            },
+            "backgroundColor": "#00F593",
+            "isEnabled": true,
+            "isUserInputRequired": false,
+            "maxPerStreamSetting": {
+                "isEnabled": false,
+                "maxPerStream": 0
+            },
+            "maxPerUserPerStreamSetting": {
+                "isEnabled": false,
+                "maxPerUserPerStream": 0
+            },
+            "globalCooldownSetting": {
+                "isEnabled": true,
+                "globalCooldownSeconds": 600
+            },
+            "isPaused": false,
+            "isInStock": true,
+            "cooldownExpiresAt": null
+        },
+        "sortTags": [],
+        "effects": {
+            "id": "efeccb50-7d0e-44de-9b10-23ddf629c449",
+            "list": [
+                {
+                    "id": "17208a07-b626-4119-9f0b-e952ce062ab2",
+                    "type": "firebot:playsound",
+                    "active": true,
+                    "soundType": "local",
+                    "volume": 3,
+                    "audioOutputDevice": {
+                        "label": "App Default",
+                        "deviceId": ""
+                    },
+                    "filepath": "/home/don/BlackDon/OBS Assets/SteamingSounds/Where is my mouse.mp3",
+                    "waitForSound": true,
+                    "percentWeight": null
+                }
+            ],
+            "runMode": "all"
+        }
+    },
+    "190ccdde-fade-4fd1-97a6-8c5cae26590c": {
+        "id": "190ccdde-fade-4fd1-97a6-8c5cae26590c",
+        "twitchData": {
+            "broadcasterId": "893193472",
+            "broadcasterLogin": "theblack_don",
+            "broadcasterName": "theblack_don",
+            "id": "190ccdde-fade-4fd1-97a6-8c5cae26590c",
+            "title": "Zoom Zoom Zoom ",
+            "prompt": "",
+            "bits": 100,
+            "image": {
+                "url1x": "https://static-cdn.jtvnw.net/twilight-static-assets/Default-Power-up-Line-Lightshade-28x28.png",
+                "url2x": "https://static-cdn.jtvnw.net/twilight-static-assets/Default-Power-up-Line-Lightshade-56x56.png",
+                "url4x": "https://static-cdn.jtvnw.net/twilight-static-assets/Default-Power-up-Line-Lightshade-112x112.png"
+            },
+            "defaultImage": {
+                "url1x": "https://static-cdn.jtvnw.net/twilight-static-assets/Default-Power-up-Line-Lightshade-28x28.png",
+                "url2x": "https://static-cdn.jtvnw.net/twilight-static-assets/Default-Power-up-Line-Lightshade-56x56.png",
+                "url4x": "https://static-cdn.jtvnw.net/twilight-static-assets/Default-Power-up-Line-Lightshade-112x112.png"
+            },
+            "backgroundColor": "#E69900",
+            "isEnabled": true,
+            "isUserInputRequired": false,
+            "maxPerStreamSetting": {
+                "isEnabled": false,
+                "maxPerStream": 0
+            },
+            "maxPerUserPerStreamSetting": {
+                "isEnabled": false,
+                "maxPerUserPerStream": 0
+            },
+            "globalCooldownSetting": {
+                "isEnabled": true,
+                "globalCooldownSeconds": 600
+            },
+            "isPaused": false,
+            "isInStock": true,
+            "cooldownExpiresAt": null
+        },
+        "effects": {
+            "id": "c5c18696-22bf-4697-843c-1a56f7508ec8",
+            "list": [
+                {
+                    "id": "cb6a78a8-b4f6-44dc-b617-adae76b9a131",
+                    "type": "firebot:playsound",
+                    "active": true,
+                    "soundType": "local",
+                    "volume": 3,
+                    "audioOutputDevice": {
+                        "label": "App Default",
+                        "deviceId": ""
+                    },
+                    "filepath": "/home/don/BlackDon/OBS Assets/SteamingSounds/Zoom Boom.mp3",
+                    "percentWeight": null
+                },
+                {
+                    "id": "59d46003-80d3-4ba4-82f3-cd751a224692",
+                    "type": "firebot:delay",
+                    "active": true,
+                    "delay": "4",
+                    "percentWeight": null
+                },
+                {
+                    "id": "98cb7559-28ef-4332-a098-9034294b66d0",
+                    "type": "firebot:customscript",
+                    "active": true,
+                    "scriptName": "kwin-zoom.js",
+                    "parameters": {
+                        "zoomDelay": {
+                            "type": "number",
+                            "description": "Delay between zoom steps (milliseconds)",
+                            "secondaryDescription": "Default 400 — raise it if zoom steps feel cut short",
+                            "default": 400,
+                            "value": 250
+                        }
+                    },
+                    "percentWeight": null
+                }
+            ],
+            "runMode": "all"
+        },
+        "sortTags": []
+    },
+    "ce58d6d0-f2b0-49a7-b892-d5625a93f9a4": {
+        "id": "ce58d6d0-f2b0-49a7-b892-d5625a93f9a4",
+        "twitchData": {
+            "broadcasterId": "893193472",
+            "broadcasterLogin": "theblack_don",
+            "broadcasterName": "theblack_don",
+            "id": "ce58d6d0-f2b0-49a7-b892-d5625a93f9a4",
+            "title": "Bootc Jingle!",
+            "prompt": "",
+            "bits": 500,
+            "image": {
+                "url1x": "https://static-cdn.jtvnw.net/twilight-static-assets/Default-Power-up-Line-Lightshade-28x28.png",
+                "url2x": "https://static-cdn.jtvnw.net/twilight-static-assets/Default-Power-up-Line-Lightshade-56x56.png",
+                "url4x": "https://static-cdn.jtvnw.net/twilight-static-assets/Default-Power-up-Line-Lightshade-112x112.png"
+            },
+            "defaultImage": {
+                "url1x": "https://static-cdn.jtvnw.net/twilight-static-assets/Default-Power-up-Line-Lightshade-28x28.png",
+                "url2x": "https://static-cdn.jtvnw.net/twilight-static-assets/Default-Power-up-Line-Lightshade-56x56.png",
+                "url4x": "https://static-cdn.jtvnw.net/twilight-static-assets/Default-Power-up-Line-Lightshade-112x112.png"
+            },
+            "backgroundColor": "#D1B3FF",
+            "isEnabled": true,
+            "isUserInputRequired": false,
+            "maxPerStreamSetting": {
+                "isEnabled": false,
+                "maxPerStream": 0
+            },
+            "maxPerUserPerStreamSetting": {
+                "isEnabled": false,
+                "maxPerUserPerStream": 0
+            },
+            "globalCooldownSetting": {
+                "isEnabled": true,
+                "globalCooldownSeconds": 600
+            },
+            "isPaused": false,
+            "isInStock": true,
+            "cooldownExpiresAt": null
+        },
+        "sortTags": [],
+        "effects": {
+            "id": "267ae54d-be99-4f74-a25f-3c9d4ac1b1a5",
+            "list": [
+                {
+                    "id": "e6225511-e042-4007-b771-4d2925f01445",
+                    "type": "firebot:playsound",
+                    "active": true,
+                    "soundType": "local",
+                    "volume": 3,
+                    "audioOutputDevice": {
+                        "label": "App Default",
+                        "deviceId": ""
+                    },
+                    "filepath": "/home/don/BlackDon/OBS Assets/SteamingSounds/bootc.mp3",
+                    "percentWeight": null
+                }
+            ],
+            "runMode": "all"
+        }
+    },
+    "0eb1eeb0-b514-4cfe-942d-68235d91125a": {
+        "id": "0eb1eeb0-b514-4cfe-942d-68235d91125a",
+        "twitchData": {
+            "broadcasterId": "893193472",
+            "broadcasterLogin": "theblack_don",
+            "broadcasterName": "theblack_don",
+            "id": "0eb1eeb0-b514-4cfe-942d-68235d91125a",
+            "title": "Don Hulk",
+            "prompt": "Turn Donnie to the Hulk! ",
+            "bits": 300,
+            "image": {
+                "url1x": "https://static-cdn.jtvnw.net/twilight-static-assets/Default-Power-up-Line-Lightshade-28x28.png",
+                "url2x": "https://static-cdn.jtvnw.net/twilight-static-assets/Default-Power-up-Line-Lightshade-56x56.png",
+                "url4x": "https://static-cdn.jtvnw.net/twilight-static-assets/Default-Power-up-Line-Lightshade-112x112.png"
+            },
+            "defaultImage": {
+                "url1x": "https://static-cdn.jtvnw.net/twilight-static-assets/Default-Power-up-Line-Lightshade-28x28.png",
+                "url2x": "https://static-cdn.jtvnw.net/twilight-static-assets/Default-Power-up-Line-Lightshade-56x56.png",
+                "url4x": "https://static-cdn.jtvnw.net/twilight-static-assets/Default-Power-up-Line-Lightshade-112x112.png"
+            },
+            "backgroundColor": "#05651C",
+            "isEnabled": true,
+            "isUserInputRequired": false,
+            "maxPerStreamSetting": {
+                "isEnabled": false,
+                "maxPerStream": 0
+            },
+            "maxPerUserPerStreamSetting": {
+                "isEnabled": false,
+                "maxPerUserPerStream": 0
+            },
+            "globalCooldownSetting": {
+                "isEnabled": false,
+                "globalCooldownSeconds": 0
+            },
+            "isPaused": false,
+            "isInStock": true,
+            "cooldownExpiresAt": null
+        },
+        "effects": {
+            "id": "afc04cd8-5eee-4dda-aa2d-3353f92d7bf0",
+            "list": [
+                {
+                    "id": "d6cf2cda-e82a-4416-9a95-bf5b1c2c6af9",
+                    "type": "firebot:customscript",
+                    "scriptName": "veadotube-set-state.js",
+                    "parameters": {},
+                    "percentWeight": null,
+                    "active": true
+                }
+            ],
+            "runMode": "all"
+        },
+        "sortTags": []
+    }
+}

@@ -1,0 +1,130 @@
+{
+    "5d136644-5e6e-4a7c-9ba7-fd4ff24247fc": {
+        "id": "5d136644-5e6e-4a7c-9ba7-fd4ff24247fc",
+        "name": "WordSalad",
+        "type": "firebot:counter-display",
+        "active": false,
+        "position": {
+            "x": 39,
+            "y": 0,
+            "width": 731,
+            "height": 639
+        },
+        "entryAnimation": {
+            "class": "zoomIn",
+            "duration": 3
+        },
+        "exitAnimation": {
+            "class": "zoomOut",
+            "duration": 3
+        },
+        "overlayInstance": null,
+        "settings": {
+            "counterFontOptions": {
+                "family": "Bangers",
+                "weight": 600,
+                "size": 24,
+                "italic": false,
+                "color": "#FFFFFF"
+            },
+            "showCounterName": true,
+            "nameFontOptions": {
+                "family": "Bangers",
+                "weight": 400,
+                "size": 18,
+                "italic": false,
+                "color": "#FFFFFF"
+            },
+            "textAlignment": "center",
+            "counterId": "bc479c42-c30a-4a9a-a09d-1fc9c346819f"
+        },
+        "state": {
+            "counterName": "WordSalad",
+            "counterValue": 124
+        },
+        "sortTags": []
+    },
+    "8856fb47-5b10-43c2-8db9-e4af0ba0c3f8": {
+        "id": "8856fb47-5b10-43c2-8db9-e4af0ba0c3f8",
+        "name": "Starting Soon!",
+        "type": "firebot:countdown-dynamic",
+        "active": false,
+        "position": {
+            "x": 199,
+            "y": 467,
+            "width": 433,
+            "height": 155
+        },
+        "entryAnimation": {
+            "class": "none"
+        },
+        "exitAnimation": {
+            "class": "none"
+        },
+        "overlayInstance": null,
+        "settings": {
+            "fontOptions": {
+                "family": "Inter",
+                "weight": 400,
+                "size": 48,
+                "italic": false,
+                "color": "#FFFFFF"
+            },
+            "alignment": "center",
+            "runWhenInactive": false,
+            "onCompleteEffects": {
+                "id": "d5a653c9-c6f5-481f-bf94-af778c6eaef5",
+                "list": [],
+                "runMode": "all"
+            }
+        },
+        "state": {
+            "remainingSeconds": 0,
+            "mode": "paused"
+        },
+        "sortTags": []
+    },
+    "d32d3e96-0067-406c-8d0e-814b3aa23a43": {
+        "id": "d32d3e96-0067-406c-8d0e-814b3aa23a43",
+        "name": "Wins",
+        "type": "firebot:counter-display",
+        "active": false,
+        "position": {
+            "x": 460,
+            "y": 159,
+            "width": 360,
+            "height": 360
+        },
+        "entryAnimation": {
+            "class": "none"
+        },
+        "exitAnimation": {
+            "class": "none"
+        },
+        "overlayInstance": null,
+        "settings": {
+            "counterFontOptions": {
+                "family": "JetBrainsMono Nerd Font Mono",
+                "weight": 800,
+                "size": 45,
+                "italic": false,
+                "color": "#fdfdfdff"
+            },
+            "showCounterName": true,
+            "nameFontOptions": {
+                "family": "JetBrainsMono Nerd Font Mono",
+                "weight": 700,
+                "size": 50,
+                "italic": false,
+                "color": "#FFFFFF"
+            },
+            "textAlignment": "left",
+            "counterId": "ff969b7b-43c4-4a05-b648-bcfa74d2c3f9"
+        },
+        "state": {
+            "counterName": "Wins",
+            "counterValue": 5
+        },
+        "sortTags": []
+    }
+}

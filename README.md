@@ -68,7 +68,7 @@ the full install.
 
    ```bash
    sudo hostnamectl set-hostname nixnix
-   git clone git@gitlab.com:theblackdon/don-dcli.git ~/.config/dcli
+   git clone https://github.com/theblack-don/don-dcli.git ~/.config/dcli
    ```
 
 4. Install `dcli`. If `~/Projects/dcli` is not present, clone

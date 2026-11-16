@@ -2,5 +2,6 @@
 # Flake inputs exposed to the NixOS system module as getFlake bindings.
 {
   noctalia-greeter = builtins.getFlake "gitlab:theblackdon/noctalia-greeter-kwe?rev=b3e3bc0268fc5aaf346a250faac70570d15e3bef";
-  punktfunk = builtins.getFlake "git+https://git.unom.io/unom/punktfunk?ref=nix-stable";
+  punktfunk = builtins.getFlake "git+file:///home/don/Projects/punktfunk?ref=feat/host-kineticwe";
+  umbriel = builtins.getFlake "github:noctalia-dev/umbriel?ref=cachix";
 }

@@ -15,6 +15,7 @@ in
     "kineticwe-dev"
     "flatpak"
     "nixnix-dots"
+    "umbriel"
   ];
 
   # User apps via nix profile; dcli sync converges the profile to this list.
@@ -206,8 +207,8 @@ in
       url = "github:amaanq/helium-flake";
     };
     punktfunk = {
-      url = "git+https://git.unom.io/unom/punktfunk";
-      ref = "nix-stable";
+      url = "git+file:///home/don/Projects/punktfunk";
+      ref = "feat/host-kineticwe";
       nixos_module = true;
     };
     lgl-papercutter = {

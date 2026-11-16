@@ -13,6 +13,7 @@ in
   imports = [
     dcliInputs.noctalia-greeter.nixosModules.default
     dcliInputs.punktfunk.nixosModules.default
+    dcliInputs.umbriel.nixosModules.default
     # ── dcli module: nixnix ──
     (
       { pkgs, ... }:
@@ -189,6 +190,20 @@ in
           group = "greeter";
           home = "/var/lib/noctalia-greeter";
           extraGroups = [ "video" "input" ];
+        };
+      }
+    )
+    # ── dcli module: umbriel ──
+    (
+      { ... }:
+      {
+        programs.umbriel.enable = true;
+      
+        nix.settings = {
+          extra-substituters = [ "https://umbriel.cachix.org" ];
+          extra-trusted-public-keys = [
+            "umbriel.cachix.org-1:JfNq/2yg2S6D6z4Z2dVSZrZlDPQTKtexB6GAVLD98nw="
+          ];
         };
       }
     )

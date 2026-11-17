@@ -42,9 +42,9 @@ Manager and dcli's flake mode are off.
 logs, databases, tokens and stream keys stay in the live directories and out of
 git.
 
-Managed: fastfetch, fish, ghostty, kitty, Nemo bookmarks, Firebot static config,
-OBS profiles/themes, noctalia, noctalia-kwe, kineticwe static files, zed, tuios,
-veadotube, and fifine-control-deck.
+Managed: fastfetch, fish, ghostty, kitty, qutebrowser static config, Nemo
+bookmarks, Firebot static config, OBS profiles/themes, noctalia, noctalia-kwe,
+kineticwe static files, zed, tuios, veadotube, and fifine-control-deck.
 
 If an app replaces a managed file symlink, restore it with
 `dcli sync --force-dotfiles`. Nemo preferences live in dconf and are not managed.

@@ -10,6 +10,11 @@
     nixos_module = true;
   };
 
+  nix_packages = [
+    "noctalia"
+    "xdg-desktop-portal-umbriel"
+  ];
+
   nixos = {
     config = ''
       { ... }:

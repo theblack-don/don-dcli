@@ -1,0 +1,10 @@
+# Noctalia -> Steam Material-Theme sync.
+# Drop-in for ~/.config/noctalia-kwe/ (or ~/.config/noctalia/ on upstream Noctalia).
+# Noctalia merges every *.toml in its config directory, so this does not
+# require editing config.toml.
+
+[theme.templates.user.steam_sync]
+input_path  = "~/noctalia-steam-theme/steam-matugen.css"
+output_path = "~/noctalia-steam-theme/matugen.css"
+post_hook   = "bash ~/noctalia-steam-theme/push.sh"
+hook_async  = false

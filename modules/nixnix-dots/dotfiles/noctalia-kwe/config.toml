@@ -96,16 +96,12 @@ builtin = "Noctalia"                # Ayu | Catppuccin | Dracula | Eldritch | Gr
 enable_builtin_templates            = true
 builtin_ids                = []     # opt-in; list ids with: noctalia theme --list-templates
 enable_community_templates = true
-community_ids              = []     # fetched from api.noctalia.dev/templates, cached locally
+community_ids              = ["qutebrowser"]  # fetched from api.noctalia.dev/templates, cached locally
 
 [theme.templates.user.konsole]
 input_path  = "~/.config/noctalia/templates/konsole.colorscheme"
 output_path = "~/.local/share/konsole/Noctalia.colorscheme"
 post_hook   = "/home/don/bin/noctalia-konsole-reload.sh"
-
-[theme.templates.user.qutebrowser]
-input_path  = "~/.config/noctalia/templates/qutebrowser.json"
-output_path = "~/.config/qutebrowser/noctalia-colors.json"
 
 [theme.templates.user.browser_startpage]
 input_path  = "~/.config/noctalia/templates/browser-startpage.css"

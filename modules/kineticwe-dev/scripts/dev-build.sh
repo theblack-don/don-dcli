@@ -308,6 +308,7 @@ let
     pkgs.qt6Packages.qt6ct
     pkgs.kdePackages.plasma-workspace
     pkgs.kdePackages.qqc2-desktop-style
+    pkgs.kdePackages.kirigami.unwrapped
   ];
 
   # Colon-joined Qt dirs from the runtime outputs. chooseDevOutputs already

@@ -11,5 +11,6 @@ in
 
   flatpak_packages = [
     "com.obsproject.Studio"
+    "com.discordapp.Discord"
   ];
 }

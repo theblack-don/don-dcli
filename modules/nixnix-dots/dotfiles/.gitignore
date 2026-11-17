@@ -51,6 +51,15 @@ fish/conf.d/fish_frozen_*
 kitty/current-theme.conf
 kitty/cosmic-theme.conf
 
+# qutebrowser runtime/generated
+qutebrowser/autoconfig.yml
+qutebrowser/bookmarks/
+qutebrowser/quickmarks
+qutebrowser/noctalia/
+qutebrowser/qsettings/
+qutebrowser/greasemonkey/
+qutebrowser/sessions/
+
 # Noctalia and fifine backups
 noctalia/config.toml.bak-*
 noctalia-kwe/config.toml.bak-*

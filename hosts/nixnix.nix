@@ -6,7 +6,7 @@ let
 in
 {
   host = "nixnix";
-  description = "NixOS workstation (replaces piknix/fednix), shared /home partition";
+  description = "NixOS workstation";
 
   # Sequential runs the kineticwe-dev hook as the user, not via sudo.
   module_processing = "sequential";
@@ -40,7 +40,8 @@ in
     "xdg-desktop-portal-gtk"
     "opencode"
     "chromium"
-    "equibop"
+    # Temporary pin: nixpkgs-unstable still marks qutebrowser insecure.
+    "github:NixOS/nixpkgs/4bc82a230ef72f82a7c62ed32435e570b26bc76f#qutebrowser"
     "helium#default"
     # Wrapper adds Qt Multimedia to quickshell; see ~/Projects/kwepaperpicker/nix/.
     "path:/home/don/Projects/kwepaperpicker/nix#quickshell"

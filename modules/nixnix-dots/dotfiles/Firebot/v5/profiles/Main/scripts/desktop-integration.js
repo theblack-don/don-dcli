@@ -24,6 +24,24 @@ function childPath() {
     return [...NIX_BIN_DIRS, process.env.PATH || ''].filter(Boolean).join(':');
 }
 
+// Firebot's wrapper exports an old gcc libstdc++ that shadows newer Nix
+// closures (noctalia/umbriel). Drop only those entries for child processes.
+function childEnv() {
+    const env = { ...process.env, PATH: childPath() };
+    if (!env.LD_LIBRARY_PATH) return env;
+
+    const entries = env.LD_LIBRARY_PATH
+        .split(':')
+        .filter((entry) => !/\/nix\/store\/[^/]+-gcc-[^/]+-lib\/lib\/?$/.test(entry));
+
+    if (entries.length > 0) {
+        env.LD_LIBRARY_PATH = entries.join(':');
+    } else {
+        delete env.LD_LIBRARY_PATH;
+    }
+    return env;
+}
+
 // Firebot keeps its live profile under ~/.config/Firebot. The scripts are
 // symlinked in from the dotfiles repo, so __dirname resolves to the repo and
 // relative ../../../logs paths no longer reach Firebot's log directory.
@@ -92,7 +110,7 @@ function canRun(bin) {
         execFileSync(bin, ['--version'], {
             stdio: 'ignore',
             timeout: 3000,
-            env: { ...process.env, PATH: childPath() },
+            env: childEnv(),
         });
         ok = true;
     } catch (e) {
@@ -200,7 +218,7 @@ function runNoctalia(...args) {
     const target = resolveNoctalia();
 
     return execFileSync(target.bin, ['msg', ...args], {
-        env: { ...process.env, PATH: childPath() },
+        env: childEnv(),
         encoding: 'utf8',
     });
 }
@@ -224,7 +242,7 @@ function restartNoctalia() {
                 const child = spawn(target.bin, [], {
                     detached: true,
                     stdio: 'ignore',
-                    env: { ...process.env, PATH: childPath() },
+                    env: childEnv(),
                 });
                 child.on('error', reject);
                 child.unref();
@@ -261,7 +279,7 @@ function umbrielBinary() {
 
 function runUmbriel(...args) {
     return execFileSync(umbrielBinary(), ['msg', ...args], {
-        env: { ...process.env, PATH: childPath() },
+        env: childEnv(),
         encoding: 'utf8',
     });
 }

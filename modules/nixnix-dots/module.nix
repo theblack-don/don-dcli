@@ -32,6 +32,11 @@
     { source = "dotfiles/kitty/sessions"; target = "~/.config/kitty/sessions"; }
     { source = "dotfiles/kitty/themes"; target = "~/.config/kitty/themes"; }
 
+    # qutebrowser: static config only. autoconfig.yml, quickmarks, bookmarks,
+    # qsettings and generated noctalia colors stay live.
+    { source = "dotfiles/qutebrowser/config.py"; target = "~/.config/qutebrowser/config.py"; }
+    { source = "dotfiles/qutebrowser/userscripts/qute-bitwarden"; target = "~/.config/qutebrowser/userscripts/qute-bitwarden"; }
+
     # Nemo bookmarks only; preferences live in dconf.
     { source = "dotfiles/gtk-3.0/bookmarks"; target = "~/.config/gtk-3.0/bookmarks"; }
 

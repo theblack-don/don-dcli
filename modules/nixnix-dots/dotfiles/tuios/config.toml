@@ -119,7 +119,7 @@
 [startup]
 tiled = true
 daemon = true
-layout = "bsp"
+layout = "scrolling"
 start_in_terminal_mode = true
 
 [appearance.sidebar.left]

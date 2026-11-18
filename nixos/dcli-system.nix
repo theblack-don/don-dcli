@@ -62,14 +62,15 @@ in
         programs.dconf.enable = true;
       
         # Punktfunk streaming host (Punktfunk + GameStream/Moonlight clients).
-        services.punktfunk.host = {
-          enable = true;
-          users = [ "don" ];
-          gamestream = true;
-          openFirewall = true;
-          desktopSession = true;   # KDE/KineticWE desktop login
-          settings = { RUST_LOG = "info"; };
-        };
+        # Disabled: not in use, and the host build stalls every update. Uncomment to re-enable.
+        # services.punktfunk.host = {
+        #   enable = true;
+        #   users = [ "don" ];
+        #   gamestream = true;
+        #   openFirewall = true;
+        #   desktopSession = true;   # KDE/KineticWE desktop login
+        #   settings = { RUST_LOG = "info"; };
+        # };
       
         # Native Punktfunk client (replaces the Flatpak).
         services.punktfunk.client = {

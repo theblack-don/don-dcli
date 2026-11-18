@@ -50,9 +50,7 @@
     "tree_view": true
   },
   "terminal": {
-    "shell": {
-      "program": "/usr/bin/fish"
-    },
+    "shell": "system",
     "dock": "bottom"
   },
   "project_panel": {

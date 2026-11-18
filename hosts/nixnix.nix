@@ -27,6 +27,7 @@ in
     "mpvpaper"
     "fastfetch"
     "matugen"
+    "zed-editor"
     "btop"
     "gh"
     "eza"
@@ -37,6 +38,7 @@ in
     "mpv"
     "nix-output-monitor"
     "tuios"
+    "herdr-desktop"
     "xdg-desktop-portal-gtk"
     "opencode"
     "chromium"
@@ -131,14 +133,15 @@ in
         programs.dconf.enable = true;
 
         # Punktfunk streaming host (Punktfunk + GameStream/Moonlight clients).
-        services.punktfunk.host = {
-          enable = true;
-          users = [ "don" ];
-          gamestream = true;
-          openFirewall = true;
-          desktopSession = true;   # KDE/KineticWE desktop login
-          settings = { RUST_LOG = "info"; };
-        };
+        # Disabled: not in use, and the host build stalls every update. Uncomment to re-enable.
+        # services.punktfunk.host = {
+        #   enable = true;
+        #   users = [ "don" ];
+        #   gamestream = true;
+        #   openFirewall = true;
+        #   desktopSession = true;   # KDE/KineticWE desktop login
+        #   settings = { RUST_LOG = "info"; };
+        # };
 
         # Native Punktfunk client (replaces the Flatpak).
         services.punktfunk.client = {
@@ -195,6 +198,7 @@ in
     enabled = true;
     nixos_enabled = true;        # dcli sync ends with nixos-rebuild switch
     nix_profile_enabled = true;  # user apps via nix profile
+    allow_unfree = true;         # permits unfree packages (e.g. discord)
     home_manager_enabled = false;
     flake_enabled = false;
   };

@@ -8,12 +8,15 @@ if colors_file.exists():
     config.source(str(colors_file))
 
 # === General Settings ===
-# Dark mode preference - prefer dark based on system but don't force it
+# Force dark mode globally, but let sites with their own theme render natively
 c.content.prefers_reduced_motion = True
-c.colors.webpage.darkmode.enabled = False  # Don't force dark mode (let sites render naturally)
+c.colors.webpage.darkmode.enabled = True
 c.colors.webpage.preferred_color_scheme = "dark"  # Tell websites we prefer dark mode (matches system)
 c.colors.webpage.darkmode.policy.images = 'never'
 c.colors.webpage.darkmode.policy.page = 'smart'  # Smart detection
+# YouTube has a native dark theme; Canva needs accurate design colors
+for site in ['*://*.youtube.com/*', '*://*.canva.com/*']:
+    config.set('colors.webpage.darkmode.enabled', False, site)
 
 # === Fonts ===
 c.fonts.default_family = 'JetBrainsMono Nerd Font, monospace'

@@ -36,6 +36,8 @@ obs-studio/basic.backup.*/
 
 # Kineticwe runtime state
 kineticwe/kineticwe.kwe
+kineticwe/keybinds.kwe
+kineticwe/custom-keybinds.kwe
 kineticwe/kglobalaccelrc
 kineticwe/kglobalshortcutsrc
 kineticwe/kactivitymanagerdrc

@@ -76,12 +76,11 @@
     { source = "dotfiles/obs-studio/basic/profiles/219/streamEncoder.json"; target = "~/.config/obs-studio/basic/profiles/219/streamEncoder.json"; }
     { source = "dotfiles/obs-studio/basic/profiles/219/recordEncoder.json"; target = "~/.config/obs-studio/basic/profiles/219/recordEncoder.json"; }
 
-    # Kineticwe: static settings only. kineticwe.kwe (runtime tiling state),
-    # KDE state files, sessions and output/EDID config stay live.
+    # Kineticwe: static settings only. kineticwe.kwe and the generated
+    # keybind files are runtime state, like KDE state files, sessions and
+    # output/EDID config.
     { source = "dotfiles/kineticwe/appearance.kwe"; target = "~/.config/kineticwe/appearance.kwe"; }
-    { source = "dotfiles/kineticwe/custom-keybinds.kwe"; target = "~/.config/kineticwe/custom-keybinds.kwe"; }
     { source = "dotfiles/kineticwe/decoration.colors"; target = "~/.config/kineticwe/decoration.colors"; }
-    { source = "dotfiles/kineticwe/keybinds.kwe"; target = "~/.config/kineticwe/keybinds.kwe"; }
     { source = "dotfiles/kineticwe/kinetic-settings.kwe"; target = "~/.config/kineticwe/kinetic-settings.kwe"; }
     { source = "dotfiles/kineticwe/rules.kwe"; target = "~/.config/kineticwe/rules.kwe"; }
     { source = "dotfiles/kineticwe/lsfg-vk/conf.toml"; target = "~/.config/kineticwe/lsfg-vk/conf.toml"; }

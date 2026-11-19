@@ -52,6 +52,7 @@ in
     "lgl-papercutter#default"
     "lgl-emoji-picker#default"
     "lgl-scheduler-manager#default"
+    "lgl-text-editor#default"
     "ffmpeg"
   ];
 
@@ -131,6 +132,9 @@ in
 
         # D-Bus dconf service: GTK4 reads icon/theme settings through GSettings.
         programs.dconf.enable = true;
+
+        # Register Adwaita Sans/Mono with fontconfig (systemPackages alone is not scanned).
+        fonts.packages = [ pkgs.adwaita-fonts ];
 
         # Punktfunk streaming host (Punktfunk + GameStream/Moonlight clients).
         # Disabled: not in use, and the host build stalls every update. Uncomment to re-enable.
@@ -225,6 +229,10 @@ in
     lgl-scheduler-manager = {
       url = "github:linuxgamerlife/lgl-scheduler-manager";
     };
+    lgl-text-editor = {
+      url = "github:linuxgamerlife/lgl-text-editor";
+    };
+
   };
 
   config_backups = {

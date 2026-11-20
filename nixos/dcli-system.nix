@@ -97,6 +97,10 @@ in
         services.fwupd.enable = true;
         networking.networkmanager.enable = true;
       
+        # Tailscale VPN (installs tailscaled; no nix_packages entry needed).
+        services.tailscale.enable = true;
+        services.tailscale.openFirewall = true;
+      
         # TuneD provides the PPD-compatible power profile interface.
         services.power-profiles-daemon.enable = false;
         services.upower.enable = true;

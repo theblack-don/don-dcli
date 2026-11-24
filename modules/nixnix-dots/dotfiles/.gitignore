@@ -82,3 +82,16 @@ veadotube/result
 *.pfx
 id_rsa*
 id_ed25519*
+
+# Noctalia/matugen generated theme colors (rewritten on wallpaper/palette change)
+fastfetch/config.jsonc
+fastfetch/themes/noctalia.jsonc
+ghostty/themes/noctalia
+kineticwe/decoration.colors
+kitty/themes/noctalia.conf
+obs-studio/themes/matugen.obt
+tuios/themes/noctalia.json
+zed/themes/noctalia.json
+
+# Firebot runtime backup timestamp
+Firebot/v5/global-settings.json

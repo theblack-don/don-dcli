@@ -11,6 +11,7 @@ let
 in
 {
   imports = [
+    dcliInputs.luciole.nixosModules.default
     dcliInputs.noctalia-greeter.nixosModules.default
     dcliInputs.punktfunk.nixosModules.default
     dcliInputs.umbriel.nixosModules.default
@@ -57,6 +58,8 @@ in
       
         # Desktop
         services.flatpak.enable = true;
+        services.gvfs.enable = true;
+        programs.luciole.enable = true;
       
         # D-Bus dconf service: GTK4 reads icon/theme settings through GSettings.
         programs.dconf.enable = true;
@@ -121,6 +124,10 @@ in
         nix.settings.auto-optimise-store = true;
         nix.settings.substituters = [ "https://nix.unom.io" ];
         nix.settings.trusted-public-keys = [ "punktfunk-cache-1:yhOJmHxzg6tzXpxSFzlYn6Pc6r0jHprsWqt8MZC654o=" ];
+        nix.settings.extra-substituters = [ "https://noctalia.cachix.org" ];
+        nix.settings.extra-trusted-public-keys = [
+          "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4="
+        ];
         nix.gc = {
           automatic = true;
           dates = "weekly";
